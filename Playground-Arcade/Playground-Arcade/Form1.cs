@@ -6,5 +6,29 @@ namespace Playground_Arcade
         {
             InitializeComponent();
         }
+
+        private void WordleButton_Click(object sender, EventArgs e)
+        {
+            WordleForm wordleForm = new WordleForm();
+            wordleForm.Show();
+        }
+
+        private void CheckersButton_Click(object sender, EventArgs e)
+        {
+            CheckersForm checkersForm = new CheckersForm();
+            checkersForm.Show();
+        }
+
+        private void SolitaireButton_Click(object sender, EventArgs e)
+        {
+            SolitaireForm solitaireForm = new SolitaireForm();
+            solitaireForm.Show();
+        }
+
+        private void OthelloButton_Click(object sender, EventArgs e)
+        {
+            OthelloForm othelloForm = new OthelloForm();
+            othelloForm.Show();
+        }
     }
 }
