@@ -13,6 +13,7 @@ namespace Playground_Arcade
     {
         public SolitaireCardRank CardRank { get; private set; }
         public SolitaireCardSuit CardSuit { get; private set; }
+        public bool IsFaceUp { get; set; }
 
         public SolitaireCard(SolitaireCardRank rank, SolitaireCardSuit suit)
         {
@@ -20,6 +21,13 @@ namespace Playground_Arcade
             CardSuit = suit;
         }
 
+        //Flip card so it's face up
+        public void FlipCard()
+        {
+            IsFaceUp = true;
+        }
+
+        //Return string of cards rank and suit
         public override string ToString()
         {
             return CardRank + " of " + CardSuit;

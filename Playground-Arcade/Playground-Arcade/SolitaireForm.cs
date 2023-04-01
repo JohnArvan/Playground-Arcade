@@ -15,13 +15,13 @@ namespace Playground_Arcade
     public partial class SolitaireForm : Form
     {
         SolitaireBoard board;
-        public List<PictureBox> tableColumn1;
-        public List<PictureBox> tableColumn2;
-        public List<PictureBox> tableColumn3;
-        public List<PictureBox> tableColumn4;
-        public List<PictureBox> tableColumn5;
-        public List<PictureBox> tableColumn6;
-        public List<PictureBox> tableColumn7;
+        List<PictureBox> tableColumn1;
+        List<PictureBox> tableColumn2;
+        List<PictureBox> tableColumn3;
+        List<PictureBox> tableColumn4;
+        List<PictureBox> tableColumn5;
+        List<PictureBox> tableColumn6;
+        List<PictureBox> tableColumn7;
 
         public SolitaireForm()
         {
@@ -29,17 +29,236 @@ namespace Playground_Arcade
 
             board = new();
 
-            UpdateCardPicture(board.tableColumn1[0], TableC1R1PB);
+            //UpdateCardPicture(board.tableColumn1[0], TableC1R1PB);
+            SetupAllCardPictures();
+            UpdateAllCardPictures();
         }
 
-        public void SetupAllCards()
+        //Draw a card from the drawPile and move it to the wastePile
+        //If the drawPile is empty, move all cards in the wastePile back into the drawPile
+        private void DrawPilePB_Click(object sender, EventArgs e)
         {
-            
+            board.DrawFromDrawPile();
+            //Update the wastePile's picture to the newly added card, or blank if empty
+            if (board.wastePile.Count == 0)
+            {
+                WastePilePB.Image = null;
+            }
+            else
+            {
+                board.wastePile[board.wastePile.Count - 1].FlipCard();
+                UpdateCardPicture(board.wastePile[board.wastePile.Count - 1], WastePilePB);
+            }
+            //Update the drawPile's picture to the card back, or blank if empty
+            if (board.drawPile.Count == 0)
+            {
+                DrawPilePB.Image = null;
+            }
+            else
+            {
+                DrawPilePB.Image = Resources.Back;
+            }
+        }
+
+        //Add table picture boxes to corrseponding card lists from SolitaireBoard, and flip bottom card of each column
+        public void SetupAllCardPictures()
+        {
+            //All picture boxes in column 1
+            tableColumn1 = new List<PictureBox>()
+            {
+                TableC1R1PB,
+                TableC1R2PB,
+                TableC1R3PB,
+                TableC1R4PB,
+                TableC1R5PB,
+                TableC1R6PB,
+                TableC1R7PB,
+                TableC1R8PB,
+                TableC1R9PB,
+                TableC1R10PB,
+                TableC1R11PB,
+                TableC1R12PB,
+                TableC1R13PB
+            };
+            board.tableColumn1[0].FlipCard();
+            //All picture boxes in column 2
+            tableColumn2 = new List<PictureBox>()
+            {
+                TableC2R1PB,
+                TableC2R2PB,
+                TableC2R3PB,
+                TableC2R4PB,
+                TableC2R5PB,
+                TableC2R6PB,
+                TableC2R7PB,
+                TableC2R8PB,
+                TableC2R9PB,
+                TableC2R10PB,
+                TableC2R11PB,
+                TableC2R12PB,
+                TableC2R13PB,
+                TableC2R14PB
+            };
+            board.tableColumn2[1].FlipCard();
+            //All picture boxes in column 3
+            tableColumn3 = new List<PictureBox>()
+            {
+                TableC3R1PB,
+                TableC3R2PB,
+                TableC3R3PB,
+                TableC3R4PB,
+                TableC3R5PB,
+                TableC3R6PB,
+                TableC3R7PB,
+                TableC3R8PB,
+                TableC3R9PB,
+                TableC3R10PB,
+                TableC3R11PB,
+                TableC3R12PB,
+                TableC3R13PB,
+                TableC3R14PB,
+                TableC3R15PB
+            };
+            board.tableColumn3[2].FlipCard();
+            //All picture boxes in column 4
+            tableColumn4 = new List<PictureBox>()
+            {
+                TableC4R1PB,
+                TableC4R2PB,
+                TableC4R3PB,
+                TableC4R4PB,
+                TableC4R5PB,
+                TableC4R6PB,
+                TableC4R7PB,
+                TableC4R8PB,
+                TableC4R9PB,
+                TableC4R10PB,
+                TableC4R11PB,
+                TableC4R12PB,
+                TableC4R13PB,
+                TableC4R14PB,
+                TableC4R15PB,
+                TableC4R16PB
+            };
+            board.tableColumn4[3].FlipCard();
+            //All picture boxes in column 5
+            tableColumn5 = new List<PictureBox>()
+            {
+                TableC5R1PB,
+                TableC5R2PB,
+                TableC5R3PB,
+                TableC5R4PB,
+                TableC5R5PB,
+                TableC5R6PB,
+                TableC5R7PB,
+                TableC5R8PB,
+                TableC5R9PB,
+                TableC5R10PB,
+                TableC5R11PB,
+                TableC5R12PB,
+                TableC5R13PB,
+                TableC5R14PB,
+                TableC5R15PB,
+                TableC5R16PB,
+                TableC5R17PB
+            };
+            board.tableColumn5[4].FlipCard();
+            //All picture boxes in column 6
+            tableColumn6 = new List<PictureBox>()
+            {
+                TableC6R1PB,
+                TableC6R2PB,
+                TableC6R3PB,
+                TableC6R4PB,
+                TableC6R5PB,
+                TableC6R6PB,
+                TableC6R7PB,
+                TableC6R8PB,
+                TableC6R9PB,
+                TableC6R10PB,
+                TableC6R11PB,
+                TableC6R12PB,
+                TableC6R13PB,
+                TableC6R14PB,
+                TableC6R15PB,
+                TableC6R16PB,
+                TableC6R17PB,
+                TableC6R18PB
+            };
+            board.tableColumn6[5].FlipCard();
+            //All picture boxes in column 7
+            tableColumn7 = new List<PictureBox>()
+            {
+                TableC7R1PB,
+                TableC7R2PB,
+                TableC7R3PB,
+                TableC7R4PB,
+                TableC7R5PB,
+                TableC7R6PB,
+                TableC7R7PB,
+                TableC7R8PB,
+                TableC7R9PB,
+                TableC7R10PB,
+                TableC7R11PB,
+                TableC7R12PB,
+                TableC7R13PB,
+                TableC7R14PB,
+                TableC7R15PB,
+                TableC7R16PB,
+                TableC7R17PB,
+                TableC7R18PB,
+                TableC7R19PB
+            };
+            board.tableColumn7[6].FlipCard();
+        }
+
+        //Update each table picture box's picture to the corresponding card
+        public void UpdateAllCardPictures()
+        {
+            //Update TableColumn1
+            for (int i = 0; i < board.tableColumn1.Count; i++)
+            {
+                UpdateCardPicture(board.tableColumn1[i], tableColumn1[i]);
+            }
+            //Update TableColumn2
+            for (int i = 0; i < board.tableColumn2.Count; i++)
+            {
+                UpdateCardPicture(board.tableColumn2[i], tableColumn2[i]);
+            }
+            //Update TableColumn3
+            for (int i = 0; i < board.tableColumn3.Count; i++)
+            {
+                UpdateCardPicture(board.tableColumn3[i], tableColumn3[i]);
+            }
+            //Update TableColumn4
+            for (int i = 0; i < board.tableColumn4.Count; i++)
+            {
+                UpdateCardPicture(board.tableColumn4[i], tableColumn4[i]);
+            }
+            //Update TableColumn5
+            for (int i = 0; i < board.tableColumn5.Count; i++)
+            {
+                UpdateCardPicture(board.tableColumn5[i], tableColumn5[i]);
+            }
+            //Update TableColumn6
+            for (int i = 0; i < board.tableColumn6.Count; i++)
+            {
+                UpdateCardPicture(board.tableColumn6[i], tableColumn6[i]);
+            }
+            //Update TableColumn7
+            for (int i = 0; i < board.tableColumn7.Count; i++)
+            {
+                UpdateCardPicture(board.tableColumn7[i], tableColumn7[i]);
+            }
         }
 
         public void UpdateCardPicture(SolitaireCard card, PictureBox pictureBox)
         {
-            if (card.CardRank == SolitaireCardRank.Ace)
+            if (!card.IsFaceUp)
+            {
+                pictureBox.Image = Resources.Back;
+            }
+            else if (card.CardRank == SolitaireCardRank.Ace)
             {
                 if (card.CardSuit == SolitaireCardSuit.Diamonds)
                 {
@@ -285,31 +504,6 @@ namespace Playground_Arcade
                 {
                     pictureBox.Image = Resources.KingOfClubs;
                 }
-            }
-        }
-
-        //Draw a card from the drawPile and move it to the wastePile
-        //If the drawPile is empty, move all cards in the wastePile back into the drawPile
-        private void DrawPilePB_Click(object sender, EventArgs e)
-        {
-            board.DrawFromDrawPile();
-            //Update the wastePile's picture to the newly added card, or blank if empty
-            if (board.wastePile.Count == 0)
-            {
-                WastePilePB.Image = null;
-            }
-            else
-            {
-                UpdateCardPicture(board.wastePile[board.wastePile.Count - 1], WastePilePB);
-            }
-            //Update the drawPile's picture to the card back, or blank if empty
-            if (board.drawPile.Count == 0)
-            {
-                DrawPilePB.Image = null;
-            }
-            else
-            {
-                DrawPilePB.Image = Resources.Back;
             }
         }
     }
