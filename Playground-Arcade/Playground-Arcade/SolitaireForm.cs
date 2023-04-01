@@ -29,265 +29,288 @@ namespace Playground_Arcade
 
             board = new();
 
-            SetupAllCards();
+            UpdateCardPicture(board.tableColumn1[0], TableC1R1PB);
         }
 
         public void SetupAllCards()
         {
-            //testing, will change later
-            Debug.WriteLine(board.tableColumn1[0].ToString());
-            if (board.tableColumn1[0].CardRank == SolitaireCardRank.Ace)
-            {
-                if (board.tableColumn1[0].CardSuit == SolitaireCardSuit.Diamonds)
-                {
-                    TableC1R1PB.Image = Resources.AceOfDiamonds;
-                }
-                else if (board.tableColumn1[0].CardSuit == SolitaireCardSuit.Hearts)
-                {
-                    TableC1R1PB.Image = Resources.AceOfHearts;
-                }
-                else if (board.tableColumn1[0].CardSuit == SolitaireCardSuit.Spades)
-                {
-                    TableC1R1PB.Image = Resources.AceOfSpades;
-                }
-                else if (board.tableColumn1[0].CardSuit == SolitaireCardSuit.Clubs)
-                {
-                    TableC1R1PB.Image = Resources.AceOfClubs;
-                }
-            }
-            else if (board.tableColumn1[0].CardRank == SolitaireCardRank.Two)
-            {
-                if (board.tableColumn1[0].CardSuit == SolitaireCardSuit.Diamonds)
-                {
-                    TableC1R1PB.Image = Resources.TwoOfDiamonds;
-                }
-                else if (board.tableColumn1[0].CardSuit == SolitaireCardSuit.Hearts)
-                {
-                    TableC1R1PB.Image = Resources.TwoOfHearts;
-                }
-                else if (board.tableColumn1[0].CardSuit == SolitaireCardSuit.Spades)
-                {
-                    TableC1R1PB.Image = Resources.TwoOfSpades;
-                }
-                else if (board.tableColumn1[0].CardSuit == SolitaireCardSuit.Clubs)
-                {
-                    TableC1R1PB.Image = Resources.TwoOfClubs;
-                }
-            }
-            else if (board.tableColumn1[0].CardRank == SolitaireCardRank.Three)
-            {
-                if (board.tableColumn1[0].CardSuit == SolitaireCardSuit.Diamonds)
-                {
-                    TableC1R1PB.Image = Resources.ThreeOfDiamonds;
-                }
-                else if (board.tableColumn1[0].CardSuit == SolitaireCardSuit.Hearts)
-                {
-                    TableC1R1PB.Image = Resources.ThreeOfHearts;
-                }
-                else if (board.tableColumn1[0].CardSuit == SolitaireCardSuit.Spades)
-                {
-                    TableC1R1PB.Image = Resources.ThreeOfSpades;
-                }
-                else if (board.tableColumn1[0].CardSuit == SolitaireCardSuit.Clubs)
-                {
-                    TableC1R1PB.Image = Resources.ThreeOfClubs;
-                }
-            }
-            else if (board.tableColumn1[0].CardRank == SolitaireCardRank.Four)
-            {
-                if (board.tableColumn1[0].CardSuit == SolitaireCardSuit.Diamonds)
-                {
-                    TableC1R1PB.Image = Resources.FourOfDiamonds;
-                }
-                else if (board.tableColumn1[0].CardSuit == SolitaireCardSuit.Hearts)
-                {
-                    TableC1R1PB.Image = Resources.FourOfHearts;
-                }
-                else if (board.tableColumn1[0].CardSuit == SolitaireCardSuit.Spades)
-                {
-                    TableC1R1PB.Image = Resources.FourOfSpades;
-                }
-                else if (board.tableColumn1[0].CardSuit == SolitaireCardSuit.Clubs)
-                {
-                    TableC1R1PB.Image = Resources.FourOfClubs;
-                }
-            }
-            else if (board.tableColumn1[0].CardRank == SolitaireCardRank.Five)
-            {
-                if (board.tableColumn1[0].CardSuit == SolitaireCardSuit.Diamonds)
-                {
-                    TableC1R1PB.Image = Resources.FiveOfDiamonds;
-                }
-                else if (board.tableColumn1[0].CardSuit == SolitaireCardSuit.Hearts)
-                {
-                    TableC1R1PB.Image = Resources.FiveOfHearts;
-                }
-                else if (board.tableColumn1[0].CardSuit == SolitaireCardSuit.Spades)
-                {
-                    TableC1R1PB.Image = Resources.FiveOfSpades;
-                }
-                else if (board.tableColumn1[0].CardSuit == SolitaireCardSuit.Clubs)
-                {
-                    TableC1R1PB.Image = Resources.FiveOfClubs;
-                }
-            }
-            else if (board.tableColumn1[0].CardRank == SolitaireCardRank.Six)
-            {
-                if (board.tableColumn1[0].CardSuit == SolitaireCardSuit.Diamonds)
-                {
-                    TableC1R1PB.Image = Resources.SixOfDiamonds;
-                }
-                else if (board.tableColumn1[0].CardSuit == SolitaireCardSuit.Hearts)
-                {
-                    TableC1R1PB.Image = Resources.SixOfHearts;
-                }
-                else if (board.tableColumn1[0].CardSuit == SolitaireCardSuit.Spades)
-                {
-                    TableC1R1PB.Image = Resources.SixOfSpades;
-                }
-                else if (board.tableColumn1[0].CardSuit == SolitaireCardSuit.Clubs)
-                {
-                    TableC1R1PB.Image = Resources.SixOfClubs;
-                }
-            }
-            else if (board.tableColumn1[0].CardRank == SolitaireCardRank.Seven)
-            {
-                if (board.tableColumn1[0].CardSuit == SolitaireCardSuit.Diamonds)
-                {
-                    TableC1R1PB.Image = Resources.SevenOfDiamonds;
-                }
-                else if (board.tableColumn1[0].CardSuit == SolitaireCardSuit.Hearts)
-                {
-                    TableC1R1PB.Image = Resources.SevenOfHearts;
-                }
-                else if (board.tableColumn1[0].CardSuit == SolitaireCardSuit.Spades)
-                {
-                    TableC1R1PB.Image = Resources.SevenOfSpades;
-                }
-                else if (board.tableColumn1[0].CardSuit == SolitaireCardSuit.Clubs)
-                {
-                    TableC1R1PB.Image = Resources.SevenOfClubs;
-                }
-            }
-            else if (board.tableColumn1[0].CardRank == SolitaireCardRank.Eight)
-            {
-                if (board.tableColumn1[0].CardSuit == SolitaireCardSuit.Diamonds)
-                {
-                    TableC1R1PB.Image = Resources.EightOfDiamonds;
-                }
-                else if (board.tableColumn1[0].CardSuit == SolitaireCardSuit.Hearts)
-                {
-                    TableC1R1PB.Image = Resources.EightOfHearts;
-                }
-                else if (board.tableColumn1[0].CardSuit == SolitaireCardSuit.Spades)
-                {
-                    TableC1R1PB.Image = Resources.EightOfSpades;
-                }
-                else if (board.tableColumn1[0].CardSuit == SolitaireCardSuit.Clubs)
-                {
-                    TableC1R1PB.Image = Resources.EightOfClubs;
-                }
-            }
-            else if (board.tableColumn1[0].CardRank == SolitaireCardRank.Nine)
-            {
-                if (board.tableColumn1[0].CardSuit == SolitaireCardSuit.Diamonds)
-                {
-                    TableC1R1PB.Image = Resources.NineOfDiamonds;
-                }
-                else if (board.tableColumn1[0].CardSuit == SolitaireCardSuit.Hearts)
-                {
-                    TableC1R1PB.Image = Resources.NineOfHearts;
-                }
-                else if (board.tableColumn1[0].CardSuit == SolitaireCardSuit.Spades)
-                {
-                    TableC1R1PB.Image = Resources.NineOfSpades;
-                }
-                else if (board.tableColumn1[0].CardSuit == SolitaireCardSuit.Clubs)
-                {
-                    TableC1R1PB.Image = Resources.NineOfClubs;
-                }
-            }
-            else if (board.tableColumn1[0].CardRank == SolitaireCardRank.Ten)
-            {
-                if (board.tableColumn1[0].CardSuit == SolitaireCardSuit.Diamonds)
-                {
-                    TableC1R1PB.Image = Resources.TenOfDiamonds;
-                }
-                else if (board.tableColumn1[0].CardSuit == SolitaireCardSuit.Hearts)
-                {
-                    TableC1R1PB.Image = Resources.TenOfHearts;
-                }
-                else if (board.tableColumn1[0].CardSuit == SolitaireCardSuit.Spades)
-                {
-                    TableC1R1PB.Image = Resources.TenOfSpades;
-                }
-                else if (board.tableColumn1[0].CardSuit == SolitaireCardSuit.Clubs)
-                {
-                    TableC1R1PB.Image = Resources.TenOfClubs;
-                }
-            }
-            else if (board.tableColumn1[0].CardRank == SolitaireCardRank.Jack)
-            {
-                if (board.tableColumn1[0].CardSuit == SolitaireCardSuit.Diamonds)
-                {
-                    TableC1R1PB.Image = Resources.JackOfDiamonds;
-                }
-                else if (board.tableColumn1[0].CardSuit == SolitaireCardSuit.Hearts)
-                {
-                    TableC1R1PB.Image = Resources.JackOfHearts;
-                }
-                else if (board.tableColumn1[0].CardSuit == SolitaireCardSuit.Spades)
-                {
-                    TableC1R1PB.Image = Resources.JackOfSpades;
-                }
-                else if (board.tableColumn1[0].CardSuit == SolitaireCardSuit.Clubs)
-                {
-                    TableC1R1PB.Image = Resources.JackOfClubs;
-                }
-            }
-            else if (board.tableColumn1[0].CardRank == SolitaireCardRank.Queen)
-            {
-                if (board.tableColumn1[0].CardSuit == SolitaireCardSuit.Diamonds)
-                {
-                    TableC1R1PB.Image = Resources.QueenOfDiamonds;
-                }
-                else if (board.tableColumn1[0].CardSuit == SolitaireCardSuit.Hearts)
-                {
-                    TableC1R1PB.Image = Resources.QueenOfHearts;
-                }
-                else if (board.tableColumn1[0].CardSuit == SolitaireCardSuit.Spades)
-                {
-                    TableC1R1PB.Image = Resources.QueenOfSpades;
-                }
-                else if (board.tableColumn1[0].CardSuit == SolitaireCardSuit.Clubs)
-                {
-                    TableC1R1PB.Image = Resources.QueenOfClubs;
-                }
-            }
-            else if (board.tableColumn1[0].CardRank == SolitaireCardRank.King)
-            {
-                if (board.tableColumn1[0].CardSuit == SolitaireCardSuit.Diamonds)
-                {
-                    TableC1R1PB.Image = Resources.KingOfDiamonds;
-                }
-                else if (board.tableColumn1[0].CardSuit == SolitaireCardSuit.Hearts)
-                {
-                    TableC1R1PB.Image = Resources.KingOfHearts;
-                }
-                else if (board.tableColumn1[0].CardSuit == SolitaireCardSuit.Spades)
-                {
-                    TableC1R1PB.Image = Resources.KingOfSpades;
-                }
-                else if (board.tableColumn1[0].CardSuit == SolitaireCardSuit.Clubs)
-                {
-                    TableC1R1PB.Image = Resources.KingOfClubs;
-                }
-            }
+            
         }
 
         public void UpdateCardPicture(SolitaireCard card, PictureBox pictureBox)
         {
-            
+            if (card.CardRank == SolitaireCardRank.Ace)
+            {
+                if (card.CardSuit == SolitaireCardSuit.Diamonds)
+                {
+                    pictureBox.Image = Resources.AceOfDiamonds;
+                }
+                else if (card.CardSuit == SolitaireCardSuit.Hearts)
+                {
+                    pictureBox.Image = Resources.AceOfHearts;
+                }
+                else if (card.CardSuit == SolitaireCardSuit.Spades)
+                {
+                    pictureBox.Image = Resources.AceOfSpades;
+                }
+                else if (card.CardSuit == SolitaireCardSuit.Clubs)
+                {
+                    pictureBox.Image = Resources.AceOfClubs;
+                }
+            }
+            else if (card.CardRank == SolitaireCardRank.Two)
+            {
+                if (card.CardSuit == SolitaireCardSuit.Diamonds)
+                {
+                    pictureBox.Image = Resources.TwoOfDiamonds;
+                }
+                else if (card.CardSuit == SolitaireCardSuit.Hearts)
+                {
+                    pictureBox.Image = Resources.TwoOfHearts;
+                }
+                else if (card.CardSuit == SolitaireCardSuit.Spades)
+                {
+                    pictureBox.Image = Resources.TwoOfSpades;
+                }
+                else if (card.CardSuit == SolitaireCardSuit.Clubs)
+                {
+                    pictureBox.Image = Resources.TwoOfClubs;
+                }
+            }
+            else if (card.CardRank == SolitaireCardRank.Three)
+            {
+                if (card.CardSuit == SolitaireCardSuit.Diamonds)
+                {
+                    pictureBox.Image = Resources.ThreeOfDiamonds;
+                }
+                else if (card.CardSuit == SolitaireCardSuit.Hearts)
+                {
+                    pictureBox.Image = Resources.ThreeOfHearts;
+                }
+                else if (card.CardSuit == SolitaireCardSuit.Spades)
+                {
+                    pictureBox.Image = Resources.ThreeOfSpades;
+                }
+                else if (card.CardSuit == SolitaireCardSuit.Clubs)
+                {
+                    pictureBox.Image = Resources.ThreeOfClubs;
+                }
+            }
+            else if (card.CardRank == SolitaireCardRank.Four)
+            {
+                if (card.CardSuit == SolitaireCardSuit.Diamonds)
+                {
+                    pictureBox.Image = Resources.FourOfDiamonds;
+                }
+                else if (card.CardSuit == SolitaireCardSuit.Hearts)
+                {
+                    pictureBox.Image = Resources.FourOfHearts;
+                }
+                else if (card.CardSuit == SolitaireCardSuit.Spades)
+                {
+                    pictureBox.Image = Resources.FourOfSpades;
+                }
+                else if (card.CardSuit == SolitaireCardSuit.Clubs)
+                {
+                    pictureBox.Image = Resources.FourOfClubs;
+                }
+            }
+            else if (card.CardRank == SolitaireCardRank.Five)
+            {
+                if (card.CardSuit == SolitaireCardSuit.Diamonds)
+                {
+                    pictureBox.Image = Resources.FiveOfDiamonds;
+                }
+                else if (card.CardSuit == SolitaireCardSuit.Hearts)
+                {
+                    pictureBox.Image = Resources.FiveOfHearts;
+                }
+                else if (card.CardSuit == SolitaireCardSuit.Spades)
+                {
+                    pictureBox.Image = Resources.FiveOfSpades;
+                }
+                else if (card.CardSuit == SolitaireCardSuit.Clubs)
+                {
+                    pictureBox.Image = Resources.FiveOfClubs;
+                }
+            }
+            else if (card.CardRank == SolitaireCardRank.Six)
+            {
+                if (card.CardSuit == SolitaireCardSuit.Diamonds)
+                {
+                    pictureBox.Image = Resources.SixOfDiamonds;
+                }
+                else if (card.CardSuit == SolitaireCardSuit.Hearts)
+                {
+                    pictureBox.Image = Resources.SixOfHearts;
+                }
+                else if (card.CardSuit == SolitaireCardSuit.Spades)
+                {
+                    pictureBox.Image = Resources.SixOfSpades;
+                }
+                else if (card.CardSuit == SolitaireCardSuit.Clubs)
+                {
+                    pictureBox.Image = Resources.SixOfClubs;
+                }
+            }
+            else if (card.CardRank == SolitaireCardRank.Seven)
+            {
+                if (card.CardSuit == SolitaireCardSuit.Diamonds)
+                {
+                    pictureBox.Image = Resources.SevenOfDiamonds;
+                }
+                else if (card.CardSuit == SolitaireCardSuit.Hearts)
+                {
+                    pictureBox.Image = Resources.SevenOfHearts;
+                }
+                else if (card.CardSuit == SolitaireCardSuit.Spades)
+                {
+                    pictureBox.Image = Resources.SevenOfSpades;
+                }
+                else if (card.CardSuit == SolitaireCardSuit.Clubs)
+                {
+                    pictureBox.Image = Resources.SevenOfClubs;
+                }
+            }
+            else if (card.CardRank == SolitaireCardRank.Eight)
+            {
+                if (card.CardSuit == SolitaireCardSuit.Diamonds)
+                {
+                    pictureBox.Image = Resources.EightOfDiamonds;
+                }
+                else if (card.CardSuit == SolitaireCardSuit.Hearts)
+                {
+                    pictureBox.Image = Resources.EightOfHearts;
+                }
+                else if (card.CardSuit == SolitaireCardSuit.Spades)
+                {
+                    pictureBox.Image = Resources.EightOfSpades;
+                }
+                else if (card.CardSuit == SolitaireCardSuit.Clubs)
+                {
+                    pictureBox.Image = Resources.EightOfClubs;
+                }
+            }
+            else if (card.CardRank == SolitaireCardRank.Nine)
+            {
+                if (card.CardSuit == SolitaireCardSuit.Diamonds)
+                {
+                    pictureBox.Image = Resources.NineOfDiamonds;
+                }
+                else if (card.CardSuit == SolitaireCardSuit.Hearts)
+                {
+                    pictureBox.Image = Resources.NineOfHearts;
+                }
+                else if (card.CardSuit == SolitaireCardSuit.Spades)
+                {
+                    pictureBox.Image = Resources.NineOfSpades;
+                }
+                else if (card.CardSuit == SolitaireCardSuit.Clubs)
+                {
+                    pictureBox.Image = Resources.NineOfClubs;
+                }
+            }
+            else if (card.CardRank == SolitaireCardRank.Ten)
+            {
+                if (card.CardSuit == SolitaireCardSuit.Diamonds)
+                {
+                    pictureBox.Image = Resources.TenOfDiamonds;
+                }
+                else if (card.CardSuit == SolitaireCardSuit.Hearts)
+                {
+                    pictureBox.Image = Resources.TenOfHearts;
+                }
+                else if (card.CardSuit == SolitaireCardSuit.Spades)
+                {
+                    pictureBox.Image = Resources.TenOfSpades;
+                }
+                else if (card.CardSuit == SolitaireCardSuit.Clubs)
+                {
+                    pictureBox.Image = Resources.TenOfClubs;
+                }
+            }
+            else if (card.CardRank == SolitaireCardRank.Jack)
+            {
+                if (card.CardSuit == SolitaireCardSuit.Diamonds)
+                {
+                    pictureBox.Image = Resources.JackOfDiamonds;
+                }
+                else if (card.CardSuit == SolitaireCardSuit.Hearts)
+                {
+                    pictureBox.Image = Resources.JackOfHearts;
+                }
+                else if (card.CardSuit == SolitaireCardSuit.Spades)
+                {
+                    pictureBox.Image = Resources.JackOfSpades;
+                }
+                else if (card.CardSuit == SolitaireCardSuit.Clubs)
+                {
+                    pictureBox.Image = Resources.JackOfClubs;
+                }
+            }
+            else if (card.CardRank == SolitaireCardRank.Queen)
+            {
+                if (card.CardSuit == SolitaireCardSuit.Diamonds)
+                {
+                    pictureBox.Image = Resources.QueenOfDiamonds;
+                }
+                else if (card.CardSuit == SolitaireCardSuit.Hearts)
+                {
+                    pictureBox.Image = Resources.QueenOfHearts;
+                }
+                else if (card.CardSuit == SolitaireCardSuit.Spades)
+                {
+                    pictureBox.Image = Resources.QueenOfSpades;
+                }
+                else if (card.CardSuit == SolitaireCardSuit.Clubs)
+                {
+                    pictureBox.Image = Resources.QueenOfClubs;
+                }
+            }
+            else if (card.CardRank == SolitaireCardRank.King)
+            {
+                if (card.CardSuit == SolitaireCardSuit.Diamonds)
+                {
+                    pictureBox.Image = Resources.KingOfDiamonds;
+                }
+                else if (card.CardSuit == SolitaireCardSuit.Hearts)
+                {
+                    pictureBox.Image = Resources.KingOfHearts;
+                }
+                else if (card.CardSuit == SolitaireCardSuit.Spades)
+                {
+                    pictureBox.Image = Resources.KingOfSpades;
+                }
+                else if (card.CardSuit == SolitaireCardSuit.Clubs)
+                {
+                    pictureBox.Image = Resources.KingOfClubs;
+                }
+            }
+        }
+
+        //Draw a card from the drawPile and move it to the wastePile
+        //If the drawPile is empty, move all cards in the wastePile back into the drawPile
+        private void DrawPilePB_Click(object sender, EventArgs e)
+        {
+            board.DrawFromDrawPile();
+            //Update the wastePile's picture to the newly added card, or blank if empty
+            if (board.wastePile.Count == 0)
+            {
+                WastePilePB.Image = null;
+            }
+            else
+            {
+                UpdateCardPicture(board.wastePile[board.wastePile.Count - 1], WastePilePB);
+            }
+            //Update the drawPile's picture to the card back, or blank if empty
+            if (board.drawPile.Count == 0)
+            {
+                DrawPilePB.Image = null;
+            }
+            else
+            {
+                DrawPilePB.Image = Resources.Back;
+            }
         }
     }
 }

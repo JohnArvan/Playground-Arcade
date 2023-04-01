@@ -48,6 +48,11 @@ namespace Playground_Arcade
             tableColumn6 = new List<SolitaireCard>();
             tableColumn7 = new List<SolitaireCard>();
             drawPile = new List<SolitaireCard>();
+            wastePile = new List<SolitaireCard>();
+            completePile1 = new List<SolitaireCard>();
+            completePile2 = new List<SolitaireCard>();
+            completePile3 = new List<SolitaireCard>();
+            completePile4 = new List<SolitaireCard>();
             foreach (SolitaireCardRank rank in ranks)
             {
                 foreach (SolitaireCardSuit suit in suits)
@@ -92,6 +97,27 @@ namespace Playground_Arcade
             for (int i = 28; i < allCards.Count; i++)
             {
                 drawPile.Add(allCards[i]);
+            }
+        }
+
+        //Draw a card from the drawPile and move it into the wastePile
+        //If the drawPile is empty, move all cards from the wastePile back into the drawPile
+        public void DrawFromDrawPile()
+        {
+            //If drawPile is empty, move all cards from the wastePile back into the drawPile
+            if (drawPile.Count == 0)
+            {
+                while (wastePile.Count > 0)
+                {
+                    drawPile.Add(wastePile[0]);
+                    wastePile.RemoveAt(0);
+                }
+            }
+            //Move the top card from the drawPile into the wastePile
+            else
+            {
+                wastePile.Add(drawPile[0]);
+                drawPile.RemoveAt(0);
             }
         }
     }

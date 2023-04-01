@@ -332,6 +332,7 @@
             this.DrawPilePB.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.DrawPilePB.TabIndex = 5;
             this.DrawPilePB.TabStop = false;
+            this.DrawPilePB.Click += new System.EventHandler(this.DrawPilePB_Click);
             // 
             // TableC2R1PB
             // 
@@ -1671,7 +1672,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.LimeGreen;
+            this.BackColor = System.Drawing.Color.ForestGreen;
             this.ClientSize = new System.Drawing.Size(831, 803);
             this.Controls.Add(this.TableC7R19PB);
             this.Controls.Add(this.TableC7R18PB);

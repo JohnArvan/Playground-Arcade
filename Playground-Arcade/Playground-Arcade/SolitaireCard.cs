@@ -4,6 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+//card pictures from: https://www.abc2000.com.au/playing-cards-faces.htm
+//card back picture from: https://www.dreamstime.com/back-side-poker-playing-cards-isolated-white-image108098349
+
 namespace Playground_Arcade
 {
     public class SolitaireCard
