@@ -28,423 +28,452 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.Guess1 = new System.Windows.Forms.RichTextBox();
-            this.Q = new System.Windows.Forms.Button();
-            this.W = new System.Windows.Forms.Button();
-            this.E = new System.Windows.Forms.Button();
-            this.R = new System.Windows.Forms.Button();
-            this.T = new System.Windows.Forms.Button();
-            this.Y = new System.Windows.Forms.Button();
-            this.U = new System.Windows.Forms.Button();
-            this.I = new System.Windows.Forms.Button();
-            this.O = new System.Windows.Forms.Button();
-            this.P = new System.Windows.Forms.Button();
-            this.A = new System.Windows.Forms.Button();
-            this.S = new System.Windows.Forms.Button();
-            this.D = new System.Windows.Forms.Button();
-            this.F = new System.Windows.Forms.Button();
-            this.G = new System.Windows.Forms.Button();
-            this.H = new System.Windows.Forms.Button();
-            this.J = new System.Windows.Forms.Button();
-            this.K = new System.Windows.Forms.Button();
-            this.L = new System.Windows.Forms.Button();
-            this.Z = new System.Windows.Forms.Button();
-            this.X = new System.Windows.Forms.Button();
-            this.C = new System.Windows.Forms.Button();
-            this.V = new System.Windows.Forms.Button();
-            this.B = new System.Windows.Forms.Button();
-            this.N = new System.Windows.Forms.Button();
-            this.M = new System.Windows.Forms.Button();
-            this.Delete = new System.Windows.Forms.Button();
-            this.Enter = new System.Windows.Forms.Button();
-            this.SuspendLayout();
+            Guess1 = new RichTextBox();
+            Q = new Button();
+            W = new Button();
+            E = new Button();
+            R = new Button();
+            T = new Button();
+            Y = new Button();
+            U = new Button();
+            I = new Button();
+            O = new Button();
+            P = new Button();
+            A = new Button();
+            S = new Button();
+            D = new Button();
+            F = new Button();
+            G = new Button();
+            H = new Button();
+            J = new Button();
+            K = new Button();
+            L = new Button();
+            Z = new Button();
+            X = new Button();
+            C = new Button();
+            V = new Button();
+            B = new Button();
+            N = new Button();
+            M = new Button();
+            Delete = new Button();
+            Enter = new Button();
+            SuspendLayout();
             // 
             // Guess1
             // 
-            this.Guess1.Font = new System.Drawing.Font("Rockwell", 32.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Guess1.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.Guess1.Location = new System.Drawing.Point(209, 12);
-            this.Guess1.MaxLength = 5;
-            this.Guess1.Name = "Guess1";
-            this.Guess1.Size = new System.Drawing.Size(170, 55);
-            this.Guess1.TabIndex = 0;
-            this.Guess1.Text = "APPLE";
-            this.Guess1.TextChanged += new System.EventHandler(this.Guess1_TextChanged);
+            Guess1.Font = new Font("Rockwell", 32.25F, FontStyle.Regular, GraphicsUnit.Point);
+            Guess1.ForeColor = SystemColors.Desktop;
+            Guess1.Location = new Point(214, 12);
+            Guess1.Margin = new Padding(4, 3, 4, 3);
+            Guess1.MaxLength = 5;
+            Guess1.Name = "Guess1";
+            Guess1.Size = new Size(198, 63);
+            Guess1.TabIndex = 0;
+            Guess1.Text = "APPLE";
+            Guess1.TextChanged += Guess1_TextChanged;
             // 
             // Q
             // 
-            this.Q.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.Q.Font = new System.Drawing.Font("Rockwell", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Q.Location = new System.Drawing.Point(87, 230);
-            this.Q.Name = "Q";
-            this.Q.Size = new System.Drawing.Size(29, 32);
-            this.Q.TabIndex = 1;
-            this.Q.Text = "Q";
-            this.Q.UseVisualStyleBackColor = false;
-            this.Q.Click += new System.EventHandler(this.Q_Click);
+            Q.BackColor = SystemColors.ButtonHighlight;
+            Q.Font = new Font("Rockwell", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            Q.Location = new Point(102, 265);
+            Q.Margin = new Padding(4, 3, 4, 3);
+            Q.Name = "Q";
+            Q.Size = new Size(34, 37);
+            Q.TabIndex = 1;
+            Q.Text = "Q";
+            Q.UseVisualStyleBackColor = false;
+            Q.Click += Q_Click;
             // 
             // W
             // 
-            this.W.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.W.Font = new System.Drawing.Font("Rockwell", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.W.Location = new System.Drawing.Point(122, 230);
-            this.W.Name = "W";
-            this.W.Size = new System.Drawing.Size(29, 32);
-            this.W.TabIndex = 2;
-            this.W.Text = "W";
-            this.W.UseVisualStyleBackColor = false;
-            this.W.Click += new System.EventHandler(this.W_Click);
+            W.BackColor = SystemColors.ButtonHighlight;
+            W.Font = new Font("Rockwell", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            W.Location = new Point(142, 265);
+            W.Margin = new Padding(4, 3, 4, 3);
+            W.Name = "W";
+            W.Size = new Size(34, 37);
+            W.TabIndex = 2;
+            W.Text = "W";
+            W.UseVisualStyleBackColor = false;
+            W.Click += W_Click;
             // 
             // E
             // 
-            this.E.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.E.Font = new System.Drawing.Font("Rockwell", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.E.Location = new System.Drawing.Point(157, 230);
-            this.E.Name = "E";
-            this.E.Size = new System.Drawing.Size(29, 32);
-            this.E.TabIndex = 3;
-            this.E.Text = "E";
-            this.E.UseVisualStyleBackColor = false;
-            this.E.Click += new System.EventHandler(this.E_Click);
+            E.BackColor = SystemColors.ButtonHighlight;
+            E.Font = new Font("Rockwell", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            E.Location = new Point(183, 265);
+            E.Margin = new Padding(4, 3, 4, 3);
+            E.Name = "E";
+            E.Size = new Size(34, 37);
+            E.TabIndex = 3;
+            E.Text = "E";
+            E.UseVisualStyleBackColor = false;
+            E.Click += E_Click;
             // 
             // R
             // 
-            this.R.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.R.Font = new System.Drawing.Font("Rockwell", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.R.Location = new System.Drawing.Point(192, 230);
-            this.R.Name = "R";
-            this.R.Size = new System.Drawing.Size(29, 32);
-            this.R.TabIndex = 4;
-            this.R.Text = "R";
-            this.R.UseVisualStyleBackColor = false;
-            this.R.Click += new System.EventHandler(this.R_Click);
+            R.BackColor = SystemColors.ButtonHighlight;
+            R.Font = new Font("Rockwell", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            R.Location = new Point(224, 265);
+            R.Margin = new Padding(4, 3, 4, 3);
+            R.Name = "R";
+            R.Size = new Size(34, 37);
+            R.TabIndex = 4;
+            R.Text = "R";
+            R.UseVisualStyleBackColor = false;
+            R.Click += R_Click;
             // 
             // T
             // 
-            this.T.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.T.Font = new System.Drawing.Font("Rockwell", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.T.Location = new System.Drawing.Point(227, 230);
-            this.T.Name = "T";
-            this.T.Size = new System.Drawing.Size(29, 32);
-            this.T.TabIndex = 5;
-            this.T.Text = "T";
-            this.T.UseVisualStyleBackColor = false;
-            this.T.Click += new System.EventHandler(this.T_Click);
+            T.BackColor = SystemColors.ButtonHighlight;
+            T.Font = new Font("Rockwell", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            T.Location = new Point(265, 265);
+            T.Margin = new Padding(4, 3, 4, 3);
+            T.Name = "T";
+            T.Size = new Size(34, 37);
+            T.TabIndex = 5;
+            T.Text = "T";
+            T.UseVisualStyleBackColor = false;
+            T.Click += T_Click;
             // 
             // Y
             // 
-            this.Y.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.Y.Font = new System.Drawing.Font("Rockwell", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Y.Location = new System.Drawing.Point(262, 230);
-            this.Y.Name = "Y";
-            this.Y.Size = new System.Drawing.Size(29, 32);
-            this.Y.TabIndex = 6;
-            this.Y.Text = "Y";
-            this.Y.UseVisualStyleBackColor = false;
-            this.Y.Click += new System.EventHandler(this.Y_Click);
+            Y.BackColor = SystemColors.ButtonHighlight;
+            Y.Font = new Font("Rockwell", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            Y.Location = new Point(306, 265);
+            Y.Margin = new Padding(4, 3, 4, 3);
+            Y.Name = "Y";
+            Y.Size = new Size(34, 37);
+            Y.TabIndex = 6;
+            Y.Text = "Y";
+            Y.UseVisualStyleBackColor = false;
+            Y.Click += Y_Click;
             // 
             // U
             // 
-            this.U.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.U.Font = new System.Drawing.Font("Rockwell", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.U.Location = new System.Drawing.Point(297, 230);
-            this.U.Name = "U";
-            this.U.Size = new System.Drawing.Size(29, 32);
-            this.U.TabIndex = 7;
-            this.U.Text = "U";
-            this.U.UseVisualStyleBackColor = false;
-            this.U.Click += new System.EventHandler(this.U_Click);
+            U.BackColor = SystemColors.ButtonHighlight;
+            U.Font = new Font("Rockwell", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            U.Location = new Point(346, 265);
+            U.Margin = new Padding(4, 3, 4, 3);
+            U.Name = "U";
+            U.Size = new Size(34, 37);
+            U.TabIndex = 7;
+            U.Text = "U";
+            U.UseVisualStyleBackColor = false;
+            U.Click += U_Click;
             // 
             // I
             // 
-            this.I.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.I.Font = new System.Drawing.Font("Rockwell", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.I.Location = new System.Drawing.Point(332, 230);
-            this.I.Name = "I";
-            this.I.Size = new System.Drawing.Size(29, 32);
-            this.I.TabIndex = 8;
-            this.I.Text = "I";
-            this.I.UseVisualStyleBackColor = false;
-            this.I.Click += new System.EventHandler(this.I_Click);
+            I.BackColor = SystemColors.ButtonHighlight;
+            I.Font = new Font("Rockwell", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            I.Location = new Point(387, 265);
+            I.Margin = new Padding(4, 3, 4, 3);
+            I.Name = "I";
+            I.Size = new Size(34, 37);
+            I.TabIndex = 8;
+            I.Text = "I";
+            I.UseVisualStyleBackColor = false;
+            I.Click += I_Click;
             // 
             // O
             // 
-            this.O.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.O.Font = new System.Drawing.Font("Rockwell", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.O.Location = new System.Drawing.Point(367, 230);
-            this.O.Name = "O";
-            this.O.Size = new System.Drawing.Size(29, 32);
-            this.O.TabIndex = 9;
-            this.O.Text = "O";
-            this.O.UseVisualStyleBackColor = false;
-            this.O.Click += new System.EventHandler(this.O_Click);
+            O.BackColor = SystemColors.ButtonHighlight;
+            O.Font = new Font("Rockwell", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            O.Location = new Point(428, 265);
+            O.Margin = new Padding(4, 3, 4, 3);
+            O.Name = "O";
+            O.Size = new Size(34, 37);
+            O.TabIndex = 9;
+            O.Text = "O";
+            O.UseVisualStyleBackColor = false;
+            O.Click += O_Click;
             // 
             // P
             // 
-            this.P.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.P.Font = new System.Drawing.Font("Rockwell", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.P.Location = new System.Drawing.Point(402, 230);
-            this.P.Name = "P";
-            this.P.Size = new System.Drawing.Size(29, 32);
-            this.P.TabIndex = 10;
-            this.P.Text = "P";
-            this.P.UseVisualStyleBackColor = false;
-            this.P.Click += new System.EventHandler(this.P_Click);
+            P.BackColor = SystemColors.ButtonHighlight;
+            P.Font = new Font("Rockwell", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            P.Location = new Point(469, 265);
+            P.Margin = new Padding(4, 3, 4, 3);
+            P.Name = "P";
+            P.Size = new Size(34, 37);
+            P.TabIndex = 10;
+            P.Text = "P";
+            P.UseVisualStyleBackColor = false;
+            P.Click += P_Click;
             // 
             // A
             // 
-            this.A.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.A.Font = new System.Drawing.Font("Rockwell", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.A.Location = new System.Drawing.Point(105, 262);
-            this.A.Name = "A";
-            this.A.Size = new System.Drawing.Size(29, 32);
-            this.A.TabIndex = 11;
-            this.A.Text = "A";
-            this.A.UseVisualStyleBackColor = false;
-            this.A.Click += new System.EventHandler(this.A_Click);
+            A.BackColor = SystemColors.ButtonHighlight;
+            A.Font = new Font("Rockwell", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            A.Location = new Point(122, 302);
+            A.Margin = new Padding(4, 3, 4, 3);
+            A.Name = "A";
+            A.Size = new Size(34, 37);
+            A.TabIndex = 11;
+            A.Text = "A";
+            A.UseVisualStyleBackColor = false;
+            A.Click += A_Click;
             // 
             // S
             // 
-            this.S.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.S.Font = new System.Drawing.Font("Rockwell", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.S.Location = new System.Drawing.Point(140, 262);
-            this.S.Name = "S";
-            this.S.Size = new System.Drawing.Size(29, 32);
-            this.S.TabIndex = 12;
-            this.S.Text = "S";
-            this.S.UseVisualStyleBackColor = false;
-            this.S.Click += new System.EventHandler(this.S_Click);
+            S.BackColor = SystemColors.ButtonHighlight;
+            S.Font = new Font("Rockwell", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            S.Location = new Point(163, 302);
+            S.Margin = new Padding(4, 3, 4, 3);
+            S.Name = "S";
+            S.Size = new Size(34, 37);
+            S.TabIndex = 12;
+            S.Text = "S";
+            S.UseVisualStyleBackColor = false;
+            S.Click += S_Click;
             // 
             // D
             // 
-            this.D.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.D.Font = new System.Drawing.Font("Rockwell", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.D.Location = new System.Drawing.Point(175, 262);
-            this.D.Name = "D";
-            this.D.Size = new System.Drawing.Size(29, 32);
-            this.D.TabIndex = 13;
-            this.D.Text = "D";
-            this.D.UseVisualStyleBackColor = false;
-            this.D.Click += new System.EventHandler(this.D_Click);
+            D.BackColor = SystemColors.ButtonHighlight;
+            D.Font = new Font("Rockwell", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            D.Location = new Point(204, 302);
+            D.Margin = new Padding(4, 3, 4, 3);
+            D.Name = "D";
+            D.Size = new Size(34, 37);
+            D.TabIndex = 13;
+            D.Text = "D";
+            D.UseVisualStyleBackColor = false;
+            D.Click += D_Click;
             // 
             // F
             // 
-            this.F.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.F.Font = new System.Drawing.Font("Rockwell", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.F.Location = new System.Drawing.Point(210, 262);
-            this.F.Name = "F";
-            this.F.Size = new System.Drawing.Size(29, 32);
-            this.F.TabIndex = 14;
-            this.F.Text = "F";
-            this.F.UseVisualStyleBackColor = false;
-            this.F.Click += new System.EventHandler(this.F_Click);
+            F.BackColor = SystemColors.ButtonHighlight;
+            F.Font = new Font("Rockwell", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            F.Location = new Point(245, 302);
+            F.Margin = new Padding(4, 3, 4, 3);
+            F.Name = "F";
+            F.Size = new Size(34, 37);
+            F.TabIndex = 14;
+            F.Text = "F";
+            F.UseVisualStyleBackColor = false;
+            F.Click += F_Click;
             // 
             // G
             // 
-            this.G.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.G.Font = new System.Drawing.Font("Rockwell", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.G.Location = new System.Drawing.Point(245, 262);
-            this.G.Name = "G";
-            this.G.Size = new System.Drawing.Size(29, 32);
-            this.G.TabIndex = 15;
-            this.G.Text = "G";
-            this.G.UseVisualStyleBackColor = false;
-            this.G.Click += new System.EventHandler(this.G_Click);
+            G.BackColor = SystemColors.ButtonHighlight;
+            G.Font = new Font("Rockwell", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            G.Location = new Point(286, 302);
+            G.Margin = new Padding(4, 3, 4, 3);
+            G.Name = "G";
+            G.Size = new Size(34, 37);
+            G.TabIndex = 15;
+            G.Text = "G";
+            G.UseVisualStyleBackColor = false;
+            G.Click += G_Click;
             // 
             // H
             // 
-            this.H.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.H.Font = new System.Drawing.Font("Rockwell", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.H.Location = new System.Drawing.Point(280, 262);
-            this.H.Name = "H";
-            this.H.Size = new System.Drawing.Size(29, 32);
-            this.H.TabIndex = 16;
-            this.H.Text = "H";
-            this.H.UseVisualStyleBackColor = false;
-            this.H.Click += new System.EventHandler(this.H_Click);
+            H.BackColor = SystemColors.ButtonHighlight;
+            H.Font = new Font("Rockwell", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            H.Location = new Point(327, 302);
+            H.Margin = new Padding(4, 3, 4, 3);
+            H.Name = "H";
+            H.Size = new Size(34, 37);
+            H.TabIndex = 16;
+            H.Text = "H";
+            H.UseVisualStyleBackColor = false;
+            H.Click += H_Click;
             // 
             // J
             // 
-            this.J.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.J.Font = new System.Drawing.Font("Rockwell", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.J.Location = new System.Drawing.Point(315, 262);
-            this.J.Name = "J";
-            this.J.Size = new System.Drawing.Size(29, 32);
-            this.J.TabIndex = 17;
-            this.J.Text = "J";
-            this.J.UseVisualStyleBackColor = false;
-            this.J.Click += new System.EventHandler(this.J_Click);
+            J.BackColor = SystemColors.ButtonHighlight;
+            J.Font = new Font("Rockwell", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            J.Location = new Point(368, 302);
+            J.Margin = new Padding(4, 3, 4, 3);
+            J.Name = "J";
+            J.Size = new Size(34, 37);
+            J.TabIndex = 17;
+            J.Text = "J";
+            J.UseVisualStyleBackColor = false;
+            J.Click += J_Click;
             // 
             // K
             // 
-            this.K.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.K.Font = new System.Drawing.Font("Rockwell", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.K.Location = new System.Drawing.Point(350, 262);
-            this.K.Name = "K";
-            this.K.Size = new System.Drawing.Size(29, 32);
-            this.K.TabIndex = 18;
-            this.K.Text = "K";
-            this.K.UseVisualStyleBackColor = false;
-            this.K.Click += new System.EventHandler(this.K_Click);
+            K.BackColor = SystemColors.ButtonHighlight;
+            K.Font = new Font("Rockwell", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            K.Location = new Point(408, 302);
+            K.Margin = new Padding(4, 3, 4, 3);
+            K.Name = "K";
+            K.Size = new Size(34, 37);
+            K.TabIndex = 18;
+            K.Text = "K";
+            K.UseVisualStyleBackColor = false;
+            K.Click += K_Click;
             // 
             // L
             // 
-            this.L.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.L.Font = new System.Drawing.Font("Rockwell", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.L.Location = new System.Drawing.Point(385, 262);
-            this.L.Name = "L";
-            this.L.Size = new System.Drawing.Size(29, 32);
-            this.L.TabIndex = 19;
-            this.L.Text = "L";
-            this.L.UseVisualStyleBackColor = false;
-            this.L.Click += new System.EventHandler(this.L_Click);
+            L.BackColor = SystemColors.ButtonHighlight;
+            L.Font = new Font("Rockwell", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            L.Location = new Point(449, 302);
+            L.Margin = new Padding(4, 3, 4, 3);
+            L.Name = "L";
+            L.Size = new Size(34, 37);
+            L.TabIndex = 19;
+            L.Text = "L";
+            L.UseVisualStyleBackColor = false;
+            L.Click += L_Click;
             // 
             // Z
             // 
-            this.Z.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.Z.Font = new System.Drawing.Font("Rockwell", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Z.Location = new System.Drawing.Point(122, 294);
-            this.Z.Name = "Z";
-            this.Z.Size = new System.Drawing.Size(29, 32);
-            this.Z.TabIndex = 20;
-            this.Z.Text = "Z";
-            this.Z.UseVisualStyleBackColor = false;
-            this.Z.Click += new System.EventHandler(this.Z_Click);
+            Z.BackColor = SystemColors.ButtonHighlight;
+            Z.Font = new Font("Rockwell", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            Z.Location = new Point(142, 339);
+            Z.Margin = new Padding(4, 3, 4, 3);
+            Z.Name = "Z";
+            Z.Size = new Size(34, 37);
+            Z.TabIndex = 20;
+            Z.Text = "Z";
+            Z.UseVisualStyleBackColor = false;
+            Z.Click += Z_Click;
             // 
             // X
             // 
-            this.X.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.X.Font = new System.Drawing.Font("Rockwell", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.X.Location = new System.Drawing.Point(157, 294);
-            this.X.Name = "X";
-            this.X.Size = new System.Drawing.Size(29, 32);
-            this.X.TabIndex = 21;
-            this.X.Text = "X";
-            this.X.UseVisualStyleBackColor = false;
-            this.X.Click += new System.EventHandler(this.X_Click);
+            X.BackColor = SystemColors.ButtonHighlight;
+            X.Font = new Font("Rockwell", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            X.Location = new Point(183, 339);
+            X.Margin = new Padding(4, 3, 4, 3);
+            X.Name = "X";
+            X.Size = new Size(34, 37);
+            X.TabIndex = 21;
+            X.Text = "X";
+            X.UseVisualStyleBackColor = false;
+            X.Click += X_Click;
             // 
             // C
             // 
-            this.C.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.C.Font = new System.Drawing.Font("Rockwell", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.C.Location = new System.Drawing.Point(192, 294);
-            this.C.Name = "C";
-            this.C.Size = new System.Drawing.Size(29, 32);
-            this.C.TabIndex = 22;
-            this.C.Text = "C";
-            this.C.UseVisualStyleBackColor = false;
-            this.C.Click += new System.EventHandler(this.C_Click);
+            C.BackColor = SystemColors.ButtonHighlight;
+            C.Font = new Font("Rockwell", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            C.Location = new Point(224, 339);
+            C.Margin = new Padding(4, 3, 4, 3);
+            C.Name = "C";
+            C.Size = new Size(34, 37);
+            C.TabIndex = 22;
+            C.Text = "C";
+            C.UseVisualStyleBackColor = false;
+            C.Click += C_Click;
             // 
             // V
             // 
-            this.V.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.V.Font = new System.Drawing.Font("Rockwell", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.V.Location = new System.Drawing.Point(227, 294);
-            this.V.Name = "V";
-            this.V.Size = new System.Drawing.Size(29, 32);
-            this.V.TabIndex = 23;
-            this.V.Text = "V";
-            this.V.UseVisualStyleBackColor = false;
-            this.V.Click += new System.EventHandler(this.V_Click);
+            V.BackColor = SystemColors.ButtonHighlight;
+            V.Font = new Font("Rockwell", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            V.Location = new Point(265, 339);
+            V.Margin = new Padding(4, 3, 4, 3);
+            V.Name = "V";
+            V.Size = new Size(34, 37);
+            V.TabIndex = 23;
+            V.Text = "V";
+            V.UseVisualStyleBackColor = false;
+            V.Click += V_Click;
             // 
             // B
             // 
-            this.B.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.B.Font = new System.Drawing.Font("Rockwell", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.B.Location = new System.Drawing.Point(262, 294);
-            this.B.Name = "B";
-            this.B.Size = new System.Drawing.Size(29, 32);
-            this.B.TabIndex = 24;
-            this.B.Text = "B";
-            this.B.UseVisualStyleBackColor = false;
-            this.B.Click += new System.EventHandler(this.B_Click);
+            B.BackColor = SystemColors.ButtonHighlight;
+            B.Font = new Font("Rockwell", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            B.Location = new Point(306, 339);
+            B.Margin = new Padding(4, 3, 4, 3);
+            B.Name = "B";
+            B.Size = new Size(34, 37);
+            B.TabIndex = 24;
+            B.Text = "B";
+            B.UseVisualStyleBackColor = false;
+            B.Click += B_Click;
             // 
             // N
             // 
-            this.N.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.N.Font = new System.Drawing.Font("Rockwell", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.N.Location = new System.Drawing.Point(297, 294);
-            this.N.Name = "N";
-            this.N.Size = new System.Drawing.Size(29, 32);
-            this.N.TabIndex = 25;
-            this.N.Text = "N";
-            this.N.UseVisualStyleBackColor = false;
-            this.N.Click += new System.EventHandler(this.N_Click);
+            N.BackColor = SystemColors.ButtonHighlight;
+            N.Font = new Font("Rockwell", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            N.Location = new Point(346, 339);
+            N.Margin = new Padding(4, 3, 4, 3);
+            N.Name = "N";
+            N.Size = new Size(34, 37);
+            N.TabIndex = 25;
+            N.Text = "N";
+            N.UseVisualStyleBackColor = false;
+            N.Click += N_Click;
             // 
             // M
             // 
-            this.M.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.M.Font = new System.Drawing.Font("Rockwell", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.M.Location = new System.Drawing.Point(332, 294);
-            this.M.Name = "M";
-            this.M.Size = new System.Drawing.Size(29, 32);
-            this.M.TabIndex = 26;
-            this.M.Text = "M";
-            this.M.UseVisualStyleBackColor = false;
-            this.M.Click += new System.EventHandler(this.M_Click);
+            M.BackColor = SystemColors.ButtonHighlight;
+            M.Font = new Font("Rockwell", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            M.Location = new Point(387, 339);
+            M.Margin = new Padding(4, 3, 4, 3);
+            M.Name = "M";
+            M.Size = new Size(34, 37);
+            M.TabIndex = 26;
+            M.Text = "M";
+            M.UseVisualStyleBackColor = false;
+            M.Click += M_Click;
             // 
             // Delete
             // 
-            this.Delete.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.Delete.Font = new System.Drawing.Font("Rockwell", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Delete.Location = new System.Drawing.Point(367, 294);
-            this.Delete.Name = "Delete";
-            this.Delete.Size = new System.Drawing.Size(64, 32);
-            this.Delete.TabIndex = 27;
-            this.Delete.Text = "Delete";
-            this.Delete.UseVisualStyleBackColor = false;
-            this.Delete.Click += new System.EventHandler(this.Delete_Click);
+            Delete.BackColor = SystemColors.ButtonHighlight;
+            Delete.Font = new Font("Rockwell", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            Delete.Location = new Point(428, 339);
+            Delete.Margin = new Padding(4, 3, 4, 3);
+            Delete.Name = "Delete";
+            Delete.Size = new Size(75, 37);
+            Delete.TabIndex = 27;
+            Delete.Text = "Delete";
+            Delete.UseVisualStyleBackColor = false;
+            Delete.Click += Delete_Click;
             // 
             // Enter
             // 
-            this.Enter.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.Enter.Font = new System.Drawing.Font("Rockwell", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Enter.Location = new System.Drawing.Point(72, 294);
-            this.Enter.Name = "Enter";
-            this.Enter.Size = new System.Drawing.Size(44, 32);
-            this.Enter.TabIndex = 28;
-            this.Enter.Text = "Enter";
-            this.Enter.UseVisualStyleBackColor = false;
-            this.Enter.Click += new System.EventHandler(this.Enter_Click);
+            Enter.BackColor = SystemColors.ButtonHighlight;
+            Enter.Font = new Font("Rockwell", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            Enter.Location = new Point(84, 339);
+            Enter.Margin = new Padding(4, 3, 4, 3);
+            Enter.Name = "Enter";
+            Enter.Size = new Size(51, 37);
+            Enter.TabIndex = 28;
+            Enter.Text = "Enter";
+            Enter.UseVisualStyleBackColor = false;
+            Enter.Click += Enter_Click;
             // 
             // WordleForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.Enter);
-            this.Controls.Add(this.Delete);
-            this.Controls.Add(this.M);
-            this.Controls.Add(this.N);
-            this.Controls.Add(this.B);
-            this.Controls.Add(this.V);
-            this.Controls.Add(this.C);
-            this.Controls.Add(this.X);
-            this.Controls.Add(this.Z);
-            this.Controls.Add(this.L);
-            this.Controls.Add(this.K);
-            this.Controls.Add(this.J);
-            this.Controls.Add(this.H);
-            this.Controls.Add(this.G);
-            this.Controls.Add(this.F);
-            this.Controls.Add(this.D);
-            this.Controls.Add(this.S);
-            this.Controls.Add(this.A);
-            this.Controls.Add(this.P);
-            this.Controls.Add(this.O);
-            this.Controls.Add(this.I);
-            this.Controls.Add(this.U);
-            this.Controls.Add(this.Y);
-            this.Controls.Add(this.T);
-            this.Controls.Add(this.R);
-            this.Controls.Add(this.E);
-            this.Controls.Add(this.W);
-            this.Controls.Add(this.Q);
-            this.Controls.Add(this.Guess1);
-            this.Name = "WordleForm";
-            this.Text = "Form1";
-            this.ResumeLayout(false);
-
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(933, 519);
+            Controls.Add(Enter);
+            Controls.Add(Delete);
+            Controls.Add(M);
+            Controls.Add(N);
+            Controls.Add(B);
+            Controls.Add(V);
+            Controls.Add(C);
+            Controls.Add(X);
+            Controls.Add(Z);
+            Controls.Add(L);
+            Controls.Add(K);
+            Controls.Add(J);
+            Controls.Add(H);
+            Controls.Add(G);
+            Controls.Add(F);
+            Controls.Add(D);
+            Controls.Add(S);
+            Controls.Add(A);
+            Controls.Add(P);
+            Controls.Add(O);
+            Controls.Add(I);
+            Controls.Add(U);
+            Controls.Add(Y);
+            Controls.Add(T);
+            Controls.Add(R);
+            Controls.Add(E);
+            Controls.Add(W);
+            Controls.Add(Q);
+            Controls.Add(Guess1);
+            Margin = new Padding(4, 3, 4, 3);
+            Name = "WordleForm";
+            Text = "Form1";
+            ResumeLayout(false);
         }
 
         #endregion
