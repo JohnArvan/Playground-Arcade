@@ -28,44 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-<<<<<<< Updated upstream
-            GenerateWord = new Button();
-            labelRandomWord = new Label();
-            SuspendLayout();
-            // 
-            // GenerateWord
-            // 
-            GenerateWord.Location = new Point(393, 177);
-            GenerateWord.Name = "GenerateWord";
-            GenerateWord.Size = new Size(71, 28);
-            GenerateWord.TabIndex = 0;
-            GenerateWord.Text = "Generate word";
-            GenerateWord.UseVisualStyleBackColor = true;
-            GenerateWord.Click += GenerateWord_Click;
-            // 
-            // labelRandomWord
-            // 
-            labelRandomWord.AutoSize = true;
-            labelRandomWord.Location = new Point(372, 231);
-            labelRandomWord.Name = "labelRandomWord";
-            labelRandomWord.Size = new Size(123, 15);
-            labelRandomWord.TabIndex = 1;
-            labelRandomWord.Text = "Word to be Generated";
-            labelRandomWord.Visible = false;
-            // 
-            // WordleForm
-            // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
-            AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
-            Controls.Add(labelRandomWord);
-            Controls.Add(GenerateWord);
-            Name = "WordleForm";
-            Text = "WordleForm";
-            Load += WordleForm_Load;
-            ResumeLayout(false);
-            PerformLayout();
-=======
             this.Guess1 = new System.Windows.Forms.RichTextBox();
             this.Q = new System.Windows.Forms.Button();
             this.W = new System.Windows.Forms.Button();
@@ -101,7 +63,7 @@
             // 
             this.Guess1.Font = new System.Drawing.Font("Rockwell", 32.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Guess1.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.Guess1.Location = new System.Drawing.Point(222, 12);
+            this.Guess1.Location = new System.Drawing.Point(209, 12);
             this.Guess1.MaxLength = 5;
             this.Guess1.Name = "Guess1";
             this.Guess1.Size = new System.Drawing.Size(170, 55);
@@ -113,7 +75,7 @@
             // 
             this.Q.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.Q.Font = new System.Drawing.Font("Rockwell", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Q.Location = new System.Drawing.Point(100, 230);
+            this.Q.Location = new System.Drawing.Point(87, 230);
             this.Q.Name = "Q";
             this.Q.Size = new System.Drawing.Size(29, 32);
             this.Q.TabIndex = 1;
@@ -125,7 +87,7 @@
             // 
             this.W.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.W.Font = new System.Drawing.Font("Rockwell", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.W.Location = new System.Drawing.Point(135, 230);
+            this.W.Location = new System.Drawing.Point(122, 230);
             this.W.Name = "W";
             this.W.Size = new System.Drawing.Size(29, 32);
             this.W.TabIndex = 2;
@@ -137,7 +99,7 @@
             // 
             this.E.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.E.Font = new System.Drawing.Font("Rockwell", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.E.Location = new System.Drawing.Point(170, 230);
+            this.E.Location = new System.Drawing.Point(157, 230);
             this.E.Name = "E";
             this.E.Size = new System.Drawing.Size(29, 32);
             this.E.TabIndex = 3;
@@ -149,7 +111,7 @@
             // 
             this.R.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.R.Font = new System.Drawing.Font("Rockwell", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.R.Location = new System.Drawing.Point(205, 230);
+            this.R.Location = new System.Drawing.Point(192, 230);
             this.R.Name = "R";
             this.R.Size = new System.Drawing.Size(29, 32);
             this.R.TabIndex = 4;
@@ -161,7 +123,7 @@
             // 
             this.T.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.T.Font = new System.Drawing.Font("Rockwell", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.T.Location = new System.Drawing.Point(240, 230);
+            this.T.Location = new System.Drawing.Point(227, 230);
             this.T.Name = "T";
             this.T.Size = new System.Drawing.Size(29, 32);
             this.T.TabIndex = 5;
@@ -173,7 +135,7 @@
             // 
             this.Y.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.Y.Font = new System.Drawing.Font("Rockwell", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Y.Location = new System.Drawing.Point(275, 230);
+            this.Y.Location = new System.Drawing.Point(262, 230);
             this.Y.Name = "Y";
             this.Y.Size = new System.Drawing.Size(29, 32);
             this.Y.TabIndex = 6;
@@ -185,7 +147,7 @@
             // 
             this.U.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.U.Font = new System.Drawing.Font("Rockwell", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.U.Location = new System.Drawing.Point(310, 230);
+            this.U.Location = new System.Drawing.Point(297, 230);
             this.U.Name = "U";
             this.U.Size = new System.Drawing.Size(29, 32);
             this.U.TabIndex = 7;
@@ -197,7 +159,7 @@
             // 
             this.I.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.I.Font = new System.Drawing.Font("Rockwell", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.I.Location = new System.Drawing.Point(345, 230);
+            this.I.Location = new System.Drawing.Point(332, 230);
             this.I.Name = "I";
             this.I.Size = new System.Drawing.Size(29, 32);
             this.I.TabIndex = 8;
@@ -209,7 +171,7 @@
             // 
             this.O.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.O.Font = new System.Drawing.Font("Rockwell", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.O.Location = new System.Drawing.Point(380, 230);
+            this.O.Location = new System.Drawing.Point(367, 230);
             this.O.Name = "O";
             this.O.Size = new System.Drawing.Size(29, 32);
             this.O.TabIndex = 9;
@@ -221,7 +183,7 @@
             // 
             this.P.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.P.Font = new System.Drawing.Font("Rockwell", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.P.Location = new System.Drawing.Point(415, 230);
+            this.P.Location = new System.Drawing.Point(402, 230);
             this.P.Name = "P";
             this.P.Size = new System.Drawing.Size(29, 32);
             this.P.TabIndex = 10;
@@ -233,7 +195,7 @@
             // 
             this.A.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.A.Font = new System.Drawing.Font("Rockwell", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.A.Location = new System.Drawing.Point(118, 262);
+            this.A.Location = new System.Drawing.Point(105, 262);
             this.A.Name = "A";
             this.A.Size = new System.Drawing.Size(29, 32);
             this.A.TabIndex = 11;
@@ -245,7 +207,7 @@
             // 
             this.S.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.S.Font = new System.Drawing.Font("Rockwell", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.S.Location = new System.Drawing.Point(153, 262);
+            this.S.Location = new System.Drawing.Point(140, 262);
             this.S.Name = "S";
             this.S.Size = new System.Drawing.Size(29, 32);
             this.S.TabIndex = 12;
@@ -257,7 +219,7 @@
             // 
             this.D.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.D.Font = new System.Drawing.Font("Rockwell", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.D.Location = new System.Drawing.Point(188, 262);
+            this.D.Location = new System.Drawing.Point(175, 262);
             this.D.Name = "D";
             this.D.Size = new System.Drawing.Size(29, 32);
             this.D.TabIndex = 13;
@@ -269,7 +231,7 @@
             // 
             this.F.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.F.Font = new System.Drawing.Font("Rockwell", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.F.Location = new System.Drawing.Point(223, 262);
+            this.F.Location = new System.Drawing.Point(210, 262);
             this.F.Name = "F";
             this.F.Size = new System.Drawing.Size(29, 32);
             this.F.TabIndex = 14;
@@ -281,7 +243,7 @@
             // 
             this.G.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.G.Font = new System.Drawing.Font("Rockwell", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.G.Location = new System.Drawing.Point(258, 262);
+            this.G.Location = new System.Drawing.Point(245, 262);
             this.G.Name = "G";
             this.G.Size = new System.Drawing.Size(29, 32);
             this.G.TabIndex = 15;
@@ -293,7 +255,7 @@
             // 
             this.H.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.H.Font = new System.Drawing.Font("Rockwell", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.H.Location = new System.Drawing.Point(293, 262);
+            this.H.Location = new System.Drawing.Point(280, 262);
             this.H.Name = "H";
             this.H.Size = new System.Drawing.Size(29, 32);
             this.H.TabIndex = 16;
@@ -305,7 +267,7 @@
             // 
             this.J.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.J.Font = new System.Drawing.Font("Rockwell", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.J.Location = new System.Drawing.Point(328, 262);
+            this.J.Location = new System.Drawing.Point(315, 262);
             this.J.Name = "J";
             this.J.Size = new System.Drawing.Size(29, 32);
             this.J.TabIndex = 17;
@@ -317,7 +279,7 @@
             // 
             this.K.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.K.Font = new System.Drawing.Font("Rockwell", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.K.Location = new System.Drawing.Point(363, 262);
+            this.K.Location = new System.Drawing.Point(350, 262);
             this.K.Name = "K";
             this.K.Size = new System.Drawing.Size(29, 32);
             this.K.TabIndex = 18;
@@ -329,7 +291,7 @@
             // 
             this.L.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.L.Font = new System.Drawing.Font("Rockwell", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.L.Location = new System.Drawing.Point(398, 262);
+            this.L.Location = new System.Drawing.Point(385, 262);
             this.L.Name = "L";
             this.L.Size = new System.Drawing.Size(29, 32);
             this.L.TabIndex = 19;
@@ -341,7 +303,7 @@
             // 
             this.Z.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.Z.Font = new System.Drawing.Font("Rockwell", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Z.Location = new System.Drawing.Point(135, 294);
+            this.Z.Location = new System.Drawing.Point(122, 294);
             this.Z.Name = "Z";
             this.Z.Size = new System.Drawing.Size(29, 32);
             this.Z.TabIndex = 20;
@@ -353,7 +315,7 @@
             // 
             this.X.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.X.Font = new System.Drawing.Font("Rockwell", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.X.Location = new System.Drawing.Point(170, 294);
+            this.X.Location = new System.Drawing.Point(157, 294);
             this.X.Name = "X";
             this.X.Size = new System.Drawing.Size(29, 32);
             this.X.TabIndex = 21;
@@ -365,7 +327,7 @@
             // 
             this.C.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.C.Font = new System.Drawing.Font("Rockwell", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.C.Location = new System.Drawing.Point(205, 294);
+            this.C.Location = new System.Drawing.Point(192, 294);
             this.C.Name = "C";
             this.C.Size = new System.Drawing.Size(29, 32);
             this.C.TabIndex = 22;
@@ -377,7 +339,7 @@
             // 
             this.V.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.V.Font = new System.Drawing.Font("Rockwell", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.V.Location = new System.Drawing.Point(240, 294);
+            this.V.Location = new System.Drawing.Point(227, 294);
             this.V.Name = "V";
             this.V.Size = new System.Drawing.Size(29, 32);
             this.V.TabIndex = 23;
@@ -389,7 +351,7 @@
             // 
             this.B.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.B.Font = new System.Drawing.Font("Rockwell", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.B.Location = new System.Drawing.Point(275, 294);
+            this.B.Location = new System.Drawing.Point(262, 294);
             this.B.Name = "B";
             this.B.Size = new System.Drawing.Size(29, 32);
             this.B.TabIndex = 24;
@@ -401,7 +363,7 @@
             // 
             this.N.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.N.Font = new System.Drawing.Font("Rockwell", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.N.Location = new System.Drawing.Point(310, 294);
+            this.N.Location = new System.Drawing.Point(297, 294);
             this.N.Name = "N";
             this.N.Size = new System.Drawing.Size(29, 32);
             this.N.TabIndex = 25;
@@ -413,7 +375,7 @@
             // 
             this.M.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.M.Font = new System.Drawing.Font("Rockwell", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.M.Location = new System.Drawing.Point(345, 294);
+            this.M.Location = new System.Drawing.Point(332, 294);
             this.M.Name = "M";
             this.M.Size = new System.Drawing.Size(29, 32);
             this.M.TabIndex = 26;
@@ -425,7 +387,7 @@
             // 
             this.Delete.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.Delete.Font = new System.Drawing.Font("Rockwell", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Delete.Location = new System.Drawing.Point(380, 294);
+            this.Delete.Location = new System.Drawing.Point(367, 294);
             this.Delete.Name = "Delete";
             this.Delete.Size = new System.Drawing.Size(64, 32);
             this.Delete.TabIndex = 27;
@@ -437,7 +399,7 @@
             // 
             this.Enter.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.Enter.Font = new System.Drawing.Font("Rockwell", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Enter.Location = new System.Drawing.Point(85, 294);
+            this.Enter.Location = new System.Drawing.Point(72, 294);
             this.Enter.Name = "Enter";
             this.Enter.Size = new System.Drawing.Size(44, 32);
             this.Enter.TabIndex = 28;
@@ -445,7 +407,7 @@
             this.Enter.UseVisualStyleBackColor = false;
             this.Enter.Click += new System.EventHandler(this.Enter_Click);
             // 
-            // Form1
+            // WordleForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -479,19 +441,14 @@
             this.Controls.Add(this.W);
             this.Controls.Add(this.Q);
             this.Controls.Add(this.Guess1);
-            this.Name = "Form1";
+            this.Name = "WordleForm";
             this.Text = "Form1";
             this.ResumeLayout(false);
 
->>>>>>> Stashed changes
         }
 
         #endregion
 
-<<<<<<< Updated upstream
-        private Button GenerateWord;
-        private Label labelRandomWord;
-=======
         private System.Windows.Forms.RichTextBox Guess1;
         private System.Windows.Forms.Button Q;
         private System.Windows.Forms.Button W;
@@ -521,7 +478,6 @@
         private System.Windows.Forms.Button M;
         private System.Windows.Forms.Button Delete;
         private System.Windows.Forms.Button Enter;
->>>>>>> Stashed changes
     }
 }
 

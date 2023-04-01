@@ -16,10 +16,6 @@ namespace Playground_Arcade
         {
             InitializeComponent();
         }
-<<<<<<< Updated upstream
-
-        private void WordleForm_Load(object sender, EventArgs e)
-=======
         private Random random = new Random();
         private string[] words = { "apple", "grape", "water", "straw" };
         private string WordToGuess()
@@ -188,24 +184,10 @@ namespace Playground_Arcade
         }
 
         private void Enter_Click(object sender, EventArgs e)
->>>>>>> Stashed changes
         {
 
         }
 
-<<<<<<< Updated upstream
-        private void GenerateWord_Click(object sender, EventArgs e)
-        {
-            // Define an array of words
-            string[] words = { "apple", "banana", "cherry", "grape", "orange", "pear", "pineapple", "strawberry", "watermelon" };
-
-            // Generate a random word from the array
-            Random rand = new Random();
-            string randomWord = words[rand.Next(words.Length)];
-
-            // Display the random word in a Label control
-            labelRandomWord.Text = randomWord;
-=======
         private void Delete_Click(object sender, EventArgs e)
         {
             if (Guess1.Text.Length > 0) // check if the text box is not empty
@@ -216,7 +198,6 @@ namespace Playground_Arcade
         private void Guess1_TextChanged(object sender, EventArgs e)
         {
 
->>>>>>> Stashed changes
         }
     }
 }
