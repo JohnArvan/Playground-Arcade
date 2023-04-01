@@ -57,26 +57,32 @@
             M = new Button();
             Delete = new Button();
             Enter = new Button();
+            Guess2 = new RichTextBox();
+            Guess3 = new RichTextBox();
+            Guess4 = new RichTextBox();
+            Guess5 = new RichTextBox();
+            GuessFinal = new RichTextBox();
+            InvalidWordMessage = new Label();
             SuspendLayout();
             // 
             // Guess1
             // 
-            Guess1.Font = new Font("Rockwell", 32.25F, FontStyle.Regular, GraphicsUnit.Point);
-            Guess1.ForeColor = SystemColors.Desktop;
-            Guess1.Location = new Point(214, 12);
+            Guess1.Font = new Font("Courier New", 36F, FontStyle.Bold, GraphicsUnit.Point);
+            Guess1.ForeColor = SystemColors.ActiveCaptionText;
+            Guess1.Location = new Point(365, 12);
             Guess1.Margin = new Padding(4, 3, 4, 3);
             Guess1.MaxLength = 5;
             Guess1.Name = "Guess1";
-            Guess1.Size = new Size(198, 63);
+            Guess1.Size = new Size(156, 64);
             Guess1.TabIndex = 0;
-            Guess1.Text = "APPLE";
+            Guess1.Text = "";
             Guess1.TextChanged += Guess1_TextChanged;
             // 
             // Q
             // 
             Q.BackColor = SystemColors.ButtonHighlight;
             Q.Font = new Font("Rockwell", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            Q.Location = new Point(102, 265);
+            Q.Location = new Point(242, 401);
             Q.Margin = new Padding(4, 3, 4, 3);
             Q.Name = "Q";
             Q.Size = new Size(34, 37);
@@ -89,7 +95,7 @@
             // 
             W.BackColor = SystemColors.ButtonHighlight;
             W.Font = new Font("Rockwell", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            W.Location = new Point(142, 265);
+            W.Location = new Point(282, 401);
             W.Margin = new Padding(4, 3, 4, 3);
             W.Name = "W";
             W.Size = new Size(34, 37);
@@ -102,7 +108,7 @@
             // 
             E.BackColor = SystemColors.ButtonHighlight;
             E.Font = new Font("Rockwell", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            E.Location = new Point(183, 265);
+            E.Location = new Point(323, 401);
             E.Margin = new Padding(4, 3, 4, 3);
             E.Name = "E";
             E.Size = new Size(34, 37);
@@ -115,7 +121,7 @@
             // 
             R.BackColor = SystemColors.ButtonHighlight;
             R.Font = new Font("Rockwell", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            R.Location = new Point(224, 265);
+            R.Location = new Point(364, 401);
             R.Margin = new Padding(4, 3, 4, 3);
             R.Name = "R";
             R.Size = new Size(34, 37);
@@ -128,7 +134,7 @@
             // 
             T.BackColor = SystemColors.ButtonHighlight;
             T.Font = new Font("Rockwell", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            T.Location = new Point(265, 265);
+            T.Location = new Point(405, 401);
             T.Margin = new Padding(4, 3, 4, 3);
             T.Name = "T";
             T.Size = new Size(34, 37);
@@ -141,7 +147,7 @@
             // 
             Y.BackColor = SystemColors.ButtonHighlight;
             Y.Font = new Font("Rockwell", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            Y.Location = new Point(306, 265);
+            Y.Location = new Point(446, 401);
             Y.Margin = new Padding(4, 3, 4, 3);
             Y.Name = "Y";
             Y.Size = new Size(34, 37);
@@ -154,7 +160,7 @@
             // 
             U.BackColor = SystemColors.ButtonHighlight;
             U.Font = new Font("Rockwell", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            U.Location = new Point(346, 265);
+            U.Location = new Point(486, 401);
             U.Margin = new Padding(4, 3, 4, 3);
             U.Name = "U";
             U.Size = new Size(34, 37);
@@ -167,7 +173,7 @@
             // 
             I.BackColor = SystemColors.ButtonHighlight;
             I.Font = new Font("Rockwell", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            I.Location = new Point(387, 265);
+            I.Location = new Point(527, 401);
             I.Margin = new Padding(4, 3, 4, 3);
             I.Name = "I";
             I.Size = new Size(34, 37);
@@ -180,7 +186,7 @@
             // 
             O.BackColor = SystemColors.ButtonHighlight;
             O.Font = new Font("Rockwell", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            O.Location = new Point(428, 265);
+            O.Location = new Point(568, 401);
             O.Margin = new Padding(4, 3, 4, 3);
             O.Name = "O";
             O.Size = new Size(34, 37);
@@ -193,7 +199,7 @@
             // 
             P.BackColor = SystemColors.ButtonHighlight;
             P.Font = new Font("Rockwell", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            P.Location = new Point(469, 265);
+            P.Location = new Point(609, 401);
             P.Margin = new Padding(4, 3, 4, 3);
             P.Name = "P";
             P.Size = new Size(34, 37);
@@ -206,7 +212,7 @@
             // 
             A.BackColor = SystemColors.ButtonHighlight;
             A.Font = new Font("Rockwell", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            A.Location = new Point(122, 302);
+            A.Location = new Point(262, 438);
             A.Margin = new Padding(4, 3, 4, 3);
             A.Name = "A";
             A.Size = new Size(34, 37);
@@ -219,7 +225,7 @@
             // 
             S.BackColor = SystemColors.ButtonHighlight;
             S.Font = new Font("Rockwell", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            S.Location = new Point(163, 302);
+            S.Location = new Point(303, 438);
             S.Margin = new Padding(4, 3, 4, 3);
             S.Name = "S";
             S.Size = new Size(34, 37);
@@ -232,7 +238,7 @@
             // 
             D.BackColor = SystemColors.ButtonHighlight;
             D.Font = new Font("Rockwell", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            D.Location = new Point(204, 302);
+            D.Location = new Point(344, 438);
             D.Margin = new Padding(4, 3, 4, 3);
             D.Name = "D";
             D.Size = new Size(34, 37);
@@ -245,7 +251,7 @@
             // 
             F.BackColor = SystemColors.ButtonHighlight;
             F.Font = new Font("Rockwell", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            F.Location = new Point(245, 302);
+            F.Location = new Point(385, 438);
             F.Margin = new Padding(4, 3, 4, 3);
             F.Name = "F";
             F.Size = new Size(34, 37);
@@ -258,7 +264,7 @@
             // 
             G.BackColor = SystemColors.ButtonHighlight;
             G.Font = new Font("Rockwell", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            G.Location = new Point(286, 302);
+            G.Location = new Point(426, 438);
             G.Margin = new Padding(4, 3, 4, 3);
             G.Name = "G";
             G.Size = new Size(34, 37);
@@ -271,7 +277,7 @@
             // 
             H.BackColor = SystemColors.ButtonHighlight;
             H.Font = new Font("Rockwell", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            H.Location = new Point(327, 302);
+            H.Location = new Point(467, 438);
             H.Margin = new Padding(4, 3, 4, 3);
             H.Name = "H";
             H.Size = new Size(34, 37);
@@ -284,7 +290,7 @@
             // 
             J.BackColor = SystemColors.ButtonHighlight;
             J.Font = new Font("Rockwell", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            J.Location = new Point(368, 302);
+            J.Location = new Point(508, 438);
             J.Margin = new Padding(4, 3, 4, 3);
             J.Name = "J";
             J.Size = new Size(34, 37);
@@ -297,7 +303,7 @@
             // 
             K.BackColor = SystemColors.ButtonHighlight;
             K.Font = new Font("Rockwell", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            K.Location = new Point(408, 302);
+            K.Location = new Point(548, 438);
             K.Margin = new Padding(4, 3, 4, 3);
             K.Name = "K";
             K.Size = new Size(34, 37);
@@ -310,7 +316,7 @@
             // 
             L.BackColor = SystemColors.ButtonHighlight;
             L.Font = new Font("Rockwell", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            L.Location = new Point(449, 302);
+            L.Location = new Point(589, 438);
             L.Margin = new Padding(4, 3, 4, 3);
             L.Name = "L";
             L.Size = new Size(34, 37);
@@ -323,7 +329,7 @@
             // 
             Z.BackColor = SystemColors.ButtonHighlight;
             Z.Font = new Font("Rockwell", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            Z.Location = new Point(142, 339);
+            Z.Location = new Point(282, 475);
             Z.Margin = new Padding(4, 3, 4, 3);
             Z.Name = "Z";
             Z.Size = new Size(34, 37);
@@ -336,7 +342,7 @@
             // 
             X.BackColor = SystemColors.ButtonHighlight;
             X.Font = new Font("Rockwell", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            X.Location = new Point(183, 339);
+            X.Location = new Point(323, 475);
             X.Margin = new Padding(4, 3, 4, 3);
             X.Name = "X";
             X.Size = new Size(34, 37);
@@ -349,7 +355,7 @@
             // 
             C.BackColor = SystemColors.ButtonHighlight;
             C.Font = new Font("Rockwell", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            C.Location = new Point(224, 339);
+            C.Location = new Point(364, 475);
             C.Margin = new Padding(4, 3, 4, 3);
             C.Name = "C";
             C.Size = new Size(34, 37);
@@ -362,7 +368,7 @@
             // 
             V.BackColor = SystemColors.ButtonHighlight;
             V.Font = new Font("Rockwell", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            V.Location = new Point(265, 339);
+            V.Location = new Point(405, 475);
             V.Margin = new Padding(4, 3, 4, 3);
             V.Name = "V";
             V.Size = new Size(34, 37);
@@ -375,7 +381,7 @@
             // 
             B.BackColor = SystemColors.ButtonHighlight;
             B.Font = new Font("Rockwell", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            B.Location = new Point(306, 339);
+            B.Location = new Point(446, 475);
             B.Margin = new Padding(4, 3, 4, 3);
             B.Name = "B";
             B.Size = new Size(34, 37);
@@ -388,7 +394,7 @@
             // 
             N.BackColor = SystemColors.ButtonHighlight;
             N.Font = new Font("Rockwell", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            N.Location = new Point(346, 339);
+            N.Location = new Point(486, 475);
             N.Margin = new Padding(4, 3, 4, 3);
             N.Name = "N";
             N.Size = new Size(34, 37);
@@ -401,7 +407,7 @@
             // 
             M.BackColor = SystemColors.ButtonHighlight;
             M.Font = new Font("Rockwell", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            M.Location = new Point(387, 339);
+            M.Location = new Point(527, 475);
             M.Margin = new Padding(4, 3, 4, 3);
             M.Name = "M";
             M.Size = new Size(34, 37);
@@ -414,7 +420,7 @@
             // 
             Delete.BackColor = SystemColors.ButtonHighlight;
             Delete.Font = new Font("Rockwell", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            Delete.Location = new Point(428, 339);
+            Delete.Location = new Point(568, 475);
             Delete.Margin = new Padding(4, 3, 4, 3);
             Delete.Name = "Delete";
             Delete.Size = new Size(75, 37);
@@ -427,20 +433,103 @@
             // 
             Enter.BackColor = SystemColors.ButtonHighlight;
             Enter.Font = new Font("Rockwell", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            Enter.Location = new Point(84, 339);
+            Enter.Location = new Point(220, 475);
             Enter.Margin = new Padding(4, 3, 4, 3);
             Enter.Name = "Enter";
-            Enter.Size = new Size(51, 37);
+            Enter.Size = new Size(55, 37);
             Enter.TabIndex = 28;
             Enter.Text = "Enter";
             Enter.UseVisualStyleBackColor = false;
             Enter.Click += Enter_Click;
+            // 
+            // Guess2
+            // 
+            Guess2.Font = new Font("Courier New", 36F, FontStyle.Bold, GraphicsUnit.Point);
+            Guess2.ForeColor = SystemColors.ActiveCaptionText;
+            Guess2.Location = new Point(365, 68);
+            Guess2.Margin = new Padding(4, 3, 4, 3);
+            Guess2.MaxLength = 5;
+            Guess2.Name = "Guess2";
+            Guess2.Size = new Size(156, 64);
+            Guess2.TabIndex = 29;
+            Guess2.Text = "";
+            Guess2.TextChanged += Guess2_TextChanged;
+            // 
+            // Guess3
+            // 
+            Guess3.Font = new Font("Courier New", 36F, FontStyle.Bold, GraphicsUnit.Point);
+            Guess3.ForeColor = SystemColors.ActiveCaptionText;
+            Guess3.Location = new Point(365, 125);
+            Guess3.Margin = new Padding(4, 3, 4, 3);
+            Guess3.MaxLength = 5;
+            Guess3.Name = "Guess3";
+            Guess3.Size = new Size(156, 64);
+            Guess3.TabIndex = 30;
+            Guess3.Text = "";
+            Guess3.TextChanged += Guess3_TextChanged;
+            // 
+            // Guess4
+            // 
+            Guess4.Font = new Font("Courier New", 36F, FontStyle.Bold, GraphicsUnit.Point);
+            Guess4.ForeColor = SystemColors.ActiveCaptionText;
+            Guess4.Location = new Point(365, 179);
+            Guess4.Margin = new Padding(4, 3, 4, 3);
+            Guess4.MaxLength = 5;
+            Guess4.Name = "Guess4";
+            Guess4.Size = new Size(156, 64);
+            Guess4.TabIndex = 31;
+            Guess4.Text = "";
+            Guess4.TextChanged += Guess4_TextChanged;
+            // 
+            // Guess5
+            // 
+            Guess5.Font = new Font("Courier New", 36F, FontStyle.Bold, GraphicsUnit.Point);
+            Guess5.ForeColor = SystemColors.ActiveCaptionText;
+            Guess5.Location = new Point(365, 235);
+            Guess5.Margin = new Padding(4, 3, 4, 3);
+            Guess5.MaxLength = 5;
+            Guess5.Name = "Guess5";
+            Guess5.Size = new Size(156, 64);
+            Guess5.TabIndex = 32;
+            Guess5.Text = "";
+            Guess5.TextChanged += Guess5_TextChanged;
+            // 
+            // GuessFinal
+            // 
+            GuessFinal.Font = new Font("Courier New", 36F, FontStyle.Bold, GraphicsUnit.Point);
+            GuessFinal.ForeColor = SystemColors.ActiveCaptionText;
+            GuessFinal.Location = new Point(365, 292);
+            GuessFinal.Margin = new Padding(4, 3, 4, 3);
+            GuessFinal.MaxLength = 5;
+            GuessFinal.Name = "GuessFinal";
+            GuessFinal.Size = new Size(156, 64);
+            GuessFinal.TabIndex = 33;
+            GuessFinal.Text = "";
+            GuessFinal.TextChanged += GuessFinal_TextChanged;
+            // 
+            // InvalidWordMessage
+            // 
+            InvalidWordMessage.AutoSize = true;
+            InvalidWordMessage.Font = new Font("Rockwell", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            InvalidWordMessage.Location = new Point(42, 164);
+            InvalidWordMessage.Name = "InvalidWordMessage";
+            InvalidWordMessage.Size = new Size(254, 21);
+            InvalidWordMessage.TabIndex = 34;
+            InvalidWordMessage.Text = "Please enter a 5 letter word";
+            InvalidWordMessage.Visible = false;
+            InvalidWordMessage.Click += InvalidWordMessage_Click;
             // 
             // WordleForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(933, 519);
+            Controls.Add(InvalidWordMessage);
+            Controls.Add(GuessFinal);
+            Controls.Add(Guess5);
+            Controls.Add(Guess4);
+            Controls.Add(Guess3);
+            Controls.Add(Guess2);
             Controls.Add(Enter);
             Controls.Add(Delete);
             Controls.Add(M);
@@ -473,7 +562,9 @@
             Margin = new Padding(4, 3, 4, 3);
             Name = "WordleForm";
             Text = "Form1";
+            Load += WordleForm_Load;
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
@@ -507,6 +598,12 @@
         private System.Windows.Forms.Button M;
         private System.Windows.Forms.Button Delete;
         private System.Windows.Forms.Button Enter;
+        private RichTextBox Guess2;
+        private RichTextBox Guess3;
+        private RichTextBox Guess4;
+        private RichTextBox Guess5;
+        private RichTextBox GuessFinal;
+        private Label InvalidWordMessage;
     }
 }
 
