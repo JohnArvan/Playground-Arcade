@@ -14,7 +14,7 @@ using System.Windows.Forms;
 //click on empty column (move king there only)
 //move to complete pile (start with ace and go up (one at a time only))
 //move cards from waste pile
-//visual fixes
+//visual fixes (picture layering)
 //time complexity fixes (remove card)
 
 namespace Playground_Arcade
@@ -569,8 +569,56 @@ namespace Playground_Arcade
 
         private void MoveCard(List<SolitaireCard> clickedColumn, List<PictureBox> clickedPictureBox, int clickedCardIndex)
         {
+            //If the clicked column is empty and the first selected card is a king, move the selected cards to the new column
+            if (clickedColumn.Count == 0 && selectedCards.Count > 0)
+            {
+                if (selectedCards[0].CardRank == SolitaireCardRank.King)
+                {
+                    //Move all selected cards to the new column
+                    for (int i = 0; i < selectedCards.Count; i++)
+                    {
+                        clickedColumn.Add(selectedCards[i]);
+                        clickedPictureBox[clickedCardIndex + i].Enabled = true;
+                        clickedPictureBox[clickedCardIndex + i].Visible = true;
+                    }
+                    //Remove selected cards from old column
+                    if (tableColumn1 == columnOfCardsToBeMoved)
+                    {
+                        RemoveMovedCard(tableColumn1, board.tableColumn1, TableC1R1PB);
+                    }
+                    else if (tableColumn2 == columnOfCardsToBeMoved)
+                    {
+                        RemoveMovedCard(tableColumn2, board.tableColumn2, TableC2R1PB);
+                    }
+                    else if (tableColumn3 == columnOfCardsToBeMoved)
+                    {
+                        RemoveMovedCard(tableColumn3, board.tableColumn3, TableC3R1PB);
+                    }
+                    else if (tableColumn4 == columnOfCardsToBeMoved)
+                    {
+                        RemoveMovedCard(tableColumn4, board.tableColumn4, TableC4R1PB);
+                    }
+                    else if (tableColumn5 == columnOfCardsToBeMoved)
+                    {
+                        RemoveMovedCard(tableColumn5, board.tableColumn5, TableC5R1PB);
+                    }
+                    else if (tableColumn6 == columnOfCardsToBeMoved)
+                    {
+                        RemoveMovedCard(tableColumn6, board.tableColumn6, TableC6R1PB);
+                    }
+                    else if (tableColumn7 == columnOfCardsToBeMoved)
+                    {
+                        RemoveMovedCard(tableColumn7, board.tableColumn7, TableC7R1PB);
+                    }
+                    while (selectedCards.Count > 0)
+                    {
+                        selectedCards.RemoveAt(0);
+                    }
+                    UpdateAllCardPictures();
+                }
+            }
             //Check if clicked card is face up
-            if (clickedColumn[clickedCardIndex].IsFaceUp)
+            else if (clickedColumn.Count > 0 && clickedColumn[clickedCardIndex].IsFaceUp)
             {
                 //If no card is currently selected, select clicked card
                 if (selectedCards.Count == 0)
@@ -598,13 +646,42 @@ namespace Playground_Arcade
                     else if (clickedColumn[clickedCardIndex].isRed != selectedCards[0].isRed && clickedColumn.Count == (clickedCardIndex + 1))
                     // && selectedCards[0].CardRank == clickedColumn[clickedCardIndex].CardRank + 1
                     {
+                        //Move all selected cards to the new column
                         for (int i = 0; i < selectedCards.Count; i++)
                         {
                             clickedColumn.Add(selectedCards[i]);
                             clickedPictureBox[clickedCardIndex + i + 1].Enabled = true;
                             clickedPictureBox[clickedCardIndex + i + 1].Visible = true;
                         }
-                        RemoveMovedCard();
+                        //Remove selected cards from old column
+                        if (tableColumn1 == columnOfCardsToBeMoved)
+                        {
+                            RemoveMovedCard(tableColumn1, board.tableColumn1, TableC1R1PB);
+                        }
+                        else if (tableColumn2 == columnOfCardsToBeMoved)
+                        {
+                            RemoveMovedCard(tableColumn2, board.tableColumn2, TableC2R1PB);
+                        }
+                        else if (tableColumn3 == columnOfCardsToBeMoved)
+                        {
+                            RemoveMovedCard(tableColumn3, board.tableColumn3, TableC3R1PB);
+                        }
+                        else if (tableColumn4 == columnOfCardsToBeMoved)
+                        {
+                            RemoveMovedCard(tableColumn4, board.tableColumn4, TableC4R1PB);
+                        }
+                        else if (tableColumn5 == columnOfCardsToBeMoved)
+                        {
+                            RemoveMovedCard(tableColumn5, board.tableColumn5, TableC5R1PB);
+                        }
+                        else if (tableColumn6 == columnOfCardsToBeMoved)
+                        {
+                            RemoveMovedCard(tableColumn6, board.tableColumn6, TableC6R1PB);
+                        }
+                        else if (tableColumn7 == columnOfCardsToBeMoved)
+                        {
+                            RemoveMovedCard(tableColumn7, board.tableColumn7, TableC7R1PB);
+                        }
                         while (selectedCards.Count > 0)
                         {
                             selectedCards.RemoveAt(0);
@@ -616,146 +693,31 @@ namespace Playground_Arcade
             UpdateTestingLabel();
         }
 
-        private void RemoveMovedCard()
+        private void RemoveMovedCard(List<PictureBox> tableColumnPictures, List<SolitaireCard> boardCards, PictureBox cardPicture)
         {
-            if (tableColumn1 == columnOfCardsToBeMoved)
+            for (int i = 0; i < boardCards.Count; i++)
             {
-                for (int i = 0; i < board.tableColumn1.Count; i++)
+                if (boardCards[i] == selectedCards[0])
                 {
-                    if (board.tableColumn1[i] == selectedCards[0])
+                    for (int e = i; e < (i + selectedCards.Count); e++)
                     {
-                        for (int e = i; e < (i + selectedCards.Count); e++)
+                        if (e != 0)
                         {
-                            tableColumn1[e].Enabled = false;
-                            tableColumn1[e].Visible = false;
-                            board.tableColumn1.RemoveAt(i);
+                            tableColumnPictures[e].Enabled = false;
+                            tableColumnPictures[e].Visible = false;
                         }
-                        if (board.tableColumn1.Count > 0)
+                        else
                         {
-                            board.tableColumn1[i - 1].FlipCard();
+                            cardPicture.Image = null;
+                            cardPicture.BorderStyle = BorderStyle.FixedSingle;
                         }
-                        return;
+                        boardCards.RemoveAt(i);
                     }
-                }
-            }
-            if (tableColumn2 == columnOfCardsToBeMoved)
-            {
-                for (int i = 0; i < board.tableColumn2.Count; i++)
-                {
-                    if (board.tableColumn2[i] == selectedCards[0])
+                    if (boardCards.Count > 0)
                     {
-                        for (int e = i; e < (i + selectedCards.Count); e++)
-                        {
-                            tableColumn2[e].Enabled = false;
-                            tableColumn2[e].Visible = false;
-                            board.tableColumn2.RemoveAt(i);
-                        }
-                        if (board.tableColumn2.Count > 0)
-                        {
-                            board.tableColumn2[i - 1].FlipCard();
-                        }
-                        return;
+                        boardCards[i - 1].FlipCard();
                     }
-                }
-            }
-            if (tableColumn3 == columnOfCardsToBeMoved)
-            {
-                for (int i = 0; i < board.tableColumn3.Count; i++)
-                {
-                    if (board.tableColumn3[i] == selectedCards[0])
-                    {
-                        for (int e = i; e < (i + selectedCards.Count); e++)
-                        {
-                            tableColumn3[e].Enabled = false;
-                            tableColumn3[e].Visible = false;
-                            board.tableColumn3.RemoveAt(i);
-                        }
-                        if (board.tableColumn3.Count > 0)
-                        {
-                            board.tableColumn3[i - 1].FlipCard();
-                        }
-                        return;
-                    }
-                }
-            }
-            else if (tableColumn4 == columnOfCardsToBeMoved)
-            {
-                for (int i = 0; i < board.tableColumn4.Count; i++)
-                {
-                    if (board.tableColumn4[i] == selectedCards[0])
-                    {
-                        for (int e = i; e < (i + selectedCards.Count); e++)
-                        {
-                            tableColumn4[e].Enabled = false;
-                            tableColumn4[e].Visible = false;
-                            board.tableColumn4.RemoveAt(i);
-                        }
-                        if (board.tableColumn4.Count > 0)
-                        {
-                            board.tableColumn4[i - 1].FlipCard();
-                        }
-                        return;
-                    }
-                }
-            }
-            if (tableColumn5 == columnOfCardsToBeMoved)
-            {
-                for (int i = 0; i < board.tableColumn5.Count; i++)
-                {
-                    if (board.tableColumn5[i] == selectedCards[0])
-                    {
-                        for (int e = i; e < (i + selectedCards.Count); e++)
-                        {
-                            tableColumn5[e].Enabled = false;
-                            tableColumn5[e].Visible = false;
-                            board.tableColumn5.RemoveAt(i);
-                        }
-                        if (board.tableColumn5.Count > 0)
-                        {
-                            board.tableColumn5[i - 1].FlipCard();
-                        }
-                        return;
-                    }
-                }
-            }
-            if (tableColumn6 == columnOfCardsToBeMoved)
-            {
-                for (int i = 0; i < board.tableColumn6.Count; i++)
-                {
-                    if (board.tableColumn6[i] == selectedCards[0])
-                    {
-                        for (int e = i; e < (i + selectedCards.Count); e++)
-                        {
-                            tableColumn6[e].Enabled = false;
-                            tableColumn6[e].Visible = false;
-                            board.tableColumn6.RemoveAt(i);
-                        }
-                        if (board.tableColumn6.Count > 0)
-                        {
-                            board.tableColumn6[i - 1].FlipCard();
-                        }
-                        return;
-                    }
-                }
-            }
-            if (tableColumn7 == columnOfCardsToBeMoved)
-            {
-                for (int i = 0; i < board.tableColumn7.Count; i++)
-                {
-                    if (board.tableColumn7[i] == selectedCards[0])
-                    {
-                        for (int e = i; e < (i + selectedCards.Count); e++)
-                        {
-                            tableColumn7[e].Enabled = false;
-                            tableColumn7[e].Visible = false;
-                            board.tableColumn7.RemoveAt(i);
-                        }
-                        if (board.tableColumn7.Count > 0)
-                        {
-                            board.tableColumn7[i - 1].FlipCard();
-                        }
-                        return;
-                    }
+                    return;
                 }
             }
         }
