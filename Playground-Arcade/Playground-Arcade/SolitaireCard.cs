@@ -14,11 +14,21 @@ namespace Playground_Arcade
         public SolitaireCardRank CardRank { get; private set; }
         public SolitaireCardSuit CardSuit { get; private set; }
         public bool IsFaceUp { get; set; }
+        public bool isRed { get; private set; }
 
         public SolitaireCard(SolitaireCardRank rank, SolitaireCardSuit suit)
         {
             CardRank = rank;
             CardSuit = suit;
+            if (CardSuit == SolitaireCardSuit.Diamonds || CardSuit == SolitaireCardSuit.Hearts)
+            {
+                isRed = true;
+            }
+            else
+            {
+                isRed = false;
+            }
+
         }
 
         //Flip card so it's face up

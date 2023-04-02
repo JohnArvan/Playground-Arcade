@@ -148,6 +148,7 @@
             this.TableC7R18PB = new System.Windows.Forms.PictureBox();
             this.TableC6R18PB = new System.Windows.Forms.PictureBox();
             this.TableC7R19PB = new System.Windows.Forms.PictureBox();
+            this.testingLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.CompletePile1PB)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CompletePile2PB)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CompletePile3PB)).BeginInit();
@@ -344,6 +345,7 @@
             this.TableC2R1PB.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.TableC2R1PB.TabIndex = 7;
             this.TableC2R1PB.TabStop = false;
+            this.TableC2R1PB.Click += new System.EventHandler(this.TableC2R1PB_Click);
             // 
             // TableC3R1PB
             // 
@@ -355,6 +357,7 @@
             this.TableC3R1PB.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.TableC3R1PB.TabIndex = 8;
             this.TableC3R1PB.TabStop = false;
+            this.TableC3R1PB.Click += new System.EventHandler(this.TableC3R1PB_Click);
             // 
             // TableC4R1PB
             // 
@@ -366,6 +369,7 @@
             this.TableC4R1PB.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.TableC4R1PB.TabIndex = 9;
             this.TableC4R1PB.TabStop = false;
+            this.TableC4R1PB.Click += new System.EventHandler(this.TableC4R1PB_Click);
             // 
             // TableC5R1PB
             // 
@@ -377,6 +381,7 @@
             this.TableC5R1PB.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.TableC5R1PB.TabIndex = 10;
             this.TableC5R1PB.TabStop = false;
+            this.TableC5R1PB.Click += new System.EventHandler(this.TableC5R1PB_Click);
             // 
             // TableC6R1PB
             // 
@@ -388,6 +393,7 @@
             this.TableC6R1PB.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.TableC6R1PB.TabIndex = 11;
             this.TableC6R1PB.TabStop = false;
+            this.TableC6R1PB.Click += new System.EventHandler(this.TableC6R1PB_Click);
             // 
             // TableC7R1PB
             // 
@@ -399,6 +405,7 @@
             this.TableC7R1PB.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.TableC7R1PB.TabIndex = 12;
             this.TableC7R1PB.TabStop = false;
+            this.TableC7R1PB.Click += new System.EventHandler(this.TableC7R1PB_Click);
             // 
             // PlayButton
             // 
@@ -429,6 +436,7 @@
             this.TableC1R2PB.TabIndex = 15;
             this.TableC1R2PB.TabStop = false;
             this.TableC1R2PB.Visible = false;
+            this.TableC1R2PB.Click += new System.EventHandler(this.TableC1R2PB_Click);
             // 
             // TableC1R3PB
             // 
@@ -441,6 +449,7 @@
             this.TableC1R3PB.TabIndex = 22;
             this.TableC1R3PB.TabStop = false;
             this.TableC1R3PB.Visible = false;
+            this.TableC1R3PB.Click += new System.EventHandler(this.TableC1R3PB_Click);
             // 
             // TableC1R4PB
             // 
@@ -453,6 +462,7 @@
             this.TableC1R4PB.TabIndex = 29;
             this.TableC1R4PB.TabStop = false;
             this.TableC1R4PB.Visible = false;
+            this.TableC1R4PB.Click += new System.EventHandler(this.TableC1R4PB_Click);
             // 
             // TableC1R5PB
             // 
@@ -465,6 +475,7 @@
             this.TableC1R5PB.TabIndex = 36;
             this.TableC1R5PB.TabStop = false;
             this.TableC1R5PB.Visible = false;
+            this.TableC1R5PB.Click += new System.EventHandler(this.TableC1R5PB_Click);
             // 
             // TableC1R6PB
             // 
@@ -477,6 +488,7 @@
             this.TableC1R6PB.TabIndex = 43;
             this.TableC1R6PB.TabStop = false;
             this.TableC1R6PB.Visible = false;
+            this.TableC1R6PB.Click += new System.EventHandler(this.TableC1R6PB_Click);
             // 
             // TableC1R7PB
             // 
@@ -489,6 +501,7 @@
             this.TableC1R7PB.TabIndex = 50;
             this.TableC1R7PB.TabStop = false;
             this.TableC1R7PB.Visible = false;
+            this.TableC1R7PB.Click += new System.EventHandler(this.TableC1R7PB_Click);
             // 
             // TableC1R8PB
             // 
@@ -501,6 +514,7 @@
             this.TableC1R8PB.TabIndex = 57;
             this.TableC1R8PB.TabStop = false;
             this.TableC1R8PB.Visible = false;
+            this.TableC1R8PB.Click += new System.EventHandler(this.TableC1R8PB_Click);
             // 
             // TableC7R2PB
             // 
@@ -512,6 +526,7 @@
             this.TableC7R2PB.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.TableC7R2PB.TabIndex = 63;
             this.TableC7R2PB.TabStop = false;
+            this.TableC7R2PB.Click += new System.EventHandler(this.TableC7R2PB_Click);
             // 
             // TableC6R2PB
             // 
@@ -523,6 +538,7 @@
             this.TableC6R2PB.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.TableC6R2PB.TabIndex = 62;
             this.TableC6R2PB.TabStop = false;
+            this.TableC6R2PB.Click += new System.EventHandler(this.TableC6R2PB_Click);
             // 
             // TableC5R2PB
             // 
@@ -534,6 +550,7 @@
             this.TableC5R2PB.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.TableC5R2PB.TabIndex = 61;
             this.TableC5R2PB.TabStop = false;
+            this.TableC5R2PB.Click += new System.EventHandler(this.TableC5R2PB_Click);
             // 
             // TableC4R2PB
             // 
@@ -545,6 +562,7 @@
             this.TableC4R2PB.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.TableC4R2PB.TabIndex = 60;
             this.TableC4R2PB.TabStop = false;
+            this.TableC4R2PB.Click += new System.EventHandler(this.TableC4R2PB_Click);
             // 
             // TableC3R2PB
             // 
@@ -556,6 +574,7 @@
             this.TableC3R2PB.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.TableC3R2PB.TabIndex = 59;
             this.TableC3R2PB.TabStop = false;
+            this.TableC3R2PB.Click += new System.EventHandler(this.TableC3R2PB_Click);
             // 
             // TableC7R3PB
             // 
@@ -567,6 +586,7 @@
             this.TableC7R3PB.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.TableC7R3PB.TabIndex = 69;
             this.TableC7R3PB.TabStop = false;
+            this.TableC7R3PB.Click += new System.EventHandler(this.TableC7R3PB_Click);
             // 
             // TableC6R3PB
             // 
@@ -578,6 +598,7 @@
             this.TableC6R3PB.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.TableC6R3PB.TabIndex = 68;
             this.TableC6R3PB.TabStop = false;
+            this.TableC6R3PB.Click += new System.EventHandler(this.TableC6R3PB_Click);
             // 
             // TableC5R3PB
             // 
@@ -589,6 +610,7 @@
             this.TableC5R3PB.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.TableC5R3PB.TabIndex = 67;
             this.TableC5R3PB.TabStop = false;
+            this.TableC5R3PB.Click += new System.EventHandler(this.TableC5R3PB_Click);
             // 
             // TableC4R3PB
             // 
@@ -600,6 +622,7 @@
             this.TableC4R3PB.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.TableC4R3PB.TabIndex = 66;
             this.TableC4R3PB.TabStop = false;
+            this.TableC4R3PB.Click += new System.EventHandler(this.TableC4R3PB_Click);
             // 
             // TableC2R3PB
             // 
@@ -612,6 +635,7 @@
             this.TableC2R3PB.TabIndex = 64;
             this.TableC2R3PB.TabStop = false;
             this.TableC2R3PB.Visible = false;
+            this.TableC2R3PB.Click += new System.EventHandler(this.TableC2R3PB_Click);
             // 
             // TableC7R4PB
             // 
@@ -623,6 +647,7 @@
             this.TableC7R4PB.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.TableC7R4PB.TabIndex = 75;
             this.TableC7R4PB.TabStop = false;
+            this.TableC7R4PB.Click += new System.EventHandler(this.TableC7R4PB_Click);
             // 
             // TableC6R4PB
             // 
@@ -634,6 +659,7 @@
             this.TableC6R4PB.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.TableC6R4PB.TabIndex = 74;
             this.TableC6R4PB.TabStop = false;
+            this.TableC6R4PB.Click += new System.EventHandler(this.TableC6R4PB_Click);
             // 
             // TableC5R4PB
             // 
@@ -645,6 +671,7 @@
             this.TableC5R4PB.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.TableC5R4PB.TabIndex = 73;
             this.TableC5R4PB.TabStop = false;
+            this.TableC5R4PB.Click += new System.EventHandler(this.TableC5R4PB_Click);
             // 
             // TableC3R4PB
             // 
@@ -657,6 +684,7 @@
             this.TableC3R4PB.TabIndex = 71;
             this.TableC3R4PB.TabStop = false;
             this.TableC3R4PB.Visible = false;
+            this.TableC3R4PB.Click += new System.EventHandler(this.TableC3R4PB_Click);
             // 
             // TableC2R4PB
             // 
@@ -669,6 +697,7 @@
             this.TableC2R4PB.TabIndex = 70;
             this.TableC2R4PB.TabStop = false;
             this.TableC2R4PB.Visible = false;
+            this.TableC2R4PB.Click += new System.EventHandler(this.TableC2R4PB_Click);
             // 
             // TableC7R5PB
             // 
@@ -680,6 +709,7 @@
             this.TableC7R5PB.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.TableC7R5PB.TabIndex = 81;
             this.TableC7R5PB.TabStop = false;
+            this.TableC7R5PB.Click += new System.EventHandler(this.TableC7R5PB_Click);
             // 
             // TableC6R5PB
             // 
@@ -691,6 +721,7 @@
             this.TableC6R5PB.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.TableC6R5PB.TabIndex = 80;
             this.TableC6R5PB.TabStop = false;
+            this.TableC6R5PB.Click += new System.EventHandler(this.TableC6R5PB_Click);
             // 
             // TableC4R5PB
             // 
@@ -703,6 +734,7 @@
             this.TableC4R5PB.TabIndex = 78;
             this.TableC4R5PB.TabStop = false;
             this.TableC4R5PB.Visible = false;
+            this.TableC4R5PB.Click += new System.EventHandler(this.TableC4R5PB_Click);
             // 
             // TableC3R5PB
             // 
@@ -715,6 +747,7 @@
             this.TableC3R5PB.TabIndex = 77;
             this.TableC3R5PB.TabStop = false;
             this.TableC3R5PB.Visible = false;
+            this.TableC3R5PB.Click += new System.EventHandler(this.TableC3R5PB_Click);
             // 
             // TableC2R5PB
             // 
@@ -727,6 +760,7 @@
             this.TableC2R5PB.TabIndex = 76;
             this.TableC2R5PB.TabStop = false;
             this.TableC2R5PB.Visible = false;
+            this.TableC2R5PB.Click += new System.EventHandler(this.TableC2R5PB_Click);
             // 
             // TableC7R6PB
             // 
@@ -738,6 +772,7 @@
             this.TableC7R6PB.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.TableC7R6PB.TabIndex = 87;
             this.TableC7R6PB.TabStop = false;
+            this.TableC7R6PB.Click += new System.EventHandler(this.TableC7R6PB_Click);
             // 
             // TableC6R6PB
             // 
@@ -749,6 +784,7 @@
             this.TableC6R6PB.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.TableC6R6PB.TabIndex = 86;
             this.TableC6R6PB.TabStop = false;
+            this.TableC6R6PB.Click += new System.EventHandler(this.TableC6R6PB_Click);
             // 
             // TableC5R6PB
             // 
@@ -761,6 +797,7 @@
             this.TableC5R6PB.TabIndex = 85;
             this.TableC5R6PB.TabStop = false;
             this.TableC5R6PB.Visible = false;
+            this.TableC5R6PB.Click += new System.EventHandler(this.TableC5R6PB_Click);
             // 
             // TableC4R6PB
             // 
@@ -773,6 +810,7 @@
             this.TableC4R6PB.TabIndex = 84;
             this.TableC4R6PB.TabStop = false;
             this.TableC4R6PB.Visible = false;
+            this.TableC4R6PB.Click += new System.EventHandler(this.TableC4R6PB_Click);
             // 
             // TableC3R6PB
             // 
@@ -785,6 +823,7 @@
             this.TableC3R6PB.TabIndex = 83;
             this.TableC3R6PB.TabStop = false;
             this.TableC3R6PB.Visible = false;
+            this.TableC3R6PB.Click += new System.EventHandler(this.TableC3R6PB_Click);
             // 
             // TableC2R6PB
             // 
@@ -797,6 +836,7 @@
             this.TableC2R6PB.TabIndex = 82;
             this.TableC2R6PB.TabStop = false;
             this.TableC2R6PB.Visible = false;
+            this.TableC2R6PB.Click += new System.EventHandler(this.TableC2R6PB_Click);
             // 
             // TableC7R7PB
             // 
@@ -808,6 +848,7 @@
             this.TableC7R7PB.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.TableC7R7PB.TabIndex = 93;
             this.TableC7R7PB.TabStop = false;
+            this.TableC7R7PB.Click += new System.EventHandler(this.TableC7R7PB_Click);
             // 
             // TableC6R7PB
             // 
@@ -820,6 +861,7 @@
             this.TableC6R7PB.TabIndex = 92;
             this.TableC6R7PB.TabStop = false;
             this.TableC6R7PB.Visible = false;
+            this.TableC6R7PB.Click += new System.EventHandler(this.TableC6R7PB_Click);
             // 
             // TableC5R7PB
             // 
@@ -832,6 +874,7 @@
             this.TableC5R7PB.TabIndex = 91;
             this.TableC5R7PB.TabStop = false;
             this.TableC5R7PB.Visible = false;
+            this.TableC5R7PB.Click += new System.EventHandler(this.TableC5R7PB_Click);
             // 
             // TableC4R7PB
             // 
@@ -844,6 +887,7 @@
             this.TableC4R7PB.TabIndex = 90;
             this.TableC4R7PB.TabStop = false;
             this.TableC4R7PB.Visible = false;
+            this.TableC4R7PB.Click += new System.EventHandler(this.TableC4R7PB_Click);
             // 
             // TableC3R7PB
             // 
@@ -856,6 +900,7 @@
             this.TableC3R7PB.TabIndex = 89;
             this.TableC3R7PB.TabStop = false;
             this.TableC3R7PB.Visible = false;
+            this.TableC3R7PB.Click += new System.EventHandler(this.TableC3R7PB_Click);
             // 
             // TableC2R7PB
             // 
@@ -868,6 +913,7 @@
             this.TableC2R7PB.TabIndex = 88;
             this.TableC2R7PB.TabStop = false;
             this.TableC2R7PB.Visible = false;
+            this.TableC2R7PB.Click += new System.EventHandler(this.TableC2R7PB_Click);
             // 
             // TableC7R8PB
             // 
@@ -880,6 +926,7 @@
             this.TableC7R8PB.TabIndex = 99;
             this.TableC7R8PB.TabStop = false;
             this.TableC7R8PB.Visible = false;
+            this.TableC7R8PB.Click += new System.EventHandler(this.TableC7R8PB_Click);
             // 
             // TableC6R8PB
             // 
@@ -892,6 +939,7 @@
             this.TableC6R8PB.TabIndex = 98;
             this.TableC6R8PB.TabStop = false;
             this.TableC6R8PB.Visible = false;
+            this.TableC6R8PB.Click += new System.EventHandler(this.TableC6R8PB_Click);
             // 
             // TableC5R8PB
             // 
@@ -904,6 +952,7 @@
             this.TableC5R8PB.TabIndex = 97;
             this.TableC5R8PB.TabStop = false;
             this.TableC5R8PB.Visible = false;
+            this.TableC5R8PB.Click += new System.EventHandler(this.TableC5R8PB_Click);
             // 
             // TableC4R8PB
             // 
@@ -916,6 +965,7 @@
             this.TableC4R8PB.TabIndex = 96;
             this.TableC4R8PB.TabStop = false;
             this.TableC4R8PB.Visible = false;
+            this.TableC4R8PB.Click += new System.EventHandler(this.TableC4R8PB_Click);
             // 
             // TableC3R8PB
             // 
@@ -928,6 +978,7 @@
             this.TableC3R8PB.TabIndex = 95;
             this.TableC3R8PB.TabStop = false;
             this.TableC3R8PB.Visible = false;
+            this.TableC3R8PB.Click += new System.EventHandler(this.TableC3R8PB_Click);
             // 
             // TableC2R8PB
             // 
@@ -940,6 +991,7 @@
             this.TableC2R8PB.TabIndex = 94;
             this.TableC2R8PB.TabStop = false;
             this.TableC2R8PB.Visible = false;
+            this.TableC2R8PB.Click += new System.EventHandler(this.TableC2R8PB_Click);
             // 
             // TableC1R1PB
             // 
@@ -951,6 +1003,7 @@
             this.TableC1R1PB.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.TableC1R1PB.TabIndex = 6;
             this.TableC1R1PB.TabStop = false;
+            this.TableC1R1PB.Click += new System.EventHandler(this.TableC1R1PB_Click);
             // 
             // TableC2R2PB
             // 
@@ -962,6 +1015,7 @@
             this.TableC2R2PB.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.TableC2R2PB.TabIndex = 58;
             this.TableC2R2PB.TabStop = false;
+            this.TableC2R2PB.Click += new System.EventHandler(this.TableC2R2PB_Click);
             // 
             // TableC3R3PB
             // 
@@ -973,6 +1027,7 @@
             this.TableC3R3PB.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.TableC3R3PB.TabIndex = 65;
             this.TableC3R3PB.TabStop = false;
+            this.TableC3R3PB.Click += new System.EventHandler(this.TableC3R3PB_Click);
             // 
             // TableC4R4PB
             // 
@@ -984,6 +1039,7 @@
             this.TableC4R4PB.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.TableC4R4PB.TabIndex = 72;
             this.TableC4R4PB.TabStop = false;
+            this.TableC4R4PB.Click += new System.EventHandler(this.TableC4R4PB_Click);
             // 
             // TableC5R5PB
             // 
@@ -995,6 +1051,7 @@
             this.TableC5R5PB.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.TableC5R5PB.TabIndex = 79;
             this.TableC5R5PB.TabStop = false;
+            this.TableC5R5PB.Click += new System.EventHandler(this.TableC5R5PB_Click);
             // 
             // TableC7R9PB
             // 
@@ -1007,6 +1064,7 @@
             this.TableC7R9PB.TabIndex = 106;
             this.TableC7R9PB.TabStop = false;
             this.TableC7R9PB.Visible = false;
+            this.TableC7R9PB.Click += new System.EventHandler(this.TableC7R9PB_Click);
             // 
             // TableC6R9PB
             // 
@@ -1019,6 +1077,7 @@
             this.TableC6R9PB.TabIndex = 105;
             this.TableC6R9PB.TabStop = false;
             this.TableC6R9PB.Visible = false;
+            this.TableC6R9PB.Click += new System.EventHandler(this.TableC6R9PB_Click);
             // 
             // TableC5R9PB
             // 
@@ -1031,6 +1090,7 @@
             this.TableC5R9PB.TabIndex = 104;
             this.TableC5R9PB.TabStop = false;
             this.TableC5R9PB.Visible = false;
+            this.TableC5R9PB.Click += new System.EventHandler(this.TableC5R9PB_Click);
             // 
             // TableC4R9PB
             // 
@@ -1043,6 +1103,7 @@
             this.TableC4R9PB.TabIndex = 103;
             this.TableC4R9PB.TabStop = false;
             this.TableC4R9PB.Visible = false;
+            this.TableC4R9PB.Click += new System.EventHandler(this.TableC4R9PB_Click);
             // 
             // TableC3R9PB
             // 
@@ -1055,6 +1116,7 @@
             this.TableC3R9PB.TabIndex = 102;
             this.TableC3R9PB.TabStop = false;
             this.TableC3R9PB.Visible = false;
+            this.TableC3R9PB.Click += new System.EventHandler(this.TableC3R9PB_Click);
             // 
             // TableC2R9PB
             // 
@@ -1067,6 +1129,7 @@
             this.TableC2R9PB.TabIndex = 101;
             this.TableC2R9PB.TabStop = false;
             this.TableC2R9PB.Visible = false;
+            this.TableC2R9PB.Click += new System.EventHandler(this.TableC2R9PB_Click);
             // 
             // TableC1R9PB
             // 
@@ -1079,6 +1142,7 @@
             this.TableC1R9PB.TabIndex = 100;
             this.TableC1R9PB.TabStop = false;
             this.TableC1R9PB.Visible = false;
+            this.TableC1R9PB.Click += new System.EventHandler(this.TableC1R9PB_Click);
             // 
             // TableC7R10PB
             // 
@@ -1091,6 +1155,7 @@
             this.TableC7R10PB.TabIndex = 113;
             this.TableC7R10PB.TabStop = false;
             this.TableC7R10PB.Visible = false;
+            this.TableC7R10PB.Click += new System.EventHandler(this.TableC7R10PB_Click);
             // 
             // TableC6R10PB
             // 
@@ -1103,6 +1168,7 @@
             this.TableC6R10PB.TabIndex = 112;
             this.TableC6R10PB.TabStop = false;
             this.TableC6R10PB.Visible = false;
+            this.TableC6R10PB.Click += new System.EventHandler(this.TableC6R10PB_Click);
             // 
             // TableC5R10PB
             // 
@@ -1115,6 +1181,7 @@
             this.TableC5R10PB.TabIndex = 111;
             this.TableC5R10PB.TabStop = false;
             this.TableC5R10PB.Visible = false;
+            this.TableC5R10PB.Click += new System.EventHandler(this.TableC5R10PB_Click);
             // 
             // TableC4R10PB
             // 
@@ -1127,6 +1194,7 @@
             this.TableC4R10PB.TabIndex = 110;
             this.TableC4R10PB.TabStop = false;
             this.TableC4R10PB.Visible = false;
+            this.TableC4R10PB.Click += new System.EventHandler(this.TableC4R10PB_Click);
             // 
             // TableC3R10PB
             // 
@@ -1139,6 +1207,7 @@
             this.TableC3R10PB.TabIndex = 109;
             this.TableC3R10PB.TabStop = false;
             this.TableC3R10PB.Visible = false;
+            this.TableC3R10PB.Click += new System.EventHandler(this.TableC3R10PB_Click);
             // 
             // TableC2R10PB
             // 
@@ -1151,6 +1220,7 @@
             this.TableC2R10PB.TabIndex = 108;
             this.TableC2R10PB.TabStop = false;
             this.TableC2R10PB.Visible = false;
+            this.TableC2R10PB.Click += new System.EventHandler(this.TableC2R10PB_Click);
             // 
             // TableC1R10PB
             // 
@@ -1163,6 +1233,7 @@
             this.TableC1R10PB.TabIndex = 107;
             this.TableC1R10PB.TabStop = false;
             this.TableC1R10PB.Visible = false;
+            this.TableC1R10PB.Click += new System.EventHandler(this.TableC1R10PB_Click);
             // 
             // TableC7R11PB
             // 
@@ -1175,6 +1246,7 @@
             this.TableC7R11PB.TabIndex = 120;
             this.TableC7R11PB.TabStop = false;
             this.TableC7R11PB.Visible = false;
+            this.TableC7R11PB.Click += new System.EventHandler(this.TableC7R11PB_Click);
             // 
             // TableC6R11PB
             // 
@@ -1187,6 +1259,7 @@
             this.TableC6R11PB.TabIndex = 119;
             this.TableC6R11PB.TabStop = false;
             this.TableC6R11PB.Visible = false;
+            this.TableC6R11PB.Click += new System.EventHandler(this.TableC6R11PB_Click);
             // 
             // TableC5R11PB
             // 
@@ -1199,6 +1272,7 @@
             this.TableC5R11PB.TabIndex = 118;
             this.TableC5R11PB.TabStop = false;
             this.TableC5R11PB.Visible = false;
+            this.TableC5R11PB.Click += new System.EventHandler(this.TableC5R11PB_Click);
             // 
             // TableC4R11PB
             // 
@@ -1211,6 +1285,7 @@
             this.TableC4R11PB.TabIndex = 117;
             this.TableC4R11PB.TabStop = false;
             this.TableC4R11PB.Visible = false;
+            this.TableC4R11PB.Click += new System.EventHandler(this.TableC4R11PB_Click);
             // 
             // TableC3R11PB
             // 
@@ -1223,6 +1298,7 @@
             this.TableC3R11PB.TabIndex = 116;
             this.TableC3R11PB.TabStop = false;
             this.TableC3R11PB.Visible = false;
+            this.TableC3R11PB.Click += new System.EventHandler(this.TableC3R11PB_Click);
             // 
             // TableC2R11PB
             // 
@@ -1235,6 +1311,7 @@
             this.TableC2R11PB.TabIndex = 115;
             this.TableC2R11PB.TabStop = false;
             this.TableC2R11PB.Visible = false;
+            this.TableC2R11PB.Click += new System.EventHandler(this.TableC2R11PB_Click);
             // 
             // TableC1R11PB
             // 
@@ -1247,6 +1324,7 @@
             this.TableC1R11PB.TabIndex = 114;
             this.TableC1R11PB.TabStop = false;
             this.TableC1R11PB.Visible = false;
+            this.TableC1R11PB.Click += new System.EventHandler(this.TableC1R11PB_Click);
             // 
             // TableC7R12PB
             // 
@@ -1259,6 +1337,7 @@
             this.TableC7R12PB.TabIndex = 127;
             this.TableC7R12PB.TabStop = false;
             this.TableC7R12PB.Visible = false;
+            this.TableC7R12PB.Click += new System.EventHandler(this.TableC7R12PB_Click);
             // 
             // TableC6R12PB
             // 
@@ -1271,6 +1350,7 @@
             this.TableC6R12PB.TabIndex = 126;
             this.TableC6R12PB.TabStop = false;
             this.TableC6R12PB.Visible = false;
+            this.TableC6R12PB.Click += new System.EventHandler(this.TableC6R12PB_Click);
             // 
             // TableC5R12PB
             // 
@@ -1283,6 +1363,7 @@
             this.TableC5R12PB.TabIndex = 125;
             this.TableC5R12PB.TabStop = false;
             this.TableC5R12PB.Visible = false;
+            this.TableC5R12PB.Click += new System.EventHandler(this.TableC5R12PB_Click);
             // 
             // TableC4R12PB
             // 
@@ -1295,6 +1376,7 @@
             this.TableC4R12PB.TabIndex = 124;
             this.TableC4R12PB.TabStop = false;
             this.TableC4R12PB.Visible = false;
+            this.TableC4R12PB.Click += new System.EventHandler(this.TableC4R12PB_Click);
             // 
             // TableC3R12PB
             // 
@@ -1307,6 +1389,7 @@
             this.TableC3R12PB.TabIndex = 123;
             this.TableC3R12PB.TabStop = false;
             this.TableC3R12PB.Visible = false;
+            this.TableC3R12PB.Click += new System.EventHandler(this.TableC3R12PB_Click);
             // 
             // TableC2R12PB
             // 
@@ -1319,6 +1402,7 @@
             this.TableC2R12PB.TabIndex = 122;
             this.TableC2R12PB.TabStop = false;
             this.TableC2R12PB.Visible = false;
+            this.TableC2R12PB.Click += new System.EventHandler(this.TableC2R12PB_Click);
             // 
             // TableC1R12PB
             // 
@@ -1331,6 +1415,7 @@
             this.TableC1R12PB.TabIndex = 121;
             this.TableC1R12PB.TabStop = false;
             this.TableC1R12PB.Visible = false;
+            this.TableC1R12PB.Click += new System.EventHandler(this.TableC1R12PB_Click);
             // 
             // TableC7R13PB
             // 
@@ -1343,6 +1428,7 @@
             this.TableC7R13PB.TabIndex = 134;
             this.TableC7R13PB.TabStop = false;
             this.TableC7R13PB.Visible = false;
+            this.TableC7R13PB.Click += new System.EventHandler(this.TableC7R13PB_Click);
             // 
             // TableC6R13PB
             // 
@@ -1355,6 +1441,7 @@
             this.TableC6R13PB.TabIndex = 133;
             this.TableC6R13PB.TabStop = false;
             this.TableC6R13PB.Visible = false;
+            this.TableC6R13PB.Click += new System.EventHandler(this.TableC6R13PB_Click);
             // 
             // TableC5R13PB
             // 
@@ -1367,6 +1454,7 @@
             this.TableC5R13PB.TabIndex = 132;
             this.TableC5R13PB.TabStop = false;
             this.TableC5R13PB.Visible = false;
+            this.TableC5R13PB.Click += new System.EventHandler(this.TableC5R13PB_Click);
             // 
             // TableC4R13PB
             // 
@@ -1379,6 +1467,7 @@
             this.TableC4R13PB.TabIndex = 131;
             this.TableC4R13PB.TabStop = false;
             this.TableC4R13PB.Visible = false;
+            this.TableC4R13PB.Click += new System.EventHandler(this.TableC4R13PB_Click);
             // 
             // TableC3R13PB
             // 
@@ -1391,6 +1480,7 @@
             this.TableC3R13PB.TabIndex = 130;
             this.TableC3R13PB.TabStop = false;
             this.TableC3R13PB.Visible = false;
+            this.TableC3R13PB.Click += new System.EventHandler(this.TableC3R13PB_Click);
             // 
             // TableC2R13PB
             // 
@@ -1403,6 +1493,7 @@
             this.TableC2R13PB.TabIndex = 129;
             this.TableC2R13PB.TabStop = false;
             this.TableC2R13PB.Visible = false;
+            this.TableC2R13PB.Click += new System.EventHandler(this.TableC2R13PB_Click);
             // 
             // TableC1R13PB
             // 
@@ -1415,6 +1506,7 @@
             this.TableC1R13PB.TabIndex = 128;
             this.TableC1R13PB.TabStop = false;
             this.TableC1R13PB.Visible = false;
+            this.TableC1R13PB.Click += new System.EventHandler(this.TableC1R13PB_Click);
             // 
             // TableC7R14PB
             // 
@@ -1427,6 +1519,7 @@
             this.TableC7R14PB.TabIndex = 141;
             this.TableC7R14PB.TabStop = false;
             this.TableC7R14PB.Visible = false;
+            this.TableC7R14PB.Click += new System.EventHandler(this.TableC7R14PB_Click);
             // 
             // TableC6R14PB
             // 
@@ -1439,6 +1532,7 @@
             this.TableC6R14PB.TabIndex = 140;
             this.TableC6R14PB.TabStop = false;
             this.TableC6R14PB.Visible = false;
+            this.TableC6R14PB.Click += new System.EventHandler(this.TableC6R14PB_Click);
             // 
             // TableC5R14PB
             // 
@@ -1451,6 +1545,7 @@
             this.TableC5R14PB.TabIndex = 139;
             this.TableC5R14PB.TabStop = false;
             this.TableC5R14PB.Visible = false;
+            this.TableC5R14PB.Click += new System.EventHandler(this.TableC5R14PB_Click);
             // 
             // TableC4R14PB
             // 
@@ -1463,6 +1558,7 @@
             this.TableC4R14PB.TabIndex = 138;
             this.TableC4R14PB.TabStop = false;
             this.TableC4R14PB.Visible = false;
+            this.TableC4R14PB.Click += new System.EventHandler(this.TableC4R14PB_Click);
             // 
             // TableC3R14PB
             // 
@@ -1475,6 +1571,7 @@
             this.TableC3R14PB.TabIndex = 137;
             this.TableC3R14PB.TabStop = false;
             this.TableC3R14PB.Visible = false;
+            this.TableC3R14PB.Click += new System.EventHandler(this.TableC3R14PB_Click);
             // 
             // TableC2R14PB
             // 
@@ -1487,6 +1584,7 @@
             this.TableC2R14PB.TabIndex = 136;
             this.TableC2R14PB.TabStop = false;
             this.TableC2R14PB.Visible = false;
+            this.TableC2R14PB.Click += new System.EventHandler(this.TableC2R14PB_Click);
             // 
             // TableC7R15PB
             // 
@@ -1499,6 +1597,7 @@
             this.TableC7R15PB.TabIndex = 148;
             this.TableC7R15PB.TabStop = false;
             this.TableC7R15PB.Visible = false;
+            this.TableC7R15PB.Click += new System.EventHandler(this.TableC7R15PB_Click);
             // 
             // TableC6R15PB
             // 
@@ -1511,6 +1610,7 @@
             this.TableC6R15PB.TabIndex = 147;
             this.TableC6R15PB.TabStop = false;
             this.TableC6R15PB.Visible = false;
+            this.TableC6R15PB.Click += new System.EventHandler(this.TableC6R15PB_Click);
             // 
             // TableC5R15PB
             // 
@@ -1523,6 +1623,7 @@
             this.TableC5R15PB.TabIndex = 146;
             this.TableC5R15PB.TabStop = false;
             this.TableC5R15PB.Visible = false;
+            this.TableC5R15PB.Click += new System.EventHandler(this.TableC5R15PB_Click);
             // 
             // TableC4R15PB
             // 
@@ -1535,6 +1636,7 @@
             this.TableC4R15PB.TabIndex = 145;
             this.TableC4R15PB.TabStop = false;
             this.TableC4R15PB.Visible = false;
+            this.TableC4R15PB.Click += new System.EventHandler(this.TableC4R15PB_Click);
             // 
             // TableC3R15PB
             // 
@@ -1547,6 +1649,7 @@
             this.TableC3R15PB.TabIndex = 144;
             this.TableC3R15PB.TabStop = false;
             this.TableC3R15PB.Visible = false;
+            this.TableC3R15PB.Click += new System.EventHandler(this.TableC3R15PB_Click);
             // 
             // TableC7R16PB
             // 
@@ -1559,6 +1662,7 @@
             this.TableC7R16PB.TabIndex = 155;
             this.TableC7R16PB.TabStop = false;
             this.TableC7R16PB.Visible = false;
+            this.TableC7R16PB.Click += new System.EventHandler(this.TableC7R16PB_Click);
             // 
             // TableC6R16PB
             // 
@@ -1571,6 +1675,7 @@
             this.TableC6R16PB.TabIndex = 154;
             this.TableC6R16PB.TabStop = false;
             this.TableC6R16PB.Visible = false;
+            this.TableC6R16PB.Click += new System.EventHandler(this.TableC6R16PB_Click);
             // 
             // TableC5R16PB
             // 
@@ -1583,6 +1688,7 @@
             this.TableC5R16PB.TabIndex = 153;
             this.TableC5R16PB.TabStop = false;
             this.TableC5R16PB.Visible = false;
+            this.TableC5R16PB.Click += new System.EventHandler(this.TableC5R16PB_Click);
             // 
             // TableC4R16PB
             // 
@@ -1595,6 +1701,7 @@
             this.TableC4R16PB.TabIndex = 152;
             this.TableC4R16PB.TabStop = false;
             this.TableC4R16PB.Visible = false;
+            this.TableC4R16PB.Click += new System.EventHandler(this.TableC4R16PB_Click);
             // 
             // TableC7R17PB
             // 
@@ -1607,6 +1714,7 @@
             this.TableC7R17PB.TabIndex = 162;
             this.TableC7R17PB.TabStop = false;
             this.TableC7R17PB.Visible = false;
+            this.TableC7R17PB.Click += new System.EventHandler(this.TableC7R17PB_Click);
             // 
             // TableC6R17PB
             // 
@@ -1619,6 +1727,7 @@
             this.TableC6R17PB.TabIndex = 161;
             this.TableC6R17PB.TabStop = false;
             this.TableC6R17PB.Visible = false;
+            this.TableC6R17PB.Click += new System.EventHandler(this.TableC6R17PB_Click);
             // 
             // TableC5R17PB
             // 
@@ -1631,6 +1740,7 @@
             this.TableC5R17PB.TabIndex = 160;
             this.TableC5R17PB.TabStop = false;
             this.TableC5R17PB.Visible = false;
+            this.TableC5R17PB.Click += new System.EventHandler(this.TableC5R17PB_Click);
             // 
             // TableC7R18PB
             // 
@@ -1643,6 +1753,7 @@
             this.TableC7R18PB.TabIndex = 169;
             this.TableC7R18PB.TabStop = false;
             this.TableC7R18PB.Visible = false;
+            this.TableC7R18PB.Click += new System.EventHandler(this.TableC7R18PB_Click);
             // 
             // TableC6R18PB
             // 
@@ -1655,6 +1766,7 @@
             this.TableC6R18PB.TabIndex = 168;
             this.TableC6R18PB.TabStop = false;
             this.TableC6R18PB.Visible = false;
+            this.TableC6R18PB.Click += new System.EventHandler(this.TableC6R18PB_Click);
             // 
             // TableC7R19PB
             // 
@@ -1667,6 +1779,16 @@
             this.TableC7R19PB.TabIndex = 176;
             this.TableC7R19PB.TabStop = false;
             this.TableC7R19PB.Visible = false;
+            this.TableC7R19PB.Click += new System.EventHandler(this.TableC7R19PB_Click);
+            // 
+            // testingLabel
+            // 
+            this.testingLabel.AutoSize = true;
+            this.testingLabel.Location = new System.Drawing.Point(670, 91);
+            this.testingLabel.Name = "testingLabel";
+            this.testingLabel.Size = new System.Drawing.Size(50, 20);
+            this.testingLabel.TabIndex = 177;
+            this.testingLabel.Text = "label1";
             // 
             // SolitaireForm
             // 
@@ -1674,6 +1796,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.ForestGreen;
             this.ClientSize = new System.Drawing.Size(831, 803);
+            this.Controls.Add(this.testingLabel);
             this.Controls.Add(this.TableC7R19PB);
             this.Controls.Add(this.TableC7R18PB);
             this.Controls.Add(this.TableC6R18PB);
@@ -2041,5 +2164,6 @@
         private PictureBox TableC7R18PB;
         private PictureBox TableC6R18PB;
         private PictureBox TableC7R19PB;
+        private Label testingLabel;
     }
 }
