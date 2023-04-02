@@ -271,7 +271,7 @@
             // 
             // CompletePile1PB
             // 
-            this.CompletePile1PB.BackColor = System.Drawing.Color.DarkGray;
+            this.CompletePile1PB.BackColor = System.Drawing.Color.MediumSeaGreen;
             this.CompletePile1PB.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.CompletePile1PB.Location = new System.Drawing.Point(171, 12);
             this.CompletePile1PB.Name = "CompletePile1PB";
@@ -282,7 +282,7 @@
             // 
             // CompletePile2PB
             // 
-            this.CompletePile2PB.BackColor = System.Drawing.Color.DarkGray;
+            this.CompletePile2PB.BackColor = System.Drawing.Color.MediumSeaGreen;
             this.CompletePile2PB.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.CompletePile2PB.Location = new System.Drawing.Point(237, 12);
             this.CompletePile2PB.Name = "CompletePile2PB";
@@ -293,7 +293,7 @@
             // 
             // CompletePile3PB
             // 
-            this.CompletePile3PB.BackColor = System.Drawing.Color.DarkGray;
+            this.CompletePile3PB.BackColor = System.Drawing.Color.MediumSeaGreen;
             this.CompletePile3PB.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.CompletePile3PB.Location = new System.Drawing.Point(303, 12);
             this.CompletePile3PB.Name = "CompletePile3PB";
@@ -304,7 +304,7 @@
             // 
             // CompletePile4PB
             // 
-            this.CompletePile4PB.BackColor = System.Drawing.Color.DarkGray;
+            this.CompletePile4PB.BackColor = System.Drawing.Color.MediumSeaGreen;
             this.CompletePile4PB.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.CompletePile4PB.Location = new System.Drawing.Point(369, 12);
             this.CompletePile4PB.Name = "CompletePile4PB";
@@ -315,6 +315,7 @@
             // 
             // WastePilePB
             // 
+            this.WastePilePB.BackColor = System.Drawing.Color.DarkSeaGreen;
             this.WastePilePB.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.WastePilePB.Location = new System.Drawing.Point(501, 12);
             this.WastePilePB.Name = "WastePilePB";
@@ -322,9 +323,11 @@
             this.WastePilePB.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.WastePilePB.TabIndex = 4;
             this.WastePilePB.TabStop = false;
+            this.WastePilePB.Click += new System.EventHandler(this.WastePilePB_Click);
             // 
             // DrawPilePB
             // 
+            this.DrawPilePB.BackColor = System.Drawing.Color.DarkSeaGreen;
             this.DrawPilePB.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.DrawPilePB.Image = global::Playground_Arcade.Properties.Resources.Back;
             this.DrawPilePB.Location = new System.Drawing.Point(567, 12);
@@ -337,6 +340,7 @@
             // 
             // TableC2R1PB
             // 
+            this.TableC2R1PB.BackColor = System.Drawing.Color.DarkSeaGreen;
             this.TableC2R1PB.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.TableC2R1PB.Image = global::Playground_Arcade.Properties.Resources.Back;
             this.TableC2R1PB.Location = new System.Drawing.Point(237, 120);
@@ -349,6 +353,7 @@
             // 
             // TableC3R1PB
             // 
+            this.TableC3R1PB.BackColor = System.Drawing.Color.DarkSeaGreen;
             this.TableC3R1PB.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.TableC3R1PB.Image = global::Playground_Arcade.Properties.Resources.Back;
             this.TableC3R1PB.Location = new System.Drawing.Point(303, 120);
@@ -361,6 +366,7 @@
             // 
             // TableC4R1PB
             // 
+            this.TableC4R1PB.BackColor = System.Drawing.Color.DarkSeaGreen;
             this.TableC4R1PB.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.TableC4R1PB.Image = global::Playground_Arcade.Properties.Resources.Back;
             this.TableC4R1PB.Location = new System.Drawing.Point(369, 120);
@@ -373,6 +379,7 @@
             // 
             // TableC5R1PB
             // 
+            this.TableC5R1PB.BackColor = System.Drawing.Color.DarkSeaGreen;
             this.TableC5R1PB.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.TableC5R1PB.Image = global::Playground_Arcade.Properties.Resources.Back;
             this.TableC5R1PB.Location = new System.Drawing.Point(435, 120);
@@ -385,6 +392,7 @@
             // 
             // TableC6R1PB
             // 
+            this.TableC6R1PB.BackColor = System.Drawing.Color.DarkSeaGreen;
             this.TableC6R1PB.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.TableC6R1PB.Image = global::Playground_Arcade.Properties.Resources.Back;
             this.TableC6R1PB.Location = new System.Drawing.Point(501, 120);
@@ -397,6 +405,7 @@
             // 
             // TableC7R1PB
             // 
+            this.TableC7R1PB.BackColor = System.Drawing.Color.DarkSeaGreen;
             this.TableC7R1PB.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.TableC7R1PB.Image = global::Playground_Arcade.Properties.Resources.Back;
             this.TableC7R1PB.Location = new System.Drawing.Point(567, 120);
@@ -995,6 +1004,7 @@
             // 
             // TableC1R1PB
             // 
+            this.TableC1R1PB.BackColor = System.Drawing.Color.DarkSeaGreen;
             this.TableC1R1PB.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.TableC1R1PB.Image = global::Playground_Arcade.Properties.Resources.KingOfClubs;
             this.TableC1R1PB.Location = new System.Drawing.Point(171, 120);
@@ -1784,9 +1794,10 @@
             // testingLabel
             // 
             this.testingLabel.AutoSize = true;
-            this.testingLabel.Location = new System.Drawing.Point(670, 91);
+            this.testingLabel.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.testingLabel.Location = new System.Drawing.Point(665, 71);
             this.testingLabel.Name = "testingLabel";
-            this.testingLabel.Size = new System.Drawing.Size(50, 20);
+            this.testingLabel.Size = new System.Drawing.Size(43, 17);
             this.testingLabel.TabIndex = 177;
             this.testingLabel.Text = "label1";
             // 
@@ -1794,7 +1805,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.ForestGreen;
+            this.BackColor = System.Drawing.Color.SeaGreen;
             this.ClientSize = new System.Drawing.Size(831, 803);
             this.Controls.Add(this.testingLabel);
             this.Controls.Add(this.TableC7R19PB);
