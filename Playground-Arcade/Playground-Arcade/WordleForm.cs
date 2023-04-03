@@ -568,7 +568,7 @@ namespace Playground_Arcade
             GuessFinal.Text = "";
             GuessFinal.Visible = true;
 
-            Answer.Visible = true;
+            Answer.Visible = false;
 
             WinMessage.Visible = false;
 
