@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Diagnostics;
+using System.Diagnostics.CodeAnalysis;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -11,9 +12,12 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 //  TODO
-//move to complete pile (start with ace and go up (one at a time only))
-//move cards from waste pile
 //visual fixes (picture layering)
+//title/start screen
+//Game end
+//restart
+//maybe option for draw 1 or draw 3
+//maybe hint system
 
 namespace Playground_Arcade
 {
@@ -30,19 +34,25 @@ namespace Playground_Arcade
         List<PictureBox> tableColumn7;
         //Cards in waste pile
         List<PictureBox> wastePile;
-        //Card selected by user to move
+        //Cards in complete piles
+        List<PictureBox> completePile1;
+        List<PictureBox> completePile2;
+        List<PictureBox> completePile3;
+        List<PictureBox> completePile4;
+        //Card(s) selected by user to move
         List<SolitaireCard> selectedCards;
         //Original column of selected cards to move
         List<PictureBox> columnOfCardsToBeMoved;
+        //New location of moved cards
+        List<SolitaireCard> newColumnOfMovedCards;
 
         public SolitaireForm()
         {
             InitializeComponent();
 
             board = new();
-            selectedCards = new();
             columnOfCardsToBeMoved = new();
-            
+            selectedCards = new();
             SetupAllCardPictures();
             UpdateAllCardPictures();
         }
@@ -106,6 +116,7 @@ namespace Playground_Arcade
             {
                 board.wastePile[^1].FlipCard();
                 UpdateCardPicture(board.wastePile[^1], WastePilePB);
+                selectedCards.Clear();
             }
             //Update the drawPile's picture to the card back, or blank if empty
             if (board.drawPile.Count == 0)
@@ -268,6 +279,10 @@ namespace Playground_Arcade
                 TableC7R19PB
             };
             board.tableColumn7[6].FlipCard();
+            completePile1 = new List<PictureBox> { CompletePile1PB };
+            completePile2 = new List<PictureBox> { CompletePile2PB };
+            completePile3 = new List<PictureBox> { CompletePile3PB };
+            completePile4 = new List<PictureBox> { CompletePile4PB };
             wastePile = new List<PictureBox> { WastePilePB };
         }
 
@@ -311,6 +326,17 @@ namespace Playground_Arcade
             }
 
             UpdateTestingLabel();
+        }
+
+        public void UpdateColumnPictures(List<SolitaireCard> cardColumn, List<PictureBox> pictureColumn)
+        {
+            if (cardColumn != board.wastePile && cardColumn != null)
+            {
+                for (int i = 0; i < cardColumn.Count; i++)
+                {
+                    UpdateCardPicture(cardColumn[i], pictureColumn[i]);
+                }
+            }
         }
 
         public static void UpdateCardPicture(SolitaireCard card, PictureBox pictureBox)
@@ -569,11 +595,37 @@ namespace Playground_Arcade
             pictureBox.BorderStyle = BorderStyle.FixedSingle;
         }
 
+        private void MoveToCompletePile(List<SolitaireCard> clickedPile, PictureBox clickedPictureBox)
+        {
+            if (selectedCards.Count == 1)
+            {
+                if (clickedPile.Count == 0)
+                {
+                    if (selectedCards[0].CardRank == SolitaireCardRank.Ace)
+                    {
+                        clickedPile.Add(selectedCards[0]);
+                        DetermineColumnToRemoveFrom(columnOfCardsToBeMoved);
+                        UpdateCardPicture(selectedCards[0], clickedPictureBox);
+                        selectedCards.Clear();
+                        UpdateColumnPictures(newColumnOfMovedCards, columnOfCardsToBeMoved);
+                    }
+                }
+                else if (selectedCards[0].CardRank == clickedPile[^1].CardRank + 1 && selectedCards[0].CardSuit == clickedPile[^1].CardSuit)
+                {
+                    clickedPile.Add(selectedCards[0]);
+                    DetermineColumnToRemoveFrom(columnOfCardsToBeMoved);
+                    UpdateCardPicture(selectedCards[0], clickedPictureBox);
+                    selectedCards.Clear();
+                    UpdateColumnPictures(newColumnOfMovedCards, columnOfCardsToBeMoved);
+                }
+            }
+        }
+
         private void MoveCard(List<SolitaireCard> clickedColumn, List<PictureBox> clickedPictureBox, int clickedCardIndex)
         {
             //If the clicked column is empty and the first selected card is a king, move the selected cards to the new column
             if (clickedColumn.Count == 0 && selectedCards.Count > 0)
-            {
+            {   
                 if (selectedCards[0].CardRank == SolitaireCardRank.King)
                 {
                     //Move all selected cards to the new column
@@ -584,40 +636,10 @@ namespace Playground_Arcade
                         clickedPictureBox[clickedCardIndex + i].Visible = true;
                     }
                     //Remove selected cards from old column
-                    if (tableColumn1 == columnOfCardsToBeMoved)
-                    {
-                        RemoveMovedCard(tableColumn1, board.tableColumn1, TableC1R1PB);
-                    }
-                    else if (tableColumn2 == columnOfCardsToBeMoved)
-                    {
-                        RemoveMovedCard(tableColumn2, board.tableColumn2, TableC2R1PB);
-                    }
-                    else if (tableColumn3 == columnOfCardsToBeMoved)
-                    {
-                        RemoveMovedCard(tableColumn3, board.tableColumn3, TableC3R1PB);
-                    }
-                    else if (tableColumn4 == columnOfCardsToBeMoved)
-                    {
-                        RemoveMovedCard(tableColumn4, board.tableColumn4, TableC4R1PB);
-                    }
-                    else if (tableColumn5 == columnOfCardsToBeMoved)
-                    {
-                        RemoveMovedCard(tableColumn5, board.tableColumn5, TableC5R1PB);
-                    }
-                    else if (tableColumn6 == columnOfCardsToBeMoved)
-                    {
-                        RemoveMovedCard(tableColumn6, board.tableColumn6, TableC6R1PB);
-                    }
-                    else if (tableColumn7 == columnOfCardsToBeMoved)
-                    {
-                        RemoveMovedCard(tableColumn7, board.tableColumn7, TableC7R1PB);
-                    }
-                    else if (wastePile == columnOfCardsToBeMoved)
-                    {
-                        RemoveMovedCard(wastePile, board.wastePile, WastePilePB);
-                    }
+                    DetermineColumnToRemoveFrom(columnOfCardsToBeMoved);
                     selectedCards.Clear();
-                    UpdateAllCardPictures();
+                    UpdateColumnPictures(clickedColumn, clickedPictureBox);
+                    UpdateColumnPictures(newColumnOfMovedCards, columnOfCardsToBeMoved);
                 }
             }
             //Check if clicked card is face up
@@ -630,6 +652,7 @@ namespace Playground_Arcade
                     {
                         selectedCards.Add(clickedColumn[i]);
                         columnOfCardsToBeMoved = clickedPictureBox;
+                        newColumnOfMovedCards = clickedColumn;
                     }
                     clickedPictureBox[clickedCardIndex].BorderStyle = BorderStyle.Fixed3D;
                 }
@@ -643,8 +666,7 @@ namespace Playground_Arcade
                         selectedCards.Clear();
                     }
                     //If currently selected card is opposite color of this card, and this card has no card below it
-                    else if (clickedColumn[clickedCardIndex].isRed != selectedCards[0].isRed && clickedColumn.Count == (clickedCardIndex + 1))
-                    // && selectedCards[0].CardRank == clickedColumn[clickedCardIndex].CardRank + 1
+                    else if (clickedColumn[clickedCardIndex].isRed != selectedCards[0].isRed && clickedColumn.Count == (clickedCardIndex + 1) && selectedCards[0].CardRank == clickedColumn[clickedCardIndex].CardRank - 1)
                     {
                         //Move all selected cards to the new column
                         for (int i = 0; i < selectedCards.Count; i++)
@@ -654,44 +676,50 @@ namespace Playground_Arcade
                             clickedPictureBox[clickedCardIndex + i + 1].Visible = true;
                         }
                         //Remove selected cards from old column
-                        if (tableColumn1 == columnOfCardsToBeMoved)
-                        {
-                            RemoveMovedCard(tableColumn1, board.tableColumn1, TableC1R1PB);
-                        }
-                        else if (tableColumn2 == columnOfCardsToBeMoved)
-                        {
-                            RemoveMovedCard(tableColumn2, board.tableColumn2, TableC2R1PB);
-                        }
-                        else if (tableColumn3 == columnOfCardsToBeMoved)
-                        {
-                            RemoveMovedCard(tableColumn3, board.tableColumn3, TableC3R1PB);
-                        }
-                        else if (tableColumn4 == columnOfCardsToBeMoved)
-                        {
-                            RemoveMovedCard(tableColumn4, board.tableColumn4, TableC4R1PB);
-                        }
-                        else if (tableColumn5 == columnOfCardsToBeMoved)
-                        {
-                            RemoveMovedCard(tableColumn5, board.tableColumn5, TableC5R1PB);
-                        }
-                        else if (tableColumn6 == columnOfCardsToBeMoved)
-                        {
-                            RemoveMovedCard(tableColumn6, board.tableColumn6, TableC6R1PB);
-                        }
-                        else if (tableColumn7 == columnOfCardsToBeMoved)
-                        {
-                            RemoveMovedCard(tableColumn7, board.tableColumn7, TableC7R1PB);
-                        }
-                        else if (wastePile == columnOfCardsToBeMoved)
-                        {
-                            RemoveMovedCard(wastePile, board.wastePile, WastePilePB);
-                        }
+                        DetermineColumnToRemoveFrom(columnOfCardsToBeMoved);
                         selectedCards.Clear();
-                        UpdateAllCardPictures();
+                        UpdateColumnPictures(clickedColumn, clickedPictureBox);
+                        UpdateColumnPictures(newColumnOfMovedCards, columnOfCardsToBeMoved);
                     }
                 }
             }
             UpdateTestingLabel();
+        }
+
+        private void DetermineColumnToRemoveFrom(List<PictureBox> column)
+        {
+            if (tableColumn1 == column)
+            {
+                RemoveMovedCard(tableColumn1, board.tableColumn1, TableC1R1PB);
+            }
+            else if (tableColumn2 == column)
+            {
+                RemoveMovedCard(tableColumn2, board.tableColumn2, TableC2R1PB);
+            }
+            else if (tableColumn3 == column)
+            {
+                RemoveMovedCard(tableColumn3, board.tableColumn3, TableC3R1PB);
+            }
+            else if (tableColumn4 == column)
+            {
+                RemoveMovedCard(tableColumn4, board.tableColumn4, TableC4R1PB);
+            }
+            else if (tableColumn5 == column)
+            {
+                RemoveMovedCard(tableColumn5, board.tableColumn5, TableC5R1PB);
+            }
+            else if (tableColumn6 == column)
+            {
+                RemoveMovedCard(tableColumn6, board.tableColumn6, TableC6R1PB);
+            }
+            else if (tableColumn7 == column)
+            {
+                RemoveMovedCard(tableColumn7, board.tableColumn7, TableC7R1PB);
+            }
+            else if (wastePile == column)
+            {
+                RemoveMovedCard(wastePile, board.wastePile, WastePilePB);
+            }
         }
 
         private void RemoveMovedCard(List<PictureBox> tableColumnPictures, List<SolitaireCard> boardCards, PictureBox cardPicture)
@@ -1212,10 +1240,28 @@ namespace Playground_Arcade
                     selectedCards.Add(board.wastePile[^1]);
                     WastePilePB.BorderStyle = BorderStyle.Fixed3D;
                     columnOfCardsToBeMoved = wastePile;
+                    newColumnOfMovedCards = board.wastePile;
                 }
             }
 
             UpdateTestingLabel();
+        }
+        //Complete piles
+        private void CompletePile1PB_Click(object sender, EventArgs e)
+        {
+            MoveToCompletePile(board.completePile1, CompletePile1PB);
+        }
+        private void CompletePile2PB_Click(object sender, EventArgs e)
+        {
+            MoveToCompletePile(board.completePile2, CompletePile2PB);
+        }
+        private void CompletePile3PB_Click(object sender, EventArgs e)
+        {
+            MoveToCompletePile(board.completePile3, CompletePile3PB);
+        }
+        private void CompletePile4PB_Click(object sender, EventArgs e)
+        {
+            MoveToCompletePile(board.completePile4, CompletePile4PB);
         }
     }
 }

@@ -279,6 +279,7 @@
             this.CompletePile1PB.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.CompletePile1PB.TabIndex = 0;
             this.CompletePile1PB.TabStop = false;
+            this.CompletePile1PB.Click += new System.EventHandler(this.CompletePile1PB_Click);
             // 
             // CompletePile2PB
             // 
@@ -290,6 +291,7 @@
             this.CompletePile2PB.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.CompletePile2PB.TabIndex = 1;
             this.CompletePile2PB.TabStop = false;
+            this.CompletePile2PB.Click += new System.EventHandler(this.CompletePile2PB_Click);
             // 
             // CompletePile3PB
             // 
@@ -301,6 +303,7 @@
             this.CompletePile3PB.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.CompletePile3PB.TabIndex = 2;
             this.CompletePile3PB.TabStop = false;
+            this.CompletePile3PB.Click += new System.EventHandler(this.CompletePile3PB_Click);
             // 
             // CompletePile4PB
             // 
@@ -312,6 +315,7 @@
             this.CompletePile4PB.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.CompletePile4PB.TabIndex = 3;
             this.CompletePile4PB.TabStop = false;
+            this.CompletePile4PB.Click += new System.EventHandler(this.CompletePile4PB_Click);
             // 
             // WastePilePB
             // 
