@@ -16,9 +16,11 @@ namespace Playground_Arcade
         public WordleForm()
         {
             InitializeComponent();
+            string answer = WordToGuess();
+            Answer.Text = WordToGuess();
         }
         private Random random = new Random();
-        private string[] words = { "apple", "grape", "water", "straw" };
+        private string[] words = File.ReadAllLines("WordleDataset.txt");
         int textBoxIndex = 0;
         public void letterClick(string letter)
         {
@@ -64,6 +66,67 @@ namespace Playground_Arcade
                     break;
             }
         }
+
+        public void letterColoring(RichTextBox currentGuess)
+        {
+            int skip1 = -1;
+            int skip2 = -1;
+            for (int i = 0; i < 5; i++)
+            {
+                if (Answer.Text[i] == currentGuess.Text[i])
+                {
+                    currentGuess.Select(i, 1);
+                    currentGuess.SelectionBackColor = Color.Green;
+                    Button letterButton = this.Controls.Find(currentGuess.Text.Substring(i, 1), true).FirstOrDefault() as Button;
+                    if (letterButton != null) { letterButton.BackColor = Color.Green; }
+                }
+                else
+                {
+                    bool maybeYellow = false;
+                    for (int j = 0; j < 5; j++)
+                    {
+                        if (i == j || j == skip1 || j == skip2) { continue; }
+                        else
+                        {
+                            if (currentGuess.Text[i] == Answer.Text[j])
+                            {
+                                if (currentGuess.Text[j] == Answer.Text[j])
+                                {
+                                    currentGuess.Select(i, 1);
+                                    currentGuess.SelectionBackColor = Color.Gray;
+                                    Button letterButton = this.Controls.Find(currentGuess.Text.Substring(i, 1), true).FirstOrDefault() as Button;
+                                    if (letterButton != null && letterButton.BackColor != Color.Green && letterButton.BackColor != Color.Yellow) { letterButton.BackColor = Color.Gray; }
+                                    continue;
+                                }
+                                else
+                                {
+                                    currentGuess.Select(i, 1);
+                                    currentGuess.SelectionBackColor = Color.Yellow;
+                                    Button letterButton = this.Controls.Find(currentGuess.Text.Substring(i, 1), true).FirstOrDefault() as Button;
+                                    if (letterButton != null && letterButton.BackColor != Color.Green) { letterButton.BackColor = Color.Yellow; }
+                                    maybeYellow = true;
+                                    if (skip1 == -1) { skip1 = j; }
+                                    else { skip2 = j; }
+                                }
+                            }
+                            else
+                            {
+                                if (maybeYellow) { continue; }
+                                else
+                                {
+                                    currentGuess.Select(i, 1);
+                                    currentGuess.SelectionBackColor = Color.Gray;
+                                    Button letterButton = this.Controls.Find(currentGuess.Text.Substring(i, 1), true).FirstOrDefault() as Button;
+                                    if (letterButton != null && letterButton.BackColor != Color.Green && letterButton.BackColor != Color.Yellow) { letterButton.BackColor = Color.Gray; }
+                                    continue;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
 
         private string WordToGuess()
         {
@@ -234,48 +297,158 @@ namespace Playground_Arcade
                 case 0:
                     if (Guess1.Text.Length == 5)
                     {
-                        textBoxIndex++;
-                        InvalidWordMessage.Visible = false;
+                        if (words.Contains(Guess1.Text))
+                        {
+                            if (Guess1.Text == Answer.Text)
+                            {
+                                textBoxIndex = -1;
+                                WelcomeMessage.Visible = true;
+                                WinMessage.Visible = true;
+                                InvalidWord.Visible = false;
+                                InvalidWordMessage.Visible = false;
+                                letterColoring(Guess1);
+                            }
+                            else
+                            {
+                                textBoxIndex++;
+                                InvalidWordMessage.Visible = false;
+                                InvalidWord.Visible = false;
+                                letterColoring(Guess1);
+                            }
+                        }
+                        else { InvalidWord.Visible = true; }
                     }
                     else { InvalidWordMessage.Visible = true; }
                     break;
                 case 1:
                     if (Guess2.Text.Length == 5)
                     {
-                        textBoxIndex++;
-                        InvalidWordMessage.Visible = false;
+                        if (words.Contains(Guess2.Text))
+                        {
+                            if (Guess2.Text == Answer.Text)
+                            {
+                                textBoxIndex = -1;
+                                WelcomeMessage.Visible = true;
+                                WinMessage.Visible = true;
+                                InvalidWord.Visible = false;
+                                InvalidWordMessage.Visible = false;
+                                letterColoring(Guess2);
+                            }
+                            else
+                            {
+                                textBoxIndex++;
+                                InvalidWordMessage.Visible = false;
+                                InvalidWord.Visible = false;
+                                letterColoring(Guess2);
+                            }
+                        }
+                        else { InvalidWord.Visible = true; }
                     }
                     else { InvalidWordMessage.Visible = true; }
                     break;
                 case 2:
                     if (Guess3.Text.Length == 5)
                     {
-                        textBoxIndex++;
-                        InvalidWordMessage.Visible = false;
+                        if (words.Contains(Guess3.Text))
+                        {
+                            if (Guess3.Text == Answer.Text)
+                            {
+                                textBoxIndex = -1;
+                                WelcomeMessage.Visible = true;
+                                WinMessage.Visible = true;
+                                InvalidWord.Visible = false;
+                                InvalidWordMessage.Visible = false;
+                                letterColoring(Guess3);
+                            }
+                            else
+                            {
+                                textBoxIndex++;
+                                InvalidWordMessage.Visible = false;
+                                InvalidWord.Visible = false;
+                                letterColoring(Guess3);
+                            }
+                        }
+                        else { InvalidWord.Visible = true; }
                     }
                     else { InvalidWordMessage.Visible = true; }
                     break;
                 case 3:
                     if (Guess4.Text.Length == 5)
                     {
-                        textBoxIndex++;
-                        InvalidWordMessage.Visible = false;
+                        if (words.Contains(Guess4.Text))
+                        {
+                            if (Guess4.Text == Answer.Text)
+                            {
+                                textBoxIndex = -1;
+                                WelcomeMessage.Visible = true;
+                                WinMessage.Visible = true;
+                                InvalidWord.Visible = false;
+                                InvalidWordMessage.Visible = false;
+                                letterColoring(Guess4);
+                            }
+                            else
+                            {
+                                textBoxIndex++;
+                                InvalidWordMessage.Visible = false;
+                                InvalidWord.Visible = false;
+                                letterColoring(Guess4);
+                            }
+                        }
+                        else { InvalidWord.Visible = true; }
                     }
                     else { InvalidWordMessage.Visible = true; }
                     break;
                 case 4:
                     if (Guess5.Text.Length == 5)
                     {
-                        textBoxIndex++;
-                        InvalidWordMessage.Visible = false;
+                        if (words.Contains(Guess5.Text))
+                        {
+                            if (Guess5.Text == Answer.Text)
+                            {
+                                textBoxIndex = -1;
+                                WelcomeMessage.Visible = true;
+                                WinMessage.Visible = true;
+                                InvalidWord.Visible = false;
+                                InvalidWordMessage.Visible = false;
+                                letterColoring(Guess5);
+                            }
+                            else
+                            {
+                                textBoxIndex++;
+                                InvalidWordMessage.Visible = false;
+                                InvalidWord.Visible = false;
+                                letterColoring(Guess5);
+                            }
+                        }
+                        else { InvalidWord.Visible = true; }
                     }
                     else { InvalidWordMessage.Visible = true; }
                     break;
                 case 5:
                     if (GuessFinal.Text.Length == 5)
                     {
-                        textBoxIndex++;
-                        InvalidWordMessage.Visible = false;
+                        if (words.Contains(GuessFinal.Text))
+                        {
+                            if (GuessFinal.Text == Answer.Text)
+                            {
+                                textBoxIndex = -1;
+                                WelcomeMessage.Visible = true;
+                                WinMessage.Visible = true;
+                                InvalidWord.Visible = false;
+                                InvalidWordMessage.Visible = false;
+                                letterColoring(GuessFinal);
+                            }
+                            else
+                            {
+                                textBoxIndex++;
+                                InvalidWordMessage.Visible = false;
+                                InvalidWord.Visible = false;
+                                letterColoring(GuessFinal);
+                                Answer.Visible = true;
+                                LoseMessage.Visible = true;
+                            }
+                        }
+                        else { InvalidWord.Visible = true; }
                     }
                     else { InvalidWordMessage.Visible = true; }
                     break;
@@ -365,6 +538,53 @@ namespace Playground_Arcade
         }
 
         private void WordleForm_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Answer_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void NewGame_Click(object sender, EventArgs e)
+        {
+            WelcomeMessage.Visible = false;
+            Guess1.Text = "";
+            Guess1.Visible = true;
+
+            Guess2.Text = "";
+            Guess2.Visible = true;
+
+            Guess3.Text = "";
+            Guess3.Visible = true;
+
+            Guess4.Text = "";
+            Guess4.Visible = true;
+
+            Guess5.Text = "";
+            Guess5.Visible = true;
+
+            GuessFinal.Text = "";
+            GuessFinal.Visible = true;
+
+            Answer.Visible = true;
+
+            WinMessage.Visible = false;
+
+            LoseMessage.Visible = false;
+
+            InvalidWordMessage.Visible = false;
+            Answer.Text = WordToGuess();
+            foreach (Button button in this.Controls.OfType<Button>())
+            {
+                button.BackColor = SystemColors.Control;
+                button.Visible = true;
+            }
+            textBoxIndex = 0;
+        }
+
+        private void InvalidWord_Click(object sender, EventArgs e)
         {
 
         }
