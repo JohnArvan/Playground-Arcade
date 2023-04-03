@@ -12,11 +12,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 //  TODO
-//visual fixes (picture layering)
-//title/start screen
-//Game end
-//restart
-//maybe option for draw 1 or draw 3
+//comments/code cleanup
 //maybe hint system
 
 namespace Playground_Arcade
@@ -34,71 +30,74 @@ namespace Playground_Arcade
         List<PictureBox> tableColumn7;
         //Cards in waste pile
         List<PictureBox> wastePile;
-        //Cards in complete piles
-        List<PictureBox> completePile1;
-        List<PictureBox> completePile2;
-        List<PictureBox> completePile3;
-        List<PictureBox> completePile4;
         //Card(s) selected by user to move
         List<SolitaireCard> selectedCards;
         //Original column of selected cards to move
         List<PictureBox> columnOfCardsToBeMoved;
         //New location of moved cards
         List<SolitaireCard> newColumnOfMovedCards;
+        //Number of moves taken (draw card or move card(s))
+        int numOfMoves;
+        //Number of cards drawn from draw pile each click
+        int numOfDraws;
 
         public SolitaireForm()
         {
             InitializeComponent();
+            board = new();
+            tableColumn1 = new();
+            tableColumn2 = new();
+            tableColumn3 = new();
+            tableColumn4 = new();
+            tableColumn5 = new();
+            tableColumn6 = new();
+            tableColumn7 = new();
+            wastePile = new();
+            selectedCards = new();
+            columnOfCardsToBeMoved = new();
+            newColumnOfMovedCards = new();
+        }
 
+        private void StartGame()
+        {
+            TitleLabel.Visible = false;
+            PlayDraw1Button.Visible = false;
+            PlayDraw3Button.Visible = false;
+            HowToPlayLabel.Visible = false;
+            TitlePB1.Visible = false;
+            TitlePB2.Visible = false;
+            TitlePB3.Visible = false;
+            TitlePB4.Visible = false;
             board = new();
             columnOfCardsToBeMoved = new();
             selectedCards = new();
             SetupAllCardPictures();
             UpdateAllCardPictures();
+            numOfMoves = 0;
+            NumberOfMovesLabel.Text = "Moves: " + numOfMoves;
+            UpdateColumnPictures(board.tableColumn1, tableColumn1);
+            UpdateColumnPictures(board.tableColumn2, tableColumn2);
+            UpdateColumnPictures(board.tableColumn3, tableColumn3);
+            UpdateColumnPictures(board.tableColumn4, tableColumn4);
+            UpdateColumnPictures(board.tableColumn5, tableColumn5);
+            UpdateColumnPictures(board.tableColumn6, tableColumn6);
+            UpdateColumnPictures(board.tableColumn7, tableColumn7);
+            RestartButton.Visible = true;
+            RestartButton.Enabled = true;
+            NumberOfMovesLabel.Visible = true;
         }
 
-        //for testing
-        private void UpdateTestingLabel()
+        private void UpdateNumberOfMoves()
         {
-            testingLabel.Text = "Column 1:\n";
-            foreach (SolitaireCard card in board.tableColumn1)
+            numOfMoves++;
+            NumberOfMovesLabel.Text = "Moves: " + numOfMoves;
+        }
+
+        private void GameWonCheck()
+        {
+            if (board.completePile1.Count == 13 && board.completePile2.Count == 13 && board.completePile3.Count == 13 && board.completePile4.Count == 13)
             {
-                testingLabel.Text += card + "\n";
-            }
-            testingLabel.Text += "Column 2:\n";
-            foreach (SolitaireCard card in board.tableColumn2)
-            {
-                testingLabel.Text += card + "\n";
-            }
-            testingLabel.Text += "Column 3:\n";
-            foreach (SolitaireCard card in board.tableColumn3)
-            {
-                testingLabel.Text += card + "\n";
-            }
-            testingLabel.Text += "Column 4:\n";
-            foreach (SolitaireCard card in board.tableColumn4)
-            {
-                testingLabel.Text += card + "\n";
-            }
-            testingLabel.Text += "Column 5:\n";
-            foreach (SolitaireCard card in board.tableColumn5)
-            {
-                testingLabel.Text += card + "\n";
-            }
-            testingLabel.Text += "Column 6:\n";
-            foreach (SolitaireCard card in board.tableColumn6)
-            {
-                testingLabel.Text += card + "\n";
-            }
-            testingLabel.Text += "Column 7:\n";
-            foreach (SolitaireCard card in board.tableColumn7)
-            {
-                testingLabel.Text += card + "\n";
-            }
-            testingLabel.Text += "\nSelected:\n";
-            foreach (SolitaireCard card in selectedCards)
-            {
-                testingLabel.Text += card + "\n";
+                YouWinLabel.Visible = true;
             }
         }
 
@@ -106,26 +105,33 @@ namespace Playground_Arcade
         //If the drawPile is empty, move all cards in the wastePile back into the drawPile
         private void DrawPilePB_Click(object sender, EventArgs e)
         {
-            board.DrawFromDrawPile();
-            //Update the wastePile's picture to the newly added card, or blank if empty
-            if (board.wastePile.Count == 0)
+            for (int i = 0; i < numOfDraws; i++)
             {
-                WastePilePB.Image = null;
-            }
-            else
-            {
-                board.wastePile[^1].FlipCard();
-                UpdateCardPicture(board.wastePile[^1], WastePilePB);
-                selectedCards.Clear();
-            }
-            //Update the drawPile's picture to the card back, or blank if empty
-            if (board.drawPile.Count == 0)
-            {
-                DrawPilePB.Image = null;
-            }
-            else
-            {
-                DrawPilePB.Image = Resources.Back;
+                board.DrawFromDrawPile();
+                //Update the wastePile's picture to the newly added card, or blank if empty
+                if (board.wastePile.Count == 0)
+                {
+                    WastePilePB.Image = null;
+                }
+                else
+                {
+                    board.wastePile[^1].FlipCard();
+                    UpdateCardPicture(board.wastePile[^1], WastePilePB);
+                    selectedCards.Clear();
+                    if (i == 0)
+                    {
+                        UpdateNumberOfMoves();
+                    }
+                }
+                //Update the drawPile's picture to the card back, or blank if empty
+                if (board.drawPile.Count == 0)
+                {
+                    DrawPilePB.Image = null;
+                }
+                else
+                {
+                    DrawPilePB.Image = Resources.Back;
+                }
             }
         }
 
@@ -149,6 +155,8 @@ namespace Playground_Arcade
                 TableC1R12PB,
                 TableC1R13PB
             };
+            tableColumn1[0].Enabled = true;
+            tableColumn1[0].Visible = true;
             board.tableColumn1[0].FlipCard();
             //All picture boxes in column 2
             tableColumn2 = new List<PictureBox>()
@@ -168,6 +176,11 @@ namespace Playground_Arcade
                 TableC2R13PB,
                 TableC2R14PB
             };
+            for (int i = 0; i < 2; i++)
+            {
+                tableColumn2[i].Enabled = true;
+                tableColumn2[i].Visible = true;
+            }
             board.tableColumn2[1].FlipCard();
             //All picture boxes in column 3
             tableColumn3 = new List<PictureBox>()
@@ -188,6 +201,11 @@ namespace Playground_Arcade
                 TableC3R14PB,
                 TableC3R15PB
             };
+            for (int i = 0; i < 3; i++)
+            {
+                tableColumn3[i].Enabled = true;
+                tableColumn3[i].Visible = true;
+            }
             board.tableColumn3[2].FlipCard();
             //All picture boxes in column 4
             tableColumn4 = new List<PictureBox>()
@@ -209,6 +227,11 @@ namespace Playground_Arcade
                 TableC4R15PB,
                 TableC4R16PB
             };
+            for (int i = 0; i < 4; i++)
+            {
+                tableColumn4[i].Enabled = true;
+                tableColumn4[i].Visible = true;
+            }
             board.tableColumn4[3].FlipCard();
             //All picture boxes in column 5
             tableColumn5 = new List<PictureBox>()
@@ -231,6 +254,11 @@ namespace Playground_Arcade
                 TableC5R16PB,
                 TableC5R17PB
             };
+            for (int i = 0; i < 5; i++)
+            {
+                tableColumn5[i].Enabled = true;
+                tableColumn5[i].Visible = true;
+            }
             board.tableColumn5[4].FlipCard();
             //All picture boxes in column 6
             tableColumn6 = new List<PictureBox>()
@@ -254,6 +282,11 @@ namespace Playground_Arcade
                 TableC6R17PB,
                 TableC6R18PB
             };
+            for (int i = 0; i < 6; i++)
+            {
+                tableColumn6[i].Enabled = true;
+                tableColumn6[i].Visible = true;
+            }
             board.tableColumn6[5].FlipCard();
             //All picture boxes in column 7
             tableColumn7 = new List<PictureBox>()
@@ -278,12 +311,25 @@ namespace Playground_Arcade
                 TableC7R18PB,
                 TableC7R19PB
             };
+            for (int i = 0; i < 7; i++)
+            {
+                tableColumn7[i].Enabled = true;
+                tableColumn7[i].Visible = true;
+            }
             board.tableColumn7[6].FlipCard();
-            completePile1 = new List<PictureBox> { CompletePile1PB };
-            completePile2 = new List<PictureBox> { CompletePile2PB };
-            completePile3 = new List<PictureBox> { CompletePile3PB };
-            completePile4 = new List<PictureBox> { CompletePile4PB };
             wastePile = new List<PictureBox> { WastePilePB };
+            CompletePile1PB.Enabled = true;
+            CompletePile1PB.Visible = true;
+            CompletePile2PB.Enabled = true;
+            CompletePile2PB.Visible = true;
+            CompletePile3PB.Enabled = true;
+            CompletePile3PB.Visible = true;
+            CompletePile4PB.Enabled = true;
+            CompletePile4PB.Visible = true;
+            WastePilePB.Enabled = true;
+            WastePilePB.Visible = true;
+            DrawPilePB.Enabled = true;
+            DrawPilePB.Visible = true;
         }
 
         //Update each table picture box's picture to the corresponding card
@@ -324,8 +370,6 @@ namespace Playground_Arcade
             {
                 UpdateCardPicture(board.tableColumn7[i], tableColumn7[i]);
             }
-
-            UpdateTestingLabel();
         }
 
         public void UpdateColumnPictures(List<SolitaireCard> cardColumn, List<PictureBox> pictureColumn)
@@ -335,6 +379,10 @@ namespace Playground_Arcade
                 for (int i = 0; i < cardColumn.Count; i++)
                 {
                     UpdateCardPicture(cardColumn[i], pictureColumn[i]);
+                }
+                foreach (PictureBox picture in pictureColumn)
+                {
+                    picture.BringToFront();
                 }
             }
         }
@@ -608,6 +656,8 @@ namespace Playground_Arcade
                         UpdateCardPicture(selectedCards[0], clickedPictureBox);
                         selectedCards.Clear();
                         UpdateColumnPictures(newColumnOfMovedCards, columnOfCardsToBeMoved);
+                        UpdateNumberOfMoves();
+                        GameWonCheck();
                     }
                 }
                 else if (selectedCards[0].CardRank == clickedPile[^1].CardRank + 1 && selectedCards[0].CardSuit == clickedPile[^1].CardSuit)
@@ -617,6 +667,8 @@ namespace Playground_Arcade
                     UpdateCardPicture(selectedCards[0], clickedPictureBox);
                     selectedCards.Clear();
                     UpdateColumnPictures(newColumnOfMovedCards, columnOfCardsToBeMoved);
+                    UpdateNumberOfMoves();
+                    GameWonCheck();
                 }
             }
         }
@@ -640,6 +692,7 @@ namespace Playground_Arcade
                     selectedCards.Clear();
                     UpdateColumnPictures(clickedColumn, clickedPictureBox);
                     UpdateColumnPictures(newColumnOfMovedCards, columnOfCardsToBeMoved);
+                    UpdateNumberOfMoves();
                 }
             }
             //Check if clicked card is face up
@@ -680,10 +733,10 @@ namespace Playground_Arcade
                         selectedCards.Clear();
                         UpdateColumnPictures(clickedColumn, clickedPictureBox);
                         UpdateColumnPictures(newColumnOfMovedCards, columnOfCardsToBeMoved);
+                        UpdateNumberOfMoves();
                     }
                 }
             }
-            UpdateTestingLabel();
         }
 
         private void DetermineColumnToRemoveFrom(List<PictureBox> column)
@@ -1243,8 +1296,6 @@ namespace Playground_Arcade
                     newColumnOfMovedCards = board.wastePile;
                 }
             }
-
-            UpdateTestingLabel();
         }
         //Complete piles
         private void CompletePile1PB_Click(object sender, EventArgs e)
@@ -1262,6 +1313,23 @@ namespace Playground_Arcade
         private void CompletePile4PB_Click(object sender, EventArgs e)
         {
             MoveToCompletePile(board.completePile4, CompletePile4PB);
+        }
+        //Start game buttons
+        private void PlayDraw1Button_Click(object sender, EventArgs e)
+        {
+            numOfDraws = 1;
+            StartGame();
+        }
+        private void PlayDraw3Button_Click(object sender, EventArgs e)
+        {
+            numOfDraws = 3;
+            StartGame();
+        }
+
+        private void RestartButton_Click(object sender, EventArgs e)
+        {
+            this.Controls.Clear();
+            InitializeComponent();
         }
     }
 }

@@ -96,4 +96,26 @@
   <metadata name="TableC1R13PB.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
+  <data name="HowToPlayLabel.Text" xml:space="preserve">
+    <value>How to play:
+- Click on a face-up card to select it, then click on another
+  face-up card or empty location to move it there.
+- Click on a selected card again to deselect it.
+- If a selected card has cards on top of it, they will be
+  moved with the selected card.
+- Cards can only be put on top of cards that are a rank one
+  value greater than the selected card. (i.e., a Three can
+  only be moved on top of a Four)
+- Only cards with a rank of King can be moved to an
+  empty column.
+- Only cards with a rank of Ace can be moved into one
+  of four empty complete piles
+- To move a non-Ace card to a complete pile, it must be 
+  the same suit and a rank one greater than the current card
+  in the complete pile. (i.e., only the Queen of Diamonds can
+  be placed on top of the Jack of Diamonds.)
+- Click on the draw pile (face-down card in the top right) to 
+  draw 1 or 3 cards into the waste pile.
+- The top card of the waste pile can be selected and moved.</value>
+  </data>
 </root>
