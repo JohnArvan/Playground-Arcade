@@ -38,7 +38,6 @@ namespace Playground_Arcade
                                           SolitaireCardRank.Ten, SolitaireCardRank.Jack, SolitaireCardRank.Queen, 
                                           SolitaireCardRank.King };
             SolitaireCardSuit[] suits = { SolitaireCardSuit.Diamonds, SolitaireCardSuit.Hearts, SolitaireCardSuit.Spades, SolitaireCardSuit.Clubs };
-            //Generate all 52 possible cards and add to allCards 
             allCards = new List<SolitaireCard>();
             tableColumn1 = new List<SolitaireCard>();
             tableColumn2 = new List<SolitaireCard>();
@@ -53,6 +52,7 @@ namespace Playground_Arcade
             completePile2 = new List<SolitaireCard>();
             completePile3 = new List<SolitaireCard>();
             completePile4 = new List<SolitaireCard>();
+            //Generate all 52 possible cards and add to allCards 
             foreach (SolitaireCardRank rank in ranks)
             {
                 foreach (SolitaireCardSuit suit in suits)

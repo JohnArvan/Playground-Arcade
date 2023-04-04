@@ -14,7 +14,7 @@ namespace Playground_Arcade
         public SolitaireCardRank CardRank { get; private set; }
         public SolitaireCardSuit CardSuit { get; private set; }
         public bool IsFaceUp { get; set; }
-        public bool isRed { get; private set; }
+        public bool IsRed { get; private set; }
 
         public SolitaireCard(SolitaireCardRank rank, SolitaireCardSuit suit)
         {
@@ -22,11 +22,11 @@ namespace Playground_Arcade
             CardSuit = suit;
             if (CardSuit == SolitaireCardSuit.Diamonds || CardSuit == SolitaireCardSuit.Hearts)
             {
-                isRed = true;
+                IsRed = true;
             }
             else
             {
-                isRed = false;
+                IsRed = false;
             }
 
         }

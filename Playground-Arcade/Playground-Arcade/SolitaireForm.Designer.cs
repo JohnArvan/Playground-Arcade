@@ -1924,7 +1924,7 @@
             this.HowToPlayLabel.AutoSize = true;
             this.HowToPlayLabel.Location = new System.Drawing.Point(208, 245);
             this.HowToPlayLabel.Name = "HowToPlayLabel";
-            this.HowToPlayLabel.Size = new System.Drawing.Size(406, 400);
+            this.HowToPlayLabel.Size = new System.Drawing.Size(406, 420);
             this.HowToPlayLabel.TabIndex = 181;
             this.HowToPlayLabel.Text = resources.GetString("HowToPlayLabel.Text");
             // 
@@ -1932,7 +1932,7 @@
             // 
             this.YouWinLabel.AutoSize = true;
             this.YouWinLabel.Font = new System.Drawing.Font("Segoe UI", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
-            this.YouWinLabel.Location = new System.Drawing.Point(326, 152);
+            this.YouWinLabel.Location = new System.Drawing.Point(326, 213);
             this.YouWinLabel.Name = "YouWinLabel";
             this.YouWinLabel.Size = new System.Drawing.Size(147, 41);
             this.YouWinLabel.TabIndex = 182;

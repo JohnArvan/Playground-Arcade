@@ -104,12 +104,13 @@
 - If a selected card has cards on top of it, they will be
   moved with the selected card.
 - Cards can only be put on top of cards that are a rank one
-  value greater than the selected card. (i.e., a Three can
-  only be moved on top of a Four)
+  value greater than and the opposite color of the selected
+  card. (i.e., a red Three can only be moved on top of a 
+  black Four)
 - Only cards with a rank of King can be moved to an
   empty column.
 - Only cards with a rank of Ace can be moved into one
-  of four empty complete piles
+  of four empty complete piles.
 - To move a non-Ace card to a complete pile, it must be 
   the same suit and a rank one greater than the current card
   in the complete pile. (i.e., only the Queen of Diamonds can
