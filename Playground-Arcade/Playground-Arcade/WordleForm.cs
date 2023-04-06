@@ -290,139 +290,52 @@ namespace Playground_Arcade
             letterClick(letter);
         }
 
+
+        private void enterCase(RichTextBox currentGuess)
+        {
+            if (currentGuess.Text.Length == 5)
+            {
+                if (words.Contains(currentGuess.Text))
+                {
+                    if (currentGuess.Text == Answer.Text)
+                    {
+                        textBoxIndex = -1;
+                        WelcomeMessage.Visible = true;
+                        WinMessage.Visible = true;
+                        InvalidWord.Visible = false;
+                        InvalidWordMessage.Visible = false;
+                        letterColoring(currentGuess);
+                    }
+                    else
+                    {
+                        textBoxIndex++;
+                        InvalidWordMessage.Visible = false;
+                        InvalidWord.Visible = false;
+                        letterColoring(currentGuess);
+                    }
+                }
+                else { InvalidWord.Visible = true; InvalidWordMessage.Visible = false; }
+            }
+            else { InvalidWordMessage.Visible = true; InvalidWord.Visible = false; }
+        }
         private void Enter_Click(object sender, EventArgs e)
         {
             switch (textBoxIndex)
             {
                 case 0:
-                    if (Guess1.Text.Length == 5)
-                    {
-                        if (words.Contains(Guess1.Text))
-                        {
-                            if (Guess1.Text == Answer.Text)
-                            {
-                                textBoxIndex = -1;
-                                WelcomeMessage.Visible = true;
-                                WinMessage.Visible = true;
-                                InvalidWord.Visible = false;
-                                InvalidWordMessage.Visible = false;
-                                letterColoring(Guess1);
-                            }
-                            else
-                            {
-                                textBoxIndex++;
-                                InvalidWordMessage.Visible = false;
-                                InvalidWord.Visible = false;
-                                letterColoring(Guess1);
-                            }
-                        }
-                        else { InvalidWord.Visible = true; }
-                    }
-                    else { InvalidWordMessage.Visible = true; }
+                    enterCase(Guess1);
                     break;
                 case 1:
-                    if (Guess2.Text.Length == 5)
-                    {
-                        if (words.Contains(Guess2.Text))
-                        {
-                            if (Guess2.Text == Answer.Text)
-                            {
-                                textBoxIndex = -1;
-                                WelcomeMessage.Visible = true;
-                                WinMessage.Visible = true;
-                                InvalidWord.Visible = false;
-                                InvalidWordMessage.Visible = false;
-                                letterColoring(Guess2);
-                            }
-                            else
-                            {
-                                textBoxIndex++;
-                                InvalidWordMessage.Visible = false;
-                                InvalidWord.Visible = false;
-                                letterColoring(Guess2);
-                            }
-                        }
-                        else { InvalidWord.Visible = true; }
-                    }
-                    else { InvalidWordMessage.Visible = true; }
+                    enterCase(Guess2);
                     break;
                 case 2:
-                    if (Guess3.Text.Length == 5)
-                    {
-                        if (words.Contains(Guess3.Text))
-                        {
-                            if (Guess3.Text == Answer.Text)
-                            {
-                                textBoxIndex = -1;
-                                WelcomeMessage.Visible = true;
-                                WinMessage.Visible = true;
-                                InvalidWord.Visible = false;
-                                InvalidWordMessage.Visible = false;
-                                letterColoring(Guess3);
-                            }
-                            else
-                            {
-                                textBoxIndex++;
-                                InvalidWordMessage.Visible = false;
-                                InvalidWord.Visible = false;
-                                letterColoring(Guess3);
-                            }
-                        }
-                        else { InvalidWord.Visible = true; }
-                    }
-                    else { InvalidWordMessage.Visible = true; }
+                    enterCase(Guess3);
                     break;
                 case 3:
-                    if (Guess4.Text.Length == 5)
-                    {
-                        if (words.Contains(Guess4.Text))
-                        {
-                            if (Guess4.Text == Answer.Text)
-                            {
-                                textBoxIndex = -1;
-                                WelcomeMessage.Visible = true;
-                                WinMessage.Visible = true;
-                                InvalidWord.Visible = false;
-                                InvalidWordMessage.Visible = false;
-                                letterColoring(Guess4);
-                            }
-                            else
-                            {
-                                textBoxIndex++;
-                                InvalidWordMessage.Visible = false;
-                                InvalidWord.Visible = false;
-                                letterColoring(Guess4);
-                            }
-                        }
-                        else { InvalidWord.Visible = true; }
-                    }
-                    else { InvalidWordMessage.Visible = true; }
+                    enterCase(Guess4);
                     break;
                 case 4:
-                    if (Guess5.Text.Length == 5)
-                    {
-                        if (words.Contains(Guess5.Text))
-                        {
-                            if (Guess5.Text == Answer.Text)
-                            {
-                                textBoxIndex = -1;
-                                WelcomeMessage.Visible = true;
-                                WinMessage.Visible = true;
-                                InvalidWord.Visible = false;
-                                InvalidWordMessage.Visible = false;
-                                letterColoring(Guess5);
-                            }
-                            else
-                            {
-                                textBoxIndex++;
-                                InvalidWordMessage.Visible = false;
-                                InvalidWord.Visible = false;
-                                letterColoring(Guess5);
-                            }
-                        }
-                        else { InvalidWord.Visible = true; }
-                    }
-                    else { InvalidWordMessage.Visible = true; }
+                    enterCase(Guess5);
                     break;
                 case 5:
                     if (GuessFinal.Text.Length == 5)
@@ -448,9 +361,9 @@ namespace Playground_Arcade
                                 LoseMessage.Visible = true;
                             }
                         }
-                        else { InvalidWord.Visible = true; }
+                        else { InvalidWord.Visible = true; InvalidWordMessage.Visible = false; }
                     }
-                    else { InvalidWordMessage.Visible = true; }
+                    else { InvalidWordMessage.Visible = true; InvalidWord.Visible = false; }
                     break;
                 default:
                     break;
