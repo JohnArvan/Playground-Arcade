@@ -20,7 +20,7 @@ namespace Playground_Arcade
             Answer.Text = WordToGuess();
         }
         private Random random = new Random();
-        private string[] words = File.ReadAllLines("WordleDataset.txt");
+        private string[] words = File.ReadAllLines("../../../datasets/WordleDataset.txt");
         int textBoxIndex = 0;
         public void letterClick(string letter)
         {
