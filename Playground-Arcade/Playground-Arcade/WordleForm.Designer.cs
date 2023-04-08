@@ -76,11 +76,11 @@
             // 
             Guess1.Font = new Font("Courier New", 36F, FontStyle.Bold, GraphicsUnit.Point);
             Guess1.ForeColor = SystemColors.ActiveCaptionText;
-            Guess1.Location = new Point(365, 12);
+            Guess1.Location = new Point(353, 16);
             Guess1.Margin = new Padding(4, 3, 4, 3);
             Guess1.MaxLength = 5;
             Guess1.Name = "Guess1";
-            Guess1.Size = new Size(156, 64);
+            Guess1.Size = new Size(177, 64);
             Guess1.TabIndex = 0;
             Guess1.Text = "";
             Guess1.Visible = false;
@@ -482,11 +482,11 @@
             // 
             Guess2.Font = new Font("Courier New", 36F, FontStyle.Bold, GraphicsUnit.Point);
             Guess2.ForeColor = SystemColors.ActiveCaptionText;
-            Guess2.Location = new Point(365, 68);
+            Guess2.Location = new Point(353, 72);
             Guess2.Margin = new Padding(4, 3, 4, 3);
             Guess2.MaxLength = 5;
             Guess2.Name = "Guess2";
-            Guess2.Size = new Size(156, 64);
+            Guess2.Size = new Size(177, 64);
             Guess2.TabIndex = 29;
             Guess2.Text = "";
             Guess2.Visible = false;
@@ -496,11 +496,11 @@
             // 
             Guess3.Font = new Font("Courier New", 36F, FontStyle.Bold, GraphicsUnit.Point);
             Guess3.ForeColor = SystemColors.ActiveCaptionText;
-            Guess3.Location = new Point(365, 125);
+            Guess3.Location = new Point(353, 129);
             Guess3.Margin = new Padding(4, 3, 4, 3);
             Guess3.MaxLength = 5;
             Guess3.Name = "Guess3";
-            Guess3.Size = new Size(156, 64);
+            Guess3.Size = new Size(177, 64);
             Guess3.TabIndex = 30;
             Guess3.Text = "";
             Guess3.Visible = false;
@@ -510,11 +510,11 @@
             // 
             Guess4.Font = new Font("Courier New", 36F, FontStyle.Bold, GraphicsUnit.Point);
             Guess4.ForeColor = SystemColors.ActiveCaptionText;
-            Guess4.Location = new Point(365, 179);
+            Guess4.Location = new Point(353, 183);
             Guess4.Margin = new Padding(4, 3, 4, 3);
             Guess4.MaxLength = 5;
             Guess4.Name = "Guess4";
-            Guess4.Size = new Size(156, 64);
+            Guess4.Size = new Size(177, 64);
             Guess4.TabIndex = 31;
             Guess4.Text = "";
             Guess4.Visible = false;
@@ -524,11 +524,11 @@
             // 
             Guess5.Font = new Font("Courier New", 36F, FontStyle.Bold, GraphicsUnit.Point);
             Guess5.ForeColor = SystemColors.ActiveCaptionText;
-            Guess5.Location = new Point(365, 235);
+            Guess5.Location = new Point(353, 239);
             Guess5.Margin = new Padding(4, 3, 4, 3);
             Guess5.MaxLength = 5;
             Guess5.Name = "Guess5";
-            Guess5.Size = new Size(156, 64);
+            Guess5.Size = new Size(177, 64);
             Guess5.TabIndex = 32;
             Guess5.Text = "";
             Guess5.Visible = false;
@@ -538,11 +538,11 @@
             // 
             GuessFinal.Font = new Font("Courier New", 36F, FontStyle.Bold, GraphicsUnit.Point);
             GuessFinal.ForeColor = SystemColors.ActiveCaptionText;
-            GuessFinal.Location = new Point(365, 292);
+            GuessFinal.Location = new Point(353, 296);
             GuessFinal.Margin = new Padding(4, 3, 4, 3);
             GuessFinal.MaxLength = 5;
             GuessFinal.Name = "GuessFinal";
-            GuessFinal.Size = new Size(156, 64);
+            GuessFinal.Size = new Size(177, 64);
             GuessFinal.TabIndex = 33;
             GuessFinal.Text = "";
             GuessFinal.Visible = false;
@@ -552,7 +552,7 @@
             // 
             InvalidWordMessage.AutoSize = true;
             InvalidWordMessage.Font = new Font("Rockwell", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
-            InvalidWordMessage.Location = new Point(589, 136);
+            InvalidWordMessage.Location = new Point(609, 136);
             InvalidWordMessage.Name = "InvalidWordMessage";
             InvalidWordMessage.Size = new Size(268, 23);
             InvalidWordMessage.TabIndex = 34;
@@ -564,7 +564,7 @@
             // 
             Answer.AutoSize = true;
             Answer.Font = new Font("Rockwell", 20.25F, FontStyle.Bold, GraphicsUnit.Point);
-            Answer.Location = new Point(671, 182);
+            Answer.Location = new Point(691, 182);
             Answer.Name = "Answer";
             Answer.Size = new Size(121, 33);
             Answer.TabIndex = 35;
@@ -587,7 +587,7 @@
             // 
             LoseMessage.AutoSize = true;
             LoseMessage.Font = new Font("Rockwell", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
-            LoseMessage.Location = new Point(564, 159);
+            LoseMessage.Location = new Point(584, 159);
             LoseMessage.Name = "LoseMessage";
             LoseMessage.Size = new Size(324, 23);
             LoseMessage.TabIndex = 37;
@@ -598,7 +598,7 @@
             // 
             WinMessage.AutoSize = true;
             WinMessage.Font = new Font("Rockwell", 20.25F, FontStyle.Bold, GraphicsUnit.Point);
-            WinMessage.Location = new Point(539, 202);
+            WinMessage.Location = new Point(559, 202);
             WinMessage.Name = "WinMessage";
             WinMessage.Size = new Size(376, 33);
             WinMessage.TabIndex = 38;
@@ -609,7 +609,7 @@
             // 
             GameTitle.AutoSize = true;
             GameTitle.Font = new Font("Gill Sans Ultra Bold", 36F, FontStyle.Regular, GraphicsUnit.Point);
-            GameTitle.Location = new Point(34, 30);
+            GameTitle.Location = new Point(22, 30);
             GameTitle.Name = "GameTitle";
             GameTitle.Size = new Size(303, 69);
             GameTitle.TabIndex = 39;
@@ -619,7 +619,7 @@
             // 
             WelcomeMessage.AutoSize = true;
             WelcomeMessage.Font = new Font("Rockwell", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
-            WelcomeMessage.Location = new Point(539, 76);
+            WelcomeMessage.Location = new Point(559, 76);
             WelcomeMessage.Name = "WelcomeMessage";
             WelcomeMessage.Size = new Size(242, 23);
             WelcomeMessage.TabIndex = 40;
@@ -629,7 +629,7 @@
             // 
             InvalidWord.AutoSize = true;
             InvalidWord.Font = new Font("Rockwell", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
-            InvalidWord.Location = new Point(528, 113);
+            InvalidWord.Location = new Point(548, 113);
             InvalidWord.Name = "InvalidWord";
             InvalidWord.Size = new Size(394, 23);
             InvalidWord.TabIndex = 41;
