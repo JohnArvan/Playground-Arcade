@@ -70,6 +70,16 @@
             GameTitle = new Label();
             WelcomeMessage = new Label();
             InvalidWord = new Label();
+            HowToPlay = new Label();
+            Rules1 = new Label();
+            Rules2 = new Label();
+            Examples = new Label();
+            ExampleCorrect = new RichTextBox();
+            ExplainCorrect = new Label();
+            ExampleAlmost = new RichTextBox();
+            ExplainAlmost = new Label();
+            ExampleWrong = new RichTextBox();
+            ExplainWrong = new Label();
             SuspendLayout();
             // 
             // Guess1
@@ -609,11 +619,12 @@
             // 
             GameTitle.AutoSize = true;
             GameTitle.Font = new Font("Gill Sans Ultra Bold", 36F, FontStyle.Regular, GraphicsUnit.Point);
-            GameTitle.Location = new Point(22, 30);
+            GameTitle.Location = new Point(13, 3);
             GameTitle.Name = "GameTitle";
             GameTitle.Size = new Size(303, 69);
             GameTitle.TabIndex = 39;
             GameTitle.Text = "WORDLE!";
+            GameTitle.Click += GameTitle_Click;
             // 
             // WelcomeMessage
             // 
@@ -637,11 +648,124 @@
             InvalidWord.Visible = false;
             InvalidWord.Click += InvalidWord_Click;
             // 
+            // HowToPlay
+            // 
+            HowToPlay.AutoSize = true;
+            HowToPlay.Font = new Font("Times New Roman", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
+            HowToPlay.Location = new Point(315, 72);
+            HowToPlay.Name = "HowToPlay";
+            HowToPlay.Size = new Size(124, 24);
+            HowToPlay.TabIndex = 42;
+            HowToPlay.Text = "How To Play";
+            HowToPlay.Click += HowToPlay_Click;
+            // 
+            // Rules1
+            // 
+            Rules1.AutoSize = true;
+            Rules1.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            Rules1.Location = new Point(323, 98);
+            Rules1.Name = "Rules1";
+            Rules1.Size = new Size(172, 19);
+            Rules1.TabIndex = 43;
+            Rules1.Text = "Guess the Wordle in 6 tries";
+            Rules1.Click += Rules1_Click;
+            // 
+            // Rules2
+            // 
+            Rules2.AutoSize = true;
+            Rules2.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            Rules2.Location = new Point(323, 117);
+            Rules2.Name = "Rules2";
+            Rules2.Size = new Size(268, 57);
+            Rules2.TabIndex = 44;
+            Rules2.Text = "- Each guess must be a valid 5-letter word.\r\n- The color of the tiles will change to show\r\n   how close your guess was to the word.";
+            Rules2.Click += Rules2_Click;
+            // 
+            // Examples
+            // 
+            Examples.AutoSize = true;
+            Examples.Font = new Font("Times New Roman", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            Examples.Location = new Point(335, 183);
+            Examples.Name = "Examples";
+            Examples.Size = new Size(74, 19);
+            Examples.TabIndex = 45;
+            Examples.Text = "Examples";
+            Examples.Click += Examples_Click;
+            // 
+            // ExampleCorrect
+            // 
+            ExampleCorrect.Font = new Font("Courier New", 20.25F, FontStyle.Bold, GraphicsUnit.Point);
+            ExampleCorrect.Location = new Point(335, 210);
+            ExampleCorrect.Name = "ExampleCorrect";
+            ExampleCorrect.Size = new Size(88, 37);
+            ExampleCorrect.TabIndex = 46;
+            ExampleCorrect.Text = "WEARY";
+            ExampleCorrect.TextChanged += ExampleCorrect_TextChanged;
+            // 
+            // ExplainCorrect
+            // 
+            ExplainCorrect.AutoSize = true;
+            ExplainCorrect.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            ExplainCorrect.Location = new Point(335, 250);
+            ExplainCorrect.Name = "ExplainCorrect";
+            ExplainCorrect.Size = new Size(258, 19);
+            ExplainCorrect.TabIndex = 47;
+            ExplainCorrect.Text = "'W' is in the word and in the correct spot.";
+            // 
+            // ExampleAlmost
+            // 
+            ExampleAlmost.Font = new Font("Courier New", 20.25F, FontStyle.Bold, GraphicsUnit.Point);
+            ExampleAlmost.Location = new Point(335, 286);
+            ExampleAlmost.Name = "ExampleAlmost";
+            ExampleAlmost.Size = new Size(88, 37);
+            ExampleAlmost.TabIndex = 48;
+            ExampleAlmost.Text = "HELLO";
+            // 
+            // ExplainAlmost
+            // 
+            ExplainAlmost.AutoSize = true;
+            ExplainAlmost.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            ExplainAlmost.Location = new Point(335, 324);
+            ExplainAlmost.Name = "ExplainAlmost";
+            ExplainAlmost.Size = new Size(244, 19);
+            ExplainAlmost.TabIndex = 49;
+            ExplainAlmost.Text = "'E' is in the word but in the wrong spot.";
+            // 
+            // ExampleWrong
+            // 
+            ExampleWrong.Font = new Font("Courier New", 20.25F, FontStyle.Bold, GraphicsUnit.Point);
+            ExampleWrong.Location = new Point(335, 358);
+            ExampleWrong.Name = "ExampleWrong";
+            ExampleWrong.Size = new Size(88, 37);
+            ExampleWrong.TabIndex = 50;
+            ExampleWrong.Text = "VAGUE";
+            // 
+            // ExplainWrong
+            // 
+            ExplainWrong.AutoSize = true;
+            ExplainWrong.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            ExplainWrong.Location = new Point(335, 398);
+            ExplainWrong.Name = "ExplainWrong";
+            ExplainWrong.Size = new Size(203, 19);
+            ExplainWrong.TabIndex = 51;
+            ExplainWrong.Text = "'U' is not in the word in any spot";
+            // 
             // WordleForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.Silver;
             ClientSize = new Size(960, 556);
+            Controls.Add(ExplainWrong);
+            Controls.Add(ExampleWrong);
+            Controls.Add(ExplainAlmost);
+            Controls.Add(ExampleAlmost);
+            Controls.Add(ExplainCorrect);
+            Controls.Add(ExampleCorrect);
+            Controls.Add(Examples);
+            Controls.Add(Rules2);
+            Controls.Add(Rules1);
+            Controls.Add(HowToPlay);
             Controls.Add(InvalidWord);
             Controls.Add(WelcomeMessage);
             Controls.Add(GameTitle);
@@ -736,6 +860,16 @@
         private Label GameTitle;
         private Label WelcomeMessage;
         private Label InvalidWord;
+        private Label HowToPlay;
+        private Label Rules1;
+        private Label Rules2;
+        private Label Examples;
+        private RichTextBox ExampleCorrect;
+        private Label ExplainCorrect;
+        private RichTextBox ExampleAlmost;
+        private Label ExplainAlmost;
+        private RichTextBox ExampleWrong;
+        private Label ExplainWrong;
     }
 }
 

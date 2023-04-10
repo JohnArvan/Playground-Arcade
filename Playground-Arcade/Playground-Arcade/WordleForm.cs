@@ -18,6 +18,12 @@ namespace Playground_Arcade
             InitializeComponent();
             string answer = WordToGuess();
             Answer.Text = WordToGuess();
+            ExampleCorrect.Select(0, 1);
+            ExampleCorrect.SelectionBackColor = Color.Green;
+            ExampleAlmost.Select(1, 1);
+            ExampleAlmost.SelectionBackColor = Color.Yellow;
+            ExampleWrong.Select(3, 1);
+            ExampleWrong.SelectionBackColor = Color.Gray;
         }
         private Random random = new Random();
         private string[] words = File.ReadAllLines("../../../datasets/WordleDataset.txt");
@@ -487,6 +493,22 @@ namespace Playground_Arcade
 
             LoseMessage.Visible = false;
 
+            HowToPlay.Visible = false;
+
+            Rules1.Visible = false;
+            Rules2.Visible = false;
+
+            Examples.Visible = false;
+
+            ExampleCorrect.Visible = false;
+            ExplainCorrect.Visible = false;
+
+            ExampleAlmost.Visible = false;
+            ExplainAlmost.Visible = false;
+
+            ExampleWrong.Visible = false;
+            ExplainWrong.Visible = false;
+
             InvalidWordMessage.Visible = false;
             Answer.Text = WordToGuess();
             foreach (Button button in this.Controls.OfType<Button>())
@@ -498,6 +520,36 @@ namespace Playground_Arcade
         }
 
         private void InvalidWord_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void HowToPlay_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Rules1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Rules2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Examples_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ExampleCorrect_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void GameTitle_Click(object sender, EventArgs e)
         {
 
         }
