@@ -99,7 +99,7 @@
             // Q
             // 
             Q.BackColor = SystemColors.ButtonHighlight;
-            Q.Font = new Font("Rockwell", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            Q.Font = new Font("Rockwell", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
             Q.Location = new Point(242, 401);
             Q.Margin = new Padding(4, 3, 4, 3);
             Q.Name = "Q";
@@ -113,7 +113,7 @@
             // W
             // 
             W.BackColor = SystemColors.ButtonHighlight;
-            W.Font = new Font("Rockwell", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            W.Font = new Font("Rockwell", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
             W.Location = new Point(282, 401);
             W.Margin = new Padding(4, 3, 4, 3);
             W.Name = "W";
@@ -127,7 +127,7 @@
             // E
             // 
             E.BackColor = SystemColors.ButtonHighlight;
-            E.Font = new Font("Rockwell", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            E.Font = new Font("Rockwell", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
             E.Location = new Point(323, 401);
             E.Margin = new Padding(4, 3, 4, 3);
             E.Name = "E";
@@ -141,7 +141,7 @@
             // R
             // 
             R.BackColor = SystemColors.ButtonHighlight;
-            R.Font = new Font("Rockwell", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            R.Font = new Font("Rockwell", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
             R.Location = new Point(364, 401);
             R.Margin = new Padding(4, 3, 4, 3);
             R.Name = "R";
@@ -155,7 +155,7 @@
             // T
             // 
             T.BackColor = SystemColors.ButtonHighlight;
-            T.Font = new Font("Rockwell", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            T.Font = new Font("Rockwell", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
             T.Location = new Point(405, 401);
             T.Margin = new Padding(4, 3, 4, 3);
             T.Name = "T";
@@ -169,7 +169,7 @@
             // Y
             // 
             Y.BackColor = SystemColors.ButtonHighlight;
-            Y.Font = new Font("Rockwell", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            Y.Font = new Font("Rockwell", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
             Y.Location = new Point(446, 401);
             Y.Margin = new Padding(4, 3, 4, 3);
             Y.Name = "Y";
@@ -183,7 +183,7 @@
             // U
             // 
             U.BackColor = SystemColors.ButtonHighlight;
-            U.Font = new Font("Rockwell", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            U.Font = new Font("Rockwell", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
             U.Location = new Point(486, 401);
             U.Margin = new Padding(4, 3, 4, 3);
             U.Name = "U";
@@ -197,7 +197,7 @@
             // I
             // 
             I.BackColor = SystemColors.ButtonHighlight;
-            I.Font = new Font("Rockwell", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            I.Font = new Font("Rockwell", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
             I.Location = new Point(527, 401);
             I.Margin = new Padding(4, 3, 4, 3);
             I.Name = "I";
@@ -211,7 +211,7 @@
             // O
             // 
             O.BackColor = SystemColors.ButtonHighlight;
-            O.Font = new Font("Rockwell", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            O.Font = new Font("Rockwell", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
             O.Location = new Point(568, 401);
             O.Margin = new Padding(4, 3, 4, 3);
             O.Name = "O";
@@ -225,7 +225,7 @@
             // P
             // 
             P.BackColor = SystemColors.ButtonHighlight;
-            P.Font = new Font("Rockwell", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            P.Font = new Font("Rockwell", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
             P.Location = new Point(609, 401);
             P.Margin = new Padding(4, 3, 4, 3);
             P.Name = "P";
@@ -239,7 +239,7 @@
             // A
             // 
             A.BackColor = SystemColors.ButtonHighlight;
-            A.Font = new Font("Rockwell", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            A.Font = new Font("Rockwell", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
             A.Location = new Point(262, 438);
             A.Margin = new Padding(4, 3, 4, 3);
             A.Name = "A";
@@ -253,7 +253,7 @@
             // S
             // 
             S.BackColor = SystemColors.ButtonHighlight;
-            S.Font = new Font("Rockwell", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            S.Font = new Font("Rockwell", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
             S.Location = new Point(303, 438);
             S.Margin = new Padding(4, 3, 4, 3);
             S.Name = "S";
@@ -267,7 +267,7 @@
             // D
             // 
             D.BackColor = SystemColors.ButtonHighlight;
-            D.Font = new Font("Rockwell", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            D.Font = new Font("Rockwell", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
             D.Location = new Point(344, 438);
             D.Margin = new Padding(4, 3, 4, 3);
             D.Name = "D";
@@ -281,7 +281,7 @@
             // F
             // 
             F.BackColor = SystemColors.ButtonHighlight;
-            F.Font = new Font("Rockwell", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            F.Font = new Font("Rockwell", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
             F.Location = new Point(385, 438);
             F.Margin = new Padding(4, 3, 4, 3);
             F.Name = "F";
@@ -295,7 +295,7 @@
             // G
             // 
             G.BackColor = SystemColors.ButtonHighlight;
-            G.Font = new Font("Rockwell", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            G.Font = new Font("Rockwell", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
             G.Location = new Point(426, 438);
             G.Margin = new Padding(4, 3, 4, 3);
             G.Name = "G";
@@ -309,7 +309,7 @@
             // H
             // 
             H.BackColor = SystemColors.ButtonHighlight;
-            H.Font = new Font("Rockwell", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            H.Font = new Font("Rockwell", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
             H.Location = new Point(467, 438);
             H.Margin = new Padding(4, 3, 4, 3);
             H.Name = "H";
@@ -323,7 +323,7 @@
             // J
             // 
             J.BackColor = SystemColors.ButtonHighlight;
-            J.Font = new Font("Rockwell", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            J.Font = new Font("Rockwell", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
             J.Location = new Point(508, 438);
             J.Margin = new Padding(4, 3, 4, 3);
             J.Name = "J";
@@ -337,7 +337,7 @@
             // K
             // 
             K.BackColor = SystemColors.ButtonHighlight;
-            K.Font = new Font("Rockwell", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            K.Font = new Font("Rockwell", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
             K.Location = new Point(548, 438);
             K.Margin = new Padding(4, 3, 4, 3);
             K.Name = "K";
@@ -351,7 +351,7 @@
             // L
             // 
             L.BackColor = SystemColors.ButtonHighlight;
-            L.Font = new Font("Rockwell", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            L.Font = new Font("Rockwell", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
             L.Location = new Point(589, 438);
             L.Margin = new Padding(4, 3, 4, 3);
             L.Name = "L";
@@ -365,7 +365,7 @@
             // Z
             // 
             Z.BackColor = SystemColors.ButtonHighlight;
-            Z.Font = new Font("Rockwell", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            Z.Font = new Font("Rockwell", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
             Z.Location = new Point(282, 475);
             Z.Margin = new Padding(4, 3, 4, 3);
             Z.Name = "Z";
@@ -379,7 +379,7 @@
             // X
             // 
             X.BackColor = SystemColors.ButtonHighlight;
-            X.Font = new Font("Rockwell", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            X.Font = new Font("Rockwell", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
             X.Location = new Point(323, 475);
             X.Margin = new Padding(4, 3, 4, 3);
             X.Name = "X";
@@ -393,7 +393,7 @@
             // C
             // 
             C.BackColor = SystemColors.ButtonHighlight;
-            C.Font = new Font("Rockwell", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            C.Font = new Font("Rockwell", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
             C.Location = new Point(364, 475);
             C.Margin = new Padding(4, 3, 4, 3);
             C.Name = "C";
@@ -407,7 +407,7 @@
             // V
             // 
             V.BackColor = SystemColors.ButtonHighlight;
-            V.Font = new Font("Rockwell", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            V.Font = new Font("Rockwell", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
             V.Location = new Point(405, 475);
             V.Margin = new Padding(4, 3, 4, 3);
             V.Name = "V";
@@ -421,7 +421,7 @@
             // B
             // 
             B.BackColor = SystemColors.ButtonHighlight;
-            B.Font = new Font("Rockwell", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            B.Font = new Font("Rockwell", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
             B.Location = new Point(446, 475);
             B.Margin = new Padding(4, 3, 4, 3);
             B.Name = "B";
@@ -435,7 +435,7 @@
             // N
             // 
             N.BackColor = SystemColors.ButtonHighlight;
-            N.Font = new Font("Rockwell", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            N.Font = new Font("Rockwell", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
             N.Location = new Point(486, 475);
             N.Margin = new Padding(4, 3, 4, 3);
             N.Name = "N";
@@ -449,7 +449,7 @@
             // M
             // 
             M.BackColor = SystemColors.ButtonHighlight;
-            M.Font = new Font("Rockwell", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            M.Font = new Font("Rockwell", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
             M.Location = new Point(527, 475);
             M.Margin = new Padding(4, 3, 4, 3);
             M.Name = "M";
@@ -463,13 +463,13 @@
             // Delete
             // 
             Delete.BackColor = SystemColors.ButtonHighlight;
-            Delete.Font = new Font("Rockwell", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            Delete.Font = new Font("Rockwell", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
             Delete.Location = new Point(568, 475);
             Delete.Margin = new Padding(4, 3, 4, 3);
             Delete.Name = "Delete";
             Delete.Size = new Size(75, 37);
             Delete.TabIndex = 27;
-            Delete.Text = "Delete";
+            Delete.Text = "Del";
             Delete.UseVisualStyleBackColor = false;
             Delete.Visible = false;
             Delete.Click += Delete_Click;
@@ -477,7 +477,7 @@
             // Enter
             // 
             Enter.BackColor = SystemColors.ButtonHighlight;
-            Enter.Font = new Font("Rockwell", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            Enter.Font = new Font("Rockwell", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
             Enter.Location = new Point(220, 475);
             Enter.Margin = new Padding(4, 3, 4, 3);
             Enter.Name = "Enter";
@@ -619,7 +619,7 @@
             // 
             GameTitle.AutoSize = true;
             GameTitle.Font = new Font("Gill Sans Ultra Bold", 36F, FontStyle.Regular, GraphicsUnit.Point);
-            GameTitle.Location = new Point(13, 3);
+            GameTitle.Location = new Point(12, 42);
             GameTitle.Name = "GameTitle";
             GameTitle.Size = new Size(303, 69);
             GameTitle.TabIndex = 39;
