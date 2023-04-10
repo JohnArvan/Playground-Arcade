@@ -26,7 +26,7 @@ namespace Playground_Arcade
             ExampleWrong.SelectionBackColor = Color.Gray;
         }
         private Random random = new Random();
-        private string[] words = File.ReadAllLines("../../../datasets/WordleDataset.txt");
+        private string[] words = File.ReadAllLines("../../../Resources/WordleDataset.txt");
         int textBoxIndex = 0;
         public void letterClick(string letter)
         {
