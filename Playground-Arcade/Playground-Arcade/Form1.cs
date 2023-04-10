@@ -1,5 +1,3 @@
-using Othello;
-
 namespace Playground_Arcade
 {
     public partial class Form1 : Form
