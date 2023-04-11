@@ -86,11 +86,11 @@
             // 
             Guess1.Font = new Font("Courier New", 36F, FontStyle.Bold, GraphicsUnit.Point);
             Guess1.ForeColor = SystemColors.ActiveCaptionText;
-            Guess1.Location = new Point(353, 16);
+            Guess1.Location = new Point(364, 23);
             Guess1.Margin = new Padding(4, 3, 4, 3);
             Guess1.MaxLength = 5;
             Guess1.Name = "Guess1";
-            Guess1.Size = new Size(177, 64);
+            Guess1.Size = new Size(159, 64);
             Guess1.TabIndex = 0;
             Guess1.Text = "";
             Guess1.Visible = false;
@@ -492,11 +492,11 @@
             // 
             Guess2.Font = new Font("Courier New", 36F, FontStyle.Bold, GraphicsUnit.Point);
             Guess2.ForeColor = SystemColors.ActiveCaptionText;
-            Guess2.Location = new Point(353, 72);
+            Guess2.Location = new Point(364, 79);
             Guess2.Margin = new Padding(4, 3, 4, 3);
             Guess2.MaxLength = 5;
             Guess2.Name = "Guess2";
-            Guess2.Size = new Size(177, 64);
+            Guess2.Size = new Size(159, 64);
             Guess2.TabIndex = 29;
             Guess2.Text = "";
             Guess2.Visible = false;
@@ -506,11 +506,11 @@
             // 
             Guess3.Font = new Font("Courier New", 36F, FontStyle.Bold, GraphicsUnit.Point);
             Guess3.ForeColor = SystemColors.ActiveCaptionText;
-            Guess3.Location = new Point(353, 129);
+            Guess3.Location = new Point(364, 136);
             Guess3.Margin = new Padding(4, 3, 4, 3);
             Guess3.MaxLength = 5;
             Guess3.Name = "Guess3";
-            Guess3.Size = new Size(177, 64);
+            Guess3.Size = new Size(159, 64);
             Guess3.TabIndex = 30;
             Guess3.Text = "";
             Guess3.Visible = false;
@@ -520,11 +520,11 @@
             // 
             Guess4.Font = new Font("Courier New", 36F, FontStyle.Bold, GraphicsUnit.Point);
             Guess4.ForeColor = SystemColors.ActiveCaptionText;
-            Guess4.Location = new Point(353, 183);
+            Guess4.Location = new Point(364, 190);
             Guess4.Margin = new Padding(4, 3, 4, 3);
             Guess4.MaxLength = 5;
             Guess4.Name = "Guess4";
-            Guess4.Size = new Size(177, 64);
+            Guess4.Size = new Size(159, 64);
             Guess4.TabIndex = 31;
             Guess4.Text = "";
             Guess4.Visible = false;
@@ -534,11 +534,11 @@
             // 
             Guess5.Font = new Font("Courier New", 36F, FontStyle.Bold, GraphicsUnit.Point);
             Guess5.ForeColor = SystemColors.ActiveCaptionText;
-            Guess5.Location = new Point(353, 239);
+            Guess5.Location = new Point(364, 246);
             Guess5.Margin = new Padding(4, 3, 4, 3);
             Guess5.MaxLength = 5;
             Guess5.Name = "Guess5";
-            Guess5.Size = new Size(177, 64);
+            Guess5.Size = new Size(159, 64);
             Guess5.TabIndex = 32;
             Guess5.Text = "";
             Guess5.Visible = false;
@@ -548,11 +548,11 @@
             // 
             GuessFinal.Font = new Font("Courier New", 36F, FontStyle.Bold, GraphicsUnit.Point);
             GuessFinal.ForeColor = SystemColors.ActiveCaptionText;
-            GuessFinal.Location = new Point(353, 296);
+            GuessFinal.Location = new Point(364, 303);
             GuessFinal.Margin = new Padding(4, 3, 4, 3);
             GuessFinal.MaxLength = 5;
             GuessFinal.Name = "GuessFinal";
-            GuessFinal.Size = new Size(177, 64);
+            GuessFinal.Size = new Size(159, 64);
             GuessFinal.TabIndex = 33;
             GuessFinal.Text = "";
             GuessFinal.Visible = false;
@@ -652,7 +652,7 @@
             // 
             HowToPlay.AutoSize = true;
             HowToPlay.Font = new Font("Times New Roman", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
-            HowToPlay.Location = new Point(315, 72);
+            HowToPlay.Location = new Point(303, 90);
             HowToPlay.Name = "HowToPlay";
             HowToPlay.Size = new Size(124, 24);
             HowToPlay.TabIndex = 42;
@@ -663,7 +663,7 @@
             // 
             Rules1.AutoSize = true;
             Rules1.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            Rules1.Location = new Point(323, 98);
+            Rules1.Location = new Point(311, 116);
             Rules1.Name = "Rules1";
             Rules1.Size = new Size(172, 19);
             Rules1.TabIndex = 43;
@@ -674,7 +674,7 @@
             // 
             Rules2.AutoSize = true;
             Rules2.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            Rules2.Location = new Point(323, 117);
+            Rules2.Location = new Point(311, 135);
             Rules2.Name = "Rules2";
             Rules2.Size = new Size(268, 57);
             Rules2.TabIndex = 44;
@@ -685,7 +685,7 @@
             // 
             Examples.AutoSize = true;
             Examples.Font = new Font("Times New Roman", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            Examples.Location = new Point(335, 183);
+            Examples.Location = new Point(323, 201);
             Examples.Name = "Examples";
             Examples.Size = new Size(74, 19);
             Examples.TabIndex = 45;
@@ -695,7 +695,7 @@
             // ExampleCorrect
             // 
             ExampleCorrect.Font = new Font("Courier New", 20.25F, FontStyle.Bold, GraphicsUnit.Point);
-            ExampleCorrect.Location = new Point(335, 210);
+            ExampleCorrect.Location = new Point(323, 228);
             ExampleCorrect.Name = "ExampleCorrect";
             ExampleCorrect.Size = new Size(88, 37);
             ExampleCorrect.TabIndex = 46;
@@ -706,7 +706,7 @@
             // 
             ExplainCorrect.AutoSize = true;
             ExplainCorrect.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            ExplainCorrect.Location = new Point(335, 250);
+            ExplainCorrect.Location = new Point(323, 268);
             ExplainCorrect.Name = "ExplainCorrect";
             ExplainCorrect.Size = new Size(258, 19);
             ExplainCorrect.TabIndex = 47;
@@ -715,7 +715,7 @@
             // ExampleAlmost
             // 
             ExampleAlmost.Font = new Font("Courier New", 20.25F, FontStyle.Bold, GraphicsUnit.Point);
-            ExampleAlmost.Location = new Point(335, 286);
+            ExampleAlmost.Location = new Point(323, 304);
             ExampleAlmost.Name = "ExampleAlmost";
             ExampleAlmost.Size = new Size(88, 37);
             ExampleAlmost.TabIndex = 48;
@@ -725,7 +725,7 @@
             // 
             ExplainAlmost.AutoSize = true;
             ExplainAlmost.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            ExplainAlmost.Location = new Point(335, 324);
+            ExplainAlmost.Location = new Point(323, 342);
             ExplainAlmost.Name = "ExplainAlmost";
             ExplainAlmost.Size = new Size(244, 19);
             ExplainAlmost.TabIndex = 49;
@@ -734,7 +734,7 @@
             // ExampleWrong
             // 
             ExampleWrong.Font = new Font("Courier New", 20.25F, FontStyle.Bold, GraphicsUnit.Point);
-            ExampleWrong.Location = new Point(335, 358);
+            ExampleWrong.Location = new Point(323, 376);
             ExampleWrong.Name = "ExampleWrong";
             ExampleWrong.Size = new Size(88, 37);
             ExampleWrong.TabIndex = 50;
@@ -744,7 +744,7 @@
             // 
             ExplainWrong.AutoSize = true;
             ExplainWrong.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            ExplainWrong.Location = new Point(335, 398);
+            ExplainWrong.Location = new Point(323, 416);
             ExplainWrong.Name = "ExplainWrong";
             ExplainWrong.Size = new Size(203, 19);
             ExplainWrong.TabIndex = 51;
