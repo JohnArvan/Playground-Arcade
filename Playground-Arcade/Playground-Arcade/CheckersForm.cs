@@ -18,7 +18,7 @@ namespace Playground_Arcade
         }
         int n;
         PictureBox[,] P;
-        string color = "r", k = "", B1 = "", B2 = "",k2="";
+        string color = "r", k = "", B1 = "", B2 = "", k2 = "";
 
         private void btnExit_Click(object sender, EventArgs e)
         {
@@ -29,7 +29,7 @@ namespace Playground_Arcade
             }
         }
 
-        int blue =0,red=0;
+        int blue = 0, red = 0;
         private void Checkers_Load(object sender, EventArgs e)
         {
             n = 8;
@@ -39,13 +39,13 @@ namespace Playground_Arcade
             for (int i = 0; i < n; i++)
             {
                 left = 2;
-                if (i % 2 == 0) 
-                { 
-                    colors[0] = Color.White; colors[1] = Color.Black; 
+                if (i % 2 == 0)
+                {
+                    colors[0] = Color.White; colors[1] = Color.Black;
                 }
-                else 
-                { 
-                    colors[0] = Color.Black; colors[1] = Color.White; 
+                else
+                {
+                    colors[0] = Color.Black; colors[1] = Color.White;
                 }
 
                 for (int j = 0; j < n; j++)
@@ -56,9 +56,9 @@ namespace Playground_Arcade
                     P[i, j].Size = new Size(60, 60);
                     left += 60;
                     P[i, j].Name = i + " " + j;
-                    if (i < (n / 2) - 1 && P[i, j].BackColor == Color.Black) 
-                    { 
-                        P[i, j].Image = Properties.Resources.RR; P[i, j].Name += " r"; 
+                    if (i < (n / 2) - 1 && P[i, j].BackColor == Color.Black)
+                    {
+                        P[i, j].Image = Properties.Resources.RR; P[i, j].Name += " r";
                     }
                     else if (i > (n / 2) && P[i, j].BackColor == Color.Black)
                     {
@@ -77,7 +77,7 @@ namespace Playground_Arcade
                     };
                     P[i, j].Click += (sender3, e3) =>
                     {
-                        
+
                         PictureBox p = sender3 as PictureBox;
                         if (p.Image != null)
                         {
@@ -113,14 +113,14 @@ namespace Playground_Arcade
                                     x = Convert.ToInt32(k2.Split(' ')[0]);
                                     y = Convert.ToInt32(k2.Split(' ')[1]);
                                     P[x, y].Image = null;
-                                if (k2.Split(' ')[2] == "r")
-                                {
-                                    red++;
-                                }
-                                else
-                                {
-                                    blue++;
-                                }
+                                    if (k2.Split(' ')[2] == "r")
+                                    {
+                                        red++;
+                                    }
+                                    else
+                                    {
+                                        blue++;
+                                    }
                                     labelp1.Text = blue + "";
                                     labelp2.Text = red + "";
                                     if (red >= 12)
@@ -147,7 +147,7 @@ namespace Playground_Arcade
                                 x = Convert.ToInt32(p.Name.Split(' ')[0]);
                                 y = Convert.ToInt32(p.Name.Split(' ')[1]);
                                 k = p.Name;
-                                
+
                                 if (p.Name.Split(' ')[2] == "r") c = 1;
                                 {
                                     try
@@ -167,7 +167,7 @@ namespace Playground_Arcade
                                         }
                                     }
                                     catch { }
-                                    
+
                                     try
                                     {
                                         if (P[x + c, y - 1].Image == null)
@@ -190,17 +190,17 @@ namespace Playground_Arcade
                                 }
 
                             }
-                            
+
                         }
-                        
+
                     };
-                    
+
                     G.Controls.Add(P[i, j]);
                 }
-                
+
                 top += 60;
             }
-            
+
         }
         public void F()
         {
@@ -242,5 +242,60 @@ namespace Playground_Arcade
             lblStatus.Text = winner;
         }
 
+        private void InitializeBoard()
+        {
+            int left = 2, top = 2;
+            Color[] colors = new Color[] { Color.White, Color.Black };
+            for (int i = 0; i < n; i++)
+            {
+                left = 2;
+                if (i % 2 == 0)
+                {
+                    colors[0] = Color.White; colors[1] = Color.Black;
+                }
+                else
+                {
+                    colors[0] = Color.Black; colors[1] = Color.White;
+                }
+
+                for (int j = 0; j < n; j++)
+                {
+                    P[i, j].BackColor = colors[(j % 2 == 0) ? 1 : 0];
+                    P[i, j].Location = new Point(left, top);
+                    P[i, j].Size = new Size(60, 60);
+                    left += 60;
+                    P[i, j].Name = i + " " + j;
+                    P[i, j].Image = null;
+
+                    if (i < (n / 2) - 1 && P[i, j].BackColor == Color.Black)
+                    {
+                        P[i, j].Image = Properties.Resources.RR; P[i, j].Name += " r";
+                    }
+                    else if (i > (n / 2) && P[i, j].BackColor == Color.Black)
+                    {
+                        P[i, j].Image = Properties.Resources.BR; P[i, j].Name += " b";
+                    }
+                    P[i, j].SizeMode = PictureBoxSizeMode.CenterImage;
+                }
+                top += 60;
+            }
+
+            // Reset the game variables
+            color = "r";
+            k = "";
+            B1 = "";
+            B2 = "";
+            k2 = "";
+            blue = 0;
+            red = 0;
+            labelp1.Text = "0";
+            labelp2.Text = "0";
+            lblStatus.Text = "Player 1's Turn";
+        }
+
+        private void btnRestart_Click(object sender, EventArgs e)
+        {
+            InitializeBoard();
+        }
     }
 }
