@@ -30,5 +30,10 @@ namespace Playground_Arcade
             OthelloForm othelloForm = new OthelloForm();
             othelloForm.Show();
         }
+
+        private void ExitButton_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
