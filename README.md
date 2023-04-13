@@ -10,6 +10,7 @@ For the path, choose an empty folder on your computer, then click “Clone”
 Run the program, and the user interface for the main menu of the application will open. From there you can select a game to play by clicking the corresponding button.
 	Othello (separate instructions due to git merge issues)
 On the GitHub, go to the branch named “othello-v2”
-Open that folder as a Windows Forms Application (.NET Framework) project on Visual Studio
+When in branch “othello-v2” follow path Playground-Arcade/Playground-Arcade/Playground-Arcade/Othello/
+Open the Othello folder as a Windows Forms Application (.NET Framework) project on Visual Studio
 Run the program, and the user interface for the game will load in a form, displaying the board, disks and all other needed UI
   
